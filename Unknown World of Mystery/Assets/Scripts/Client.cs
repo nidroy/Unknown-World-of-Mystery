@@ -15,7 +15,7 @@ public class Client
     /// <param name="message">сообщение</param>
     /// <returns>ответ сервера</returns>
 
-    static string SendingMessage(string username, string message)
+    public static string SendingMessage(string username, string message)
     {
         TcpClient client = null;
         try
@@ -41,6 +41,7 @@ public class Client
                 }
                 while (stream.DataAvailable);
                 message = builder.ToString();
+                return message;
             }
         }
         catch (Exception ex)
