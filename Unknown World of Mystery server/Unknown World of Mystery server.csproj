@@ -50,8 +50,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Broker.cs" />
+    <Compile Include="Commands.cs" />
     <Compile Include="Database.cs" />
-    <Compile Include="IBroker.cs" />
+    <Compile Include="ICommand.cs" />
     <Compile Include="IQuery.cs" />
     <Compile Include="Queries.cs" />
     <Compile Include="Server.cs" />

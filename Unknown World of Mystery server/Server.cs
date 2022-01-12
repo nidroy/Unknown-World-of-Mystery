@@ -31,14 +31,12 @@ namespace Unknown_World_of_Mystery_server
                         builder.Append(Encoding.Unicode.GetString(data, 0, bytes));
                     }
                     while (stream.DataAvailable);
-
                     string message = builder.ToString();
-
                     Console.WriteLine(message);
                     // отправляем сообщение
                     message = message.Substring(message.IndexOf(':') + 1).Trim();
-                    IBroker broker = new Broker();
-                    data = Encoding.Unicode.GetBytes(broker.FormResponse(message));
+                    string[] command = message.Split(new char[] { '_' }, StringSplitOptions.RemoveEmptyEntries);
+                    data = Encoding.Unicode.GetBytes(FormResponse(command));
                     stream.Write(data, 0, data.Length);
                     break;
                 }
@@ -54,6 +52,21 @@ namespace Unknown_World_of_Mystery_server
                 if (client != null)
                     client.Close();
             }
+        }
+
+        public string FormResponse(string[] command)
+        {
+            Database database = new Database(new GetUsernames(), 
+                new GetPassword(command), 
+                new CreateUser(command));
+
+            Broker broker = new Broker(
+                new LogIn(command, database),
+                new Register(database));
+
+            database.FillInTheQueryDictionary();
+            broker.FillInTheCommandDictionary();
+            return broker.ExecuteCommand(command[0]);
         }
     }
 }

@@ -41,11 +41,11 @@ namespace Unknown_World_of_Mystery_server
 
     public class GetPassword : IQuery
     {
-        string username;
+        string[] user;
 
-        public GetPassword(string username)
+        public GetPassword(string[] user)
         {
-            this.username = username;
+            this.user = user;
         }
 
         public string Execute(string connectionString)
@@ -55,7 +55,7 @@ namespace Unknown_World_of_Mystery_server
             {
                 SqlCommand command = new SqlCommand();
                 command.Connection = connection;
-                command.CommandText = String.Format("SELECT [Password] FROM [User] WHERE [Username] = '{0}';", username);
+                command.CommandText = String.Format("SELECT [Password] FROM [User] WHERE [Username] = '{0}';", user[1]);
 
                 connection.Open();
                 SqlDataReader reader = command.ExecuteReader();
@@ -72,13 +72,11 @@ namespace Unknown_World_of_Mystery_server
 
     public class CreateUser : IQuery
     {
-        string username;
-        string password;
+        string[] user;
 
-        public CreateUser(string username, string password)
+        public CreateUser(string[] user)
         {
-            this.username = username;
-            this.password = password;
+            this.user = user;
         }
 
         public string Execute(string connectionString)
@@ -87,7 +85,7 @@ namespace Unknown_World_of_Mystery_server
             {
                 SqlCommand command = new SqlCommand();
                 command.Connection = connection;
-                command.CommandText = String.Format("INSERT INTO User VALUES('{0}','{1}');", username, password);
+                command.CommandText = String.Format("INSERT INTO User VALUES('{0}','{1}');", user[1], user[2]);
 
                 connection.Open();
                 SqlDataReader reader = command.ExecuteReader();

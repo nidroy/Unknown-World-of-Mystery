@@ -18,12 +18,10 @@ namespace Unknown_World_of_Mystery_server
                 listener = new TcpListener(IPAddress.Parse(address), port);
                 listener.Start();
                 Console.WriteLine("Ожидание подключений...");
-
                 while (true)
                 {
                     TcpClient client = listener.AcceptTcpClient();
                     Server server = new Server(client);
-
                     // создаем новый поток для обслуживания нового клиента
                     Thread clientThread = new Thread(new ThreadStart(server.Process));
                     clientThread.Start();
