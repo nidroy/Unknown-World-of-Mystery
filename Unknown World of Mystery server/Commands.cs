@@ -7,12 +7,12 @@ using System.Collections;
 
 namespace Unknown_World_of_Mystery_server
 {
-    public class LogIn : ICommand
+    public class CommandLogIn : ICommand
     {
         string[] user;
         Database database;
 
-        public LogIn(string[] user, Database database)
+        public CommandLogIn(string[] user, Database database)
         {
             this.user = user;
             this.database = database;
@@ -33,11 +33,11 @@ namespace Unknown_World_of_Mystery_server
         }
     }
 
-    public class Register : ICommand
+    public class CommandRegister : ICommand
     {
         Database database;
 
-        public Register(Database database)
+        public CommandRegister(Database database)
         {
             this.database = database;
         }
@@ -45,6 +45,36 @@ namespace Unknown_World_of_Mystery_server
         public string Execute()
         {
             return database.ExecuteQuery("CreateUser");
+        }
+    }
+    
+    public class CommandChooseCharacter : ICommand
+    {
+        Database database;
+
+        public CommandChooseCharacter(Database database)
+        {
+            this.database = database;
+        }
+
+        public string Execute()
+        {
+            return database.ExecuteQuery("GetCharacters");
+        }
+    }
+
+    public class CommandCreateCharacter : ICommand
+    {
+        Database database;
+
+        public CommandCreateCharacter(Database database)
+        {
+            this.database = database;
+        }
+
+        public string Execute()
+        {
+            return database.ExecuteQuery("CreateCharacter");
         }
     }
 }

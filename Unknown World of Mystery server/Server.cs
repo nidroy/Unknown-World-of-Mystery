@@ -56,13 +56,18 @@ namespace Unknown_World_of_Mystery_server
 
         public string FormResponse(string[] command)
         {
-            Database database = new Database(new GetUsernames(), 
-                new GetPassword(command), 
-                new CreateUser(command));
+            Database database = new Database(
+                new QueryGetUsernames(), 
+                new QueryGetPassword(command), 
+                new QueryCreateUser(command),
+                new QueryGetCharacters(command),
+                new QueryCreateCharacter(command));
 
             Broker broker = new Broker(
-                new LogIn(command, database),
-                new Register(database));
+                new CommandLogIn(command, database),
+                new CommandRegister(database),
+                new CommandChooseCharacter(database),
+                new CommandCreateCharacter(database));
 
             database.FillInTheQueryDictionary();
             broker.FillInTheCommandDictionary();

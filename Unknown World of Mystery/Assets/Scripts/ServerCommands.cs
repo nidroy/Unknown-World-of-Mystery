@@ -6,4 +6,6 @@ public class ServerCommands : MonoBehaviour
 {
     // LogIn_username_password
     // Register_username_password
+    // ChooseCharacter_username
+    // CreateCharacter_username_name_level
 }
