@@ -187,4 +187,54 @@ namespace Unknown_World_of_Mystery_server
             return settings;
         }
     }
+
+    public class QueryCreateSettings : IQuery
+    {
+        string[] user;
+
+        public QueryCreateSettings(string[] user)
+        {
+            this.user = user;
+        }
+
+        public string Execute(string connectionString)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand();
+                command.Connection = connection;
+                command.CommandText = String.Format("INSERT INTO [Settings] VALUES((SELECT [ID] FROM [User] WHERE [Username] = '{0}'), '1920x1080', 1, 'full screen', 1);", user[1]);
+
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                connection.Close();
+            }
+            return "settings created";
+        }
+    }
+
+    public class QueryUpdateSettings : IQuery
+    {
+        string[] settings;
+
+        public QueryUpdateSettings(string[] settings)
+        {
+            this.settings = settings;
+        }
+
+        public string Execute(string connectionString)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand();
+                command.Connection = connection;
+                command.CommandText = String.Format("UPDATE [Settings] SET [ScreenResolution] = '{0}', [VolumeOfSounds] = '{1}', [ScreenMode] = '{2}', [VolumeMusic] = '{3}' WHERE [UserID] = (SELECT [ID] FROM [User] WHERE [Username] = '{4}'));", settings[2], settings[3], settings[4], settings[5], settings[1]);
+
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                connection.Close();
+            }
+            return "settings updated";
+        }
+    }
 }
