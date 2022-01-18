@@ -44,7 +44,7 @@ namespace Unknown_World_of_Mystery_server
 
         public string Execute()
         {
-            return database.ExecuteQuery("CreateUser");
+            return database.ExecuteQuery("CreateUser") + "\n" + database.ExecuteQuery("CreateSettings");
         }
     }
     
@@ -75,6 +75,36 @@ namespace Unknown_World_of_Mystery_server
         public string Execute()
         {
             return database.ExecuteQuery("CreateCharacter");
+        }
+    }
+
+    public class CommandGetSettings : ICommand
+    {
+        Database database;
+
+        public CommandGetSettings(Database database)
+        {
+            this.database = database;
+        }
+
+        public string Execute()
+        {
+            return database.ExecuteQuery("GetSettings");
+        }
+    }
+
+    public class CommandApply : ICommand
+    {
+        Database database;
+
+        public CommandApply(Database database)
+        {
+            this.database = database;
+        }
+
+        public string Execute()
+        {
+            return database.ExecuteQuery("UpdateSettings");
         }
     }
 }
