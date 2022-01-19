@@ -1,14 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class StartMenu : MonoBehaviour
 {
+    public AuthorizationMenu authorizationMenu;
+
     public Animator menuAnim;
 
-    public void ShowMenu(bool isShow)
+    public GameObject messageBox;
+    public Text message;
+
+    public void ShowMenu()
     {
-        menuAnim.SetBool("isMenu", isShow);
+        if (authorizationMenu.LogIn() == "user found")
+        {
+            menuAnim.SetBool("isMenu", true);
+        }
+        else
+        {
+
+        }
     }
 
     public void ShowChooseCharacter(bool isShow)
@@ -25,4 +38,10 @@ public class StartMenu : MonoBehaviour
     {
         menuAnim.SetBool("isSettings", isShow);
     }
+
+    public void ShowMessageBox(bool isShow)
+    {
+
+    }
+
 }

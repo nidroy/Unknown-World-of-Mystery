@@ -17,11 +17,11 @@ public class Client
 
     public static string SendingMessage(string username, string message)
     {
-        TcpClient client = null;
+        TcpClient tcpClient = null;
         try
         {
-            client = new TcpClient(address, port);
-            NetworkStream stream = client.GetStream();
+            tcpClient = new TcpClient(address, port);
+            NetworkStream stream = tcpClient.GetStream();
             while (true)
             {
                 // ввод сообщения
@@ -46,11 +46,11 @@ public class Client
         }
         catch (Exception ex)
         {
-            Debug.Log(ex.Message);
+            Console.WriteLine(ex.Message);
         }
         finally
         {
-            client.Close();
+            tcpClient.Close();
         }
         return message;
     }

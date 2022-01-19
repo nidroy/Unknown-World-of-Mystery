@@ -54,13 +54,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Screensaver\Screensaver.cs" />
+    <Compile Include="Assets\Scripts\ServerCommands.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\StartMenu\StartMenu.cs" />
     <Compile Include="Assets\Scripts\StartMenu\Parallax\ParallaxBackground.cs" />
     <Compile Include="Assets\Scripts\StartMenu\Parallax\ParallaxCamera.cs" />
     <Compile Include="Assets\Scripts\Client.cs" />
     <Compile Include="Assets\Scripts\StartMenu\Parallax\ParallaxLayer.cs" />
-    <Compile Include="Assets\Scripts\ServerCommands.cs" />
+    <Compile Include="Assets\Scripts\StartMenu\AuthorizationMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\PackageManager\DemonicUI\Shaders\Fluid.shader" />
