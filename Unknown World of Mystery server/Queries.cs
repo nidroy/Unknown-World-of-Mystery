@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.Sql;
 using System.Data.SqlClient;
 using System.Collections;
+using System.Globalization;
 
 namespace Unknown_World_of_Mystery_server
 {
@@ -228,7 +229,7 @@ namespace Unknown_World_of_Mystery_server
             {
                 SqlCommand command = new SqlCommand();
                 command.Connection = connection;
-                command.CommandText = String.Format("UPDATE [Settings] SET [ScreenResolution] = '{0}', [VolumeOfSounds] = '{1}', [ScreenMode] = '{2}', [VolumeMusic] = '{3}' WHERE [UserID] = (SELECT [ID] FROM [User] WHERE [Username] = '{4}'));", settings[2], settings[3], settings[4], settings[5], settings[1]);
+                command.CommandText = String.Format("UPDATE [Settings] SET [ScreenResolution] = '{0}', [VolumeOfSounds] = '{1}', [ScreenMode] = '{2}', [VolumeMusic] = '{3}' WHERE [UserID] = (SELECT [ID] FROM [User] WHERE [Username] = '{4}');", settings[2], settings[3].Replace(',','.'), settings[4], settings[5].Replace(',', '.'), settings[1]);
 
                 connection.Open();
                 SqlDataReader reader = command.ExecuteReader();

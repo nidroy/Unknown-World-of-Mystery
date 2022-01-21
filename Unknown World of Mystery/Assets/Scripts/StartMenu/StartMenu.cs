@@ -19,11 +19,8 @@ public class StartMenu : MonoBehaviour
         string[] serverResponse = authorizationMenu.LogIn().Split(new char[] { '_' }, StringSplitOptions.RemoveEmptyEntries);
         if (serverResponse[0] == "user found")
         {
-            string[] settings = serverResponse[1].Split(new char[] { '-' }, StringSplitOptions.RemoveEmptyEntries);
-            GameManager.screenResolution = int.Parse(settings[0]);
-            GameManager.volumeSounds = float.Parse(settings[1]);
-            GameManager.screenMode = int.Parse(settings[2]);
-            GameManager.volumeMusic = float.Parse(settings[3]);
+            serverResponse = serverResponse[1].Split(new char[] { '-' }, StringSplitOptions.RemoveEmptyEntries);
+            settings.SetSettings(int.Parse(serverResponse[0]), float.Parse(serverResponse[1]), int.Parse(serverResponse[2]), float.Parse(serverResponse[3]));
             menuAnim.SetBool("isMenu", true);
         }
         else
@@ -44,7 +41,7 @@ public class StartMenu : MonoBehaviour
 
     public void ShowSettings()
     {
-        settings.GetSettings();
+        settings.GetSettings(GameManager.screenResolution, GameManager.volumeSounds, GameManager.screenMode, GameManager.volumeMusic);
         menuAnim.SetBool("isSettings", true);
     }
 

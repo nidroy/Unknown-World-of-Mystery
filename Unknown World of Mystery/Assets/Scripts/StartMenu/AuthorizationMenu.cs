@@ -13,8 +13,15 @@ public class AuthorizationMenu : MonoBehaviour
 
     public string LogIn()
     {
-        GameManager.username = username.text;
-        return Client.SendingMessage(GameManager.username, String.Format("LogIn_{0}_{1}", username.text, password.text));
+        if (username.text != "" && password.text != "")
+        {
+            GameManager.username = username.text;
+            return Client.SendingMessage(GameManager.username, String.Format("LogIn_{0}_{1}", username.text, password.text));
+        }
+        else
+        {
+            return "user not found";
+        }
     }
 
     public void Register()

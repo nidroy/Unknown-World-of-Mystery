@@ -11,4 +11,5 @@ public class GameManager : MonoBehaviour
     public static float volumeSounds;
     public static int screenMode;
     public static float volumeMusic;
+
 }
