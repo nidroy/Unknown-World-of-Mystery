@@ -9,8 +9,7 @@ public class AuthorizationMenu : MonoBehaviour
     public InputField username;
     public InputField password;
 
-    public GameObject messageBox;
-    public Text message;
+    public StartMenu startMenu;
 
     public string LogIn()
     {
@@ -22,14 +21,12 @@ public class AuthorizationMenu : MonoBehaviour
     {
         if(username.text != "" && password.text != "")
         {
-            messageBox.SetActive(true);
-            message.text = "The user is registered. Log in.";
+            startMenu.ShowMessageBox("The user is registered. Log in.");
             Debug.Log(Client.SendingMessage(GameManager.username, String.Format("Register_{0}_{1}", username.text, password.text)));
         }
         else
         {
-            messageBox.SetActive(true);
-            message.text = "Login or password not entered.";
+            startMenu.ShowMessageBox("Login or password not entered.");
         }      
     }
 }

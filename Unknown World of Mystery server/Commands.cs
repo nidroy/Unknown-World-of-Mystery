@@ -26,7 +26,7 @@ namespace Unknown_World_of_Mystery_server
             {
                 if(username.Current.ToString() == user[1] && database.ExecuteQuery("GetPassword") == user[2])
                 {
-                    return "user found";
+                    return String.Format("user found_{0}", database.ExecuteQuery("GetSettings"));
                 }
             }
             return "user not found";
@@ -75,21 +75,6 @@ namespace Unknown_World_of_Mystery_server
         public string Execute()
         {
             return database.ExecuteQuery("CreateCharacter");
-        }
-    }
-
-    public class CommandGetSettings : ICommand
-    {
-        Database database;
-
-        public CommandGetSettings(Database database)
-        {
-            this.database = database;
-        }
-
-        public string Execute()
-        {
-            return database.ExecuteQuery("GetSettings");
         }
     }
 

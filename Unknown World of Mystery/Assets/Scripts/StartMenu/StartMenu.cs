@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class StartMenu : MonoBehaviour
 {
     public AuthorizationMenu authorizationMenu;
+    public Settings settings;
 
     public Animator menuAnim;
 
@@ -14,13 +16,19 @@ public class StartMenu : MonoBehaviour
 
     public void ShowMenu()
     {
-        if (authorizationMenu.LogIn() == "user found")
+        string[] serverResponse = authorizationMenu.LogIn().Split(new char[] { '_' }, StringSplitOptions.RemoveEmptyEntries);
+        if (serverResponse[0] == "user found")
         {
+            string[] settings = serverResponse[1].Split(new char[] { '-' }, StringSplitOptions.RemoveEmptyEntries);
+            GameManager.screenResolution = int.Parse(settings[0]);
+            GameManager.volumeSounds = float.Parse(settings[1]);
+            GameManager.screenMode = int.Parse(settings[2]);
+            GameManager.volumeMusic = float.Parse(settings[3]);
             menuAnim.SetBool("isMenu", true);
         }
         else
         {
-
+            ShowMessageBox("this user does not exist");
         }
     }
 
@@ -34,14 +42,26 @@ public class StartMenu : MonoBehaviour
         menuAnim.SetBool("isCreateCharacter", isShow);
     }
 
-    public void ShowSettings(bool isShow)
+    public void ShowSettings()
     {
-        menuAnim.SetBool("isSettings", isShow);
+        settings.GetSettings();
+        menuAnim.SetBool("isSettings", true);
     }
 
-    public void ShowMessageBox(bool isShow)
+    public void ShowMessageBox(string text)
     {
+        messageBox.SetActive(true);
+        message.text = text;
+    }
 
+    public void HideMessageBox()
+    {
+        messageBox.SetActive(false);
+    }
+
+    public void HideStartMenuItems(string item)
+    {
+        menuAnim.SetBool(item, false);
     }
 
 }

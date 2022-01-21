@@ -60,8 +60,9 @@
     <Compile Include="Assets\Scripts\StartMenu\Parallax\ParallaxBackground.cs" />
     <Compile Include="Assets\Scripts\StartMenu\Parallax\ParallaxCamera.cs" />
     <Compile Include="Assets\Scripts\Client.cs" />
-    <Compile Include="Assets\Scripts\StartMenu\Parallax\ParallaxLayer.cs" />
     <Compile Include="Assets\Scripts\StartMenu\AuthorizationMenu.cs" />
+    <Compile Include="Assets\Scripts\StartMenu\Parallax\ParallaxLayer.cs" />
+    <Compile Include="Assets\Scripts\StartMenu\Settings.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\PackageManager\DemonicUI\Shaders\Fluid.shader" />

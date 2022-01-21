@@ -990,7 +990,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   authorizationMenu: {fileID: 1818836292}
+  settings: {fileID: 1065889036}
   menuAnim: {fileID: 188411303}
+  messageBox: {fileID: 1604398372}
+  message: {fileID: 1005799783}
 --- !u!1 &208145354
 GameObject:
   m_ObjectHideFlags: 0
@@ -4318,7 +4321,7 @@ MonoBehaviour:
       - m_Target: {fileID: 188411304}
         m_TargetAssemblyTypeName: StartMenu, Assembly-CSharp
         m_MethodName: ShowMenu
-        m_Mode: 6
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4613,10 +4616,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 188411304}
-        m_TargetAssemblyTypeName: StartMenu, Assembly-CSharp
-        m_MethodName: ShowSettings
-        m_Mode: 6
+      - m_Target: {fileID: 1065889036}
+        m_TargetAssemblyTypeName: Settings, Assembly-CSharp
+        m_MethodName: Apply
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5298,14 +5301,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 188411304}
         m_TargetAssemblyTypeName: StartMenu, Assembly-CSharp
-        m_MethodName: ShowMenu
-        m_Mode: 6
+        m_MethodName: HideStartMenuItems
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: isMenu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &905461480
@@ -6780,6 +6783,7 @@ GameObject:
   - component: {fileID: 1065889033}
   - component: {fileID: 1065889035}
   - component: {fileID: 1065889034}
+  - component: {fileID: 1065889036}
   m_Layer: 5
   m_Name: Settings
   m_TagString: Untagged
@@ -6856,6 +6860,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1065889032}
   m_CullTransparentMesh: 1
+--- !u!114 &1065889036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065889032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e51fc58cb6c558a48b10c8fe79f66bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  screenResolution: {fileID: 1031943621}
+  volumeSounds: {fileID: 1503623638}
+  screenMode: {fileID: 2143941925}
+  volumeMusic: {fileID: 1331031252}
+  startMenu: {fileID: 188411304}
 --- !u!1 &1066246404
 GameObject:
   m_ObjectHideFlags: 0
@@ -10219,8 +10240,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 188411304}
         m_TargetAssemblyTypeName: StartMenu, Assembly-CSharp
-        m_MethodName: ShowCreateCharacter
-        m_Mode: 6
+        m_MethodName: HideMessageBox
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -11192,6 +11213,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   username: {fileID: 507766871}
   password: {fileID: 1162484444}
+  startMenu: {fileID: 188411304}
 --- !u!1 &1826912059
 GameObject:
   m_ObjectHideFlags: 0
@@ -11424,7 +11446,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1886292473}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1818836292}
+        m_TargetAssemblyTypeName: AuthorizationMenu, Assembly-CSharp
+        m_MethodName: Register
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1886292473
 MonoBehaviour:
   m_ObjectHideFlags: 0

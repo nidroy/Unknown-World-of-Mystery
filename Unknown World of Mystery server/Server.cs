@@ -71,7 +71,6 @@ namespace Unknown_World_of_Mystery_server
                 new CommandRegister(database),
                 new CommandChooseCharacter(database),
                 new CommandCreateCharacter(database),
-                new CommandGetSettings(database),
                 new CommandApply(database));
 
             database.FillInTheQueryDictionary();
