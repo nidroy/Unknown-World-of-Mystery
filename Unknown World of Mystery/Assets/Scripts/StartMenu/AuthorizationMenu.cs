@@ -30,6 +30,8 @@ public class AuthorizationMenu : MonoBehaviour
         {
             startMenu.ShowMessageBox("The user is registered. Log in.");
             Debug.Log(Client.SendingMessage(GameManager.username, String.Format("Register_{0}_{1}", username.text, password.text)));
+            username.text = "";
+            password.text = "";
         }
         else
         {

@@ -34,9 +34,9 @@ public class StartMenu : MonoBehaviour
         menuAnim.SetBool("isChooseCharacter", isShow);
     }
 
-    public void ShowCreateCharacter(bool isShow)
+    public void ShowCreateCharacter()
     {
-        menuAnim.SetBool("isCreateCharacter", isShow);
+        menuAnim.SetBool("isCreateCharacter", true);
     }
 
     public void ShowSettings()

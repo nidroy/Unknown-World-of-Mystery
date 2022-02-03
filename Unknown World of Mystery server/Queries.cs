@@ -204,7 +204,7 @@ namespace Unknown_World_of_Mystery_server
             {
                 SqlCommand command = new SqlCommand();
                 command.Connection = connection;
-                command.CommandText = String.Format("INSERT INTO [Settings] VALUES((SELECT [ID] FROM [User] WHERE [Username] = '{0}'), '0', '1', '0', '1');", user[1]);
+                command.CommandText = String.Format("INSERT INTO [Settings] VALUES((SELECT [ID] FROM [User] WHERE [Username] = '{0}'), '1', '1', '1', '1');", user[1]);
 
                 connection.Open();
                 SqlDataReader reader = command.ExecuteReader();

@@ -6284,7 +6284,7 @@ MonoBehaviour:
   m_CaptionImage: {fileID: 0}
   m_ItemText: {fileID: 2007881841}
   m_ItemImage: {fileID: 0}
-  m_Value: 0
+  m_Value: 1
   m_Options:
     m_Options:
     - m_Text: 1920x1080
@@ -9731,6 +9731,7 @@ GameObject:
   - component: {fileID: 1651902367}
   - component: {fileID: 1651902369}
   - component: {fileID: 1651902368}
+  - component: {fileID: 1651902370}
   m_Layer: 5
   m_Name: CreateCharacter
   m_TagString: Untagged
@@ -9800,6 +9801,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1651902366}
   m_CullTransparentMesh: 1
+--- !u!114 &1651902370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651902366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 843dd351191ed164eb5a530547237ed9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterName: {fileID: 638254395}
+  characterLevel: {fileID: 1593546112}
+  startMenu: {fileID: 188411304}
 --- !u!1 &1653279765
 GameObject:
   m_ObjectHideFlags: 0
@@ -10530,7 +10546,7 @@ MonoBehaviour:
       - m_Target: {fileID: 188411304}
         m_TargetAssemblyTypeName: StartMenu, Assembly-CSharp
         m_MethodName: ShowCreateCharacter
-        m_Mode: 6
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -10988,10 +11004,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 188411304}
-        m_TargetAssemblyTypeName: StartMenu, Assembly-CSharp
-        m_MethodName: ShowCreateCharacter
-        m_Mode: 6
+      - m_Target: {fileID: 1651902370}
+        m_TargetAssemblyTypeName: CreateCharacterMenu, Assembly-CSharp
+        m_MethodName: Create
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -12947,7 +12963,7 @@ MonoBehaviour:
   m_CaptionImage: {fileID: 0}
   m_ItemText: {fileID: 1360062700}
   m_ItemImage: {fileID: 0}
-  m_Value: 0
+  m_Value: 1
   m_Options:
     m_Options:
     - m_Text: full screen
