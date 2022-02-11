@@ -129,6 +129,10 @@ namespace Unknown_World_of_Mystery_server
             {
                 result += character.Current.ToString() + "_";
             }
+            if(result == "")
+            {
+                return result;
+            }
             return result.Remove(result.Length - 1);
         }
     }
@@ -143,7 +147,7 @@ namespace Unknown_World_of_Mystery_server
         }
 
         public string Execute(string connectionString)
-        {
+        {   
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 SqlCommand command = new SqlCommand();
@@ -236,6 +240,41 @@ namespace Unknown_World_of_Mystery_server
                 connection.Close();
             }
             return "settings updated";
+        }
+    }
+
+    public class QueryGetCharacterNames : IQuery
+    {
+        string[] user;
+
+        public QueryGetCharacterNames(string[] user)
+        {
+            this.user = user;
+        }
+
+        public string Execute(string connectionString)
+        {
+            string characterNames = "";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand();
+                command.Connection = connection;
+                command.CommandText = String.Format("SELECT [Name] FROM [Character] JOIN [User] ON [Character].[UserID] = [User].[ID] WHERE [Username] = '{0}';", user[1]);
+
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    characterNames += reader[0].ToString() + "_";
+                }
+                connection.Close();
+            }
+            if(characterNames == "")
+            {
+                return characterNames;
+            }
+            return characterNames.Remove(characterNames.Length - 1);
         }
     }
 }

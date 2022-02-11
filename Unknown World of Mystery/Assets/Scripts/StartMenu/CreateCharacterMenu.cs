@@ -15,8 +15,14 @@ public class CreateCharacterMenu : MonoBehaviour
     {
         if (characterName.text != "")
         {
-            Debug.Log(Client.SendingMessage(GameManager.username, String.Format("CreateCharacter_{0}_{1}_{2}", GameManager.username, characterName.text, characterLevel.value)));
-            startMenu.HideStartMenuItems("isCreateCharacter");
+            if (Client.SendingMessage(GameManager.username, String.Format("CreateCharacter_{0}_{1}_{2}", GameManager.username, characterName.text, characterLevel.value)) == "The character exists")
+            {
+                startMenu.ShowMessageBox("The character exists.");
+            }
+            else
+            {
+                startMenu.HideStartMenuItems("isCreateCharacter");
+            }
             characterName.text = "";
             characterLevel.value = 0;
         }

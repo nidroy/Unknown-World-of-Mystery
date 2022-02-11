@@ -65,15 +65,26 @@ namespace Unknown_World_of_Mystery_server
 
     public class CommandCreateCharacter : ICommand
     {
+        string[] character;
         Database database;
 
-        public CommandCreateCharacter(Database database)
+        public CommandCreateCharacter(string[] character, Database database)
         {
+            this.character = character;
             this.database = database;
         }
 
         public string Execute()
         {
+            string[] characterNames = database.ExecuteQuery("GetCharacterNames").Split(new char[] { '_' }, StringSplitOptions.RemoveEmptyEntries);
+            IEnumerator characterName = characterNames.GetEnumerator();
+            while (characterName.MoveNext())
+            {
+                if (characterName.Current.ToString() == character[2])
+                {
+                    return "The character exists";
+                }
+            }
             return database.ExecuteQuery("CreateCharacter");
         }
     }
