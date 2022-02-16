@@ -16,7 +16,11 @@ public class AuthorizationMenu : MonoBehaviour
         if (username.text != "" && password.text != "")
         {
             GameManager.username = username.text;
-            return Client.SendingMessage(GameManager.username, String.Format("LogIn_{0}_{1}", username.text, password.text));
+            string message = Client.SendingMessage(GameManager.username, String.Format("LogIn_{0}_{1}", username.text, password.text));
+            username.text = "";
+            password.text = "";
+            return message;
+
         }
         else
         {

@@ -8,8 +8,8 @@ namespace Unknown_World_of_Mystery_server
 {
     public class Database
     {
-        //const string connectionString = "Data Source=MYCOMPUTER;Initial Catalog='Unknown World of Mystery database';Integrated Security=True";
-        const string connectionString = "Data Source=MYLAPTOP;Initial Catalog='Unknown World of Mystery database';Integrated Security=True";
+        const string connectionString = "Data Source=MYCOMPUTER;Initial Catalog='Unknown World of Mystery database';Integrated Security=True";
+        //const string connectionString = "Data Source=MYLAPTOP;Initial Catalog='Unknown World of Mystery database';Integrated Security=True";
 
         public Dictionary<string, IQuery> queryDictionary = new Dictionary<string, IQuery>();
         List<IQuery> query = new List<IQuery>();

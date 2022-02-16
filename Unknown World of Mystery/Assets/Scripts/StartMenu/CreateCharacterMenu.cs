@@ -7,7 +7,7 @@ using System;
 
 public class CreateCharacterMenu : MonoBehaviour
 {
-    public Text characterName;
+    public InputField characterName;
     public Dropdown characterLevel;
 
     public StartMenu startMenu;

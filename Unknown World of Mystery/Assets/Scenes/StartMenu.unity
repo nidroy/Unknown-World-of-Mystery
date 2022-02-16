@@ -10399,7 +10399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 843dd351191ed164eb5a530547237ed9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterName: {fileID: 638254395}
+  characterName: {fileID: 1436327006}
   characterLevel: {fileID: 1593546112}
   startMenu: {fileID: 188411304}
 --- !u!1 &1653279765
