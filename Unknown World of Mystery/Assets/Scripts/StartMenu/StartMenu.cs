@@ -33,6 +33,7 @@ public class StartMenu : MonoBehaviour
     public void ShowChooseCharacter()
     {
         menuAnim.SetBool("isChooseCharacter", true);
+        chooseCharacterMenu.isUpdateItems = true;
     }
 
     public void ShowCreateCharacter()
@@ -60,12 +61,6 @@ public class StartMenu : MonoBehaviour
     public void HideStartMenuItems(string item)
     {
         menuAnim.SetBool(item, false);
-    }
-
-    public void Exit()
-    {
-        string[] characters = Client.SendingMessage(GameManager.username, String.Format("ChooseCharacter_{0}", GameManager.username)).Split(new char[] { '_' }, StringSplitOptions.RemoveEmptyEntries);
-        chooseCharacterMenu.UpdateItems(characters.Length, characters);
     }
 
 }

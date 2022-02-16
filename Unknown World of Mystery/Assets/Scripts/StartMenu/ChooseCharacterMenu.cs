@@ -9,8 +9,21 @@ public class ChooseCharacterMenu : MonoBehaviour
     public RectTransform character;
     public RectTransform content;
 
-    public void UpdateItems(int modelsCount, string[] characters)
+    public bool isUpdateItems { get; set; }
+
+    private void Update()
     {
+        if(isUpdateItems && content.gameObject.activeInHierarchy)
+        {
+            isUpdateItems = false;
+            UpdateItems();
+        }
+    }
+
+    public void UpdateItems()
+    {
+        string[] characters = Client.SendingMessage(GameManager.username, String.Format("ChooseCharacter_{0}", GameManager.username)).Split(new char[] { '_' }, StringSplitOptions.RemoveEmptyEntries);
+        int modelsCount = characters.Length;
         StartCoroutine(GetItems(modelsCount, results => OnReceivedModels(results), characters));
     }
 
