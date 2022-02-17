@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using UnityEngine.SceneManagement;
 
 public class StartMenu : MonoBehaviour
 {
@@ -11,9 +12,12 @@ public class StartMenu : MonoBehaviour
     public ChooseCharacterMenu chooseCharacterMenu;
 
     public Animator menuAnim;
+    public Animator gatesAnim;
 
     public GameObject messageBox;
     public Text message;
+
+    public GameObject loadObject;
 
     public void ShowMenu()
     {
@@ -63,4 +67,21 @@ public class StartMenu : MonoBehaviour
         menuAnim.SetBool(item, false);
     }
 
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+
+    public void StartGame()
+    {
+        gatesAnim.SetBool("isClose", true);
+    }
+
+    private void Update()
+    {
+        if(loadObject.activeInHierarchy)
+        {
+            SceneManager.LoadScene(GameManager.location + 1);
+        }
+    }
 }
