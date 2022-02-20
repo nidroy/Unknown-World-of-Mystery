@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public static string username;
 
+    public static string filePath = "C:\\Settings\\settings.txt";
     public static int screenResolution;
     public static float volumeSounds;
     public static int screenMode;

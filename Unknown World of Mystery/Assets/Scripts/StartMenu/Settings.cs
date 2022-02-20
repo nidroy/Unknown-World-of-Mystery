@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using System.IO;
 
 public class Settings : MonoBehaviour
 {
@@ -34,5 +35,21 @@ public class Settings : MonoBehaviour
         SetSettings(screenResolution.value, volumeSounds.value, screenMode.value, volumeMusic.value);
         Debug.Log(Client.SendingMessage(GameManager.username, String.Format("Apply_{0}_{1}_{2}_{3}_{4}", GameManager.username, screenResolution.value, volumeSounds.value, screenMode.value, volumeMusic.value)));
         startMenu.HideStartMenuItems("isSettings");
+    }
+
+    public string ReadingFile(string filePath)
+    {
+        StreamReader sr = new StreamReader(filePath);
+
+        string result = "";
+
+        while (sr.EndOfStream != true)
+        {
+            result += sr.ReadLine() + "\n";
+        }
+
+        sr.Close();
+
+        return result.Remove(result.Length - 1);
     }
 }

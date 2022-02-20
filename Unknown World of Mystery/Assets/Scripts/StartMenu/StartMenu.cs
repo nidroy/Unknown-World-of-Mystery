@@ -48,6 +48,7 @@ public class StartMenu : MonoBehaviour
     public void ShowSettings()
     {
         settings.GetSettings(GameManager.screenResolution, GameManager.volumeSounds, GameManager.screenMode, GameManager.volumeMusic);
+        Debug.Log(settings.ReadingFile(GameManager.filePath));
         menuAnim.SetBool("isSettings", true);
     }
 
