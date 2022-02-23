@@ -14,26 +14,31 @@ public class Settings : MonoBehaviour
 
     public StartMenu startMenu;
 
-    public void GetSettings(int SR, float VS, int SM, float VM)
+    public void GetSettings(string pathToSettings)
     {
-        screenResolution.value = SR;
-        volumeSounds.value = VS;
-        screenMode.value = SM;
-        volumeMusic.value = VM;
+        string[] setting = ReadingFile(pathToSettings).Split(new char[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
+        IEnumerator settings = setting.GetEnumerator();
+        int counter = 0;
+        while (settings.MoveNext())
+        {
+            setting[counter] = settings.Current.ToString().Substring(settings.Current.ToString().IndexOf(':') + 1);
+            counter++;
+        }
+        screenResolution.value = int.Parse(setting[0]);
+        volumeSounds.value = float.Parse(setting[1]);
+        screenMode.value = int.Parse(setting[2]);
+        volumeMusic.value = float.Parse(setting[3]);
     }
 
-    public void SetSettings(int SR, float VS, int SM, float VM)
+    public void SetSettings(string pathToSettings)
     {
-        GameManager.screenResolution = SR;
-        GameManager.volumeSounds = VS;
-        GameManager.screenMode = SM;
-        GameManager.volumeMusic = VM;
+        string settings = String.Format("screenResolution:{0}\nvolumeSounds:{1}\nscreenMode:{2}\nvolumeMusic:{3}", screenResolution.value, volumeSounds.value, screenMode.value, volumeMusic.value);
+        WritingFile(pathToSettings, settings);
     }
 
     public void Apply()
     {
-        SetSettings(screenResolution.value, volumeSounds.value, screenMode.value, volumeMusic.value);
-        Debug.Log(Client.SendingMessage(GameManager.username, String.Format("Apply_{0}_{1}_{2}_{3}_{4}", GameManager.username, screenResolution.value, volumeSounds.value, screenMode.value, volumeMusic.value)));
+        SetSettings(GameManager.pathToSettings);
         startMenu.HideStartMenuItems("isSettings");
     }
 
@@ -51,5 +56,13 @@ public class Settings : MonoBehaviour
         sr.Close();
 
         return result.Remove(result.Length - 1);
+    }
+
+    public void WritingFile(string filePath, string text)
+    {
+        FileStream file = new FileStream(filePath, FileMode.Create);
+        StreamWriter writer = new StreamWriter(file);
+        writer.Write(text); 
+        writer.Close();
     }
 }

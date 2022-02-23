@@ -62,17 +62,13 @@ namespace Unknown_World_of_Mystery_server
                 new QueryCreateUser(command),
                 new QueryGetCharacters(command),
                 new QueryCreateCharacter(command),
-                new QueryGetSettings(command),
-                new QueryCreateSettings(command),
-                new QueryUpdateSettings(command),
                 new QueryGetCharacterNames(command));
 
             Broker broker = new Broker(
                 new CommandLogIn(command, database),
                 new CommandRegister(database),
                 new CommandChooseCharacter(database),
-                new CommandCreateCharacter(command, database),
-                new CommandApply(database));
+                new CommandCreateCharacter(command, database));
 
             database.FillInTheQueryDictionary();
             broker.FillInTheCommandDictionary();

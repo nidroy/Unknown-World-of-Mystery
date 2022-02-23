@@ -21,16 +21,15 @@ public class StartMenu : MonoBehaviour
 
     public void ShowMenu()
     {
-        string[] serverResponse = authorizationMenu.LogIn().Split(new char[] { '_' }, StringSplitOptions.RemoveEmptyEntries);
-        if (serverResponse[0] == "user found")
+        string serverResponse = authorizationMenu.LogIn();
+        if (serverResponse == "user found")
         {
-            serverResponse = serverResponse[1].Split(new char[] { '-' }, StringSplitOptions.RemoveEmptyEntries);
-            settings.SetSettings(int.Parse(serverResponse[0]), float.Parse(serverResponse[1]), int.Parse(serverResponse[2]), float.Parse(serverResponse[3]));
             menuAnim.SetBool("isMenu", true);
+            ShowMessageBox("A local account is used.");
         }
         else
         {
-            ShowMessageBox("this user does not exist");
+            ShowMessageBox("This user does not exist.");
         }
     }
 
@@ -47,8 +46,7 @@ public class StartMenu : MonoBehaviour
 
     public void ShowSettings()
     {
-        settings.GetSettings(GameManager.screenResolution, GameManager.volumeSounds, GameManager.screenMode, GameManager.volumeMusic);
-        Debug.Log(settings.ReadingFile(GameManager.filePath));
+        settings.GetSettings(GameManager.pathToSettings);
         menuAnim.SetBool("isSettings", true);
     }
 

@@ -14,16 +14,13 @@ namespace Unknown_World_of_Mystery_server
         public Dictionary<string, IQuery> queryDictionary = new Dictionary<string, IQuery>();
         List<IQuery> query = new List<IQuery>();
 
-        public Database(IQuery GetUsernames, IQuery GetPassword, IQuery CreateUser, IQuery GetCharacters, IQuery CreateCharacter, IQuery GetSettings, IQuery CreateSettings, IQuery UpdateSettings, IQuery GetCharacterNames)
+        public Database(IQuery GetUsernames, IQuery GetPassword, IQuery CreateUser, IQuery GetCharacters, IQuery CreateCharacter, IQuery GetCharacterNames)
         {
             query.Add(GetUsernames);
             query.Add(GetPassword);
             query.Add(CreateUser);
             query.Add(GetCharacters);
             query.Add(CreateCharacter);
-            query.Add(GetSettings);
-            query.Add(CreateSettings);
-            query.Add(UpdateSettings);
             query.Add(GetCharacterNames);
         }
 
@@ -35,10 +32,7 @@ namespace Unknown_World_of_Mystery_server
             queryDictionary.Add("CreateUser", query[2]);
             queryDictionary.Add("GetCharacters", query[3]);
             queryDictionary.Add("CreateCharacter", query[4]);
-            queryDictionary.Add("GetSettings", query[5]);
-            queryDictionary.Add("CreateSettings", query[6]);
-            queryDictionary.Add("UpdateSettings", query[7]);
-            queryDictionary.Add("GetCharacterNames", query[8]);
+            queryDictionary.Add("GetCharacterNames", query[5]);
         }
 
         public string ExecuteQuery(string query)

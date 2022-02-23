@@ -7,11 +7,11 @@ public class GameManager : MonoBehaviour
 {
     public static string username;
 
-    public static string filePath = "C:\\Settings\\settings.txt";
-    public static int screenResolution;
-    public static float volumeSounds;
-    public static int screenMode;
-    public static float volumeMusic;
+    public static bool isLocalAccount;
+    public static string localUsername = "username";
+    public static string localPassword = "password";
+
+    public static string pathToSettings = "C:\\Settings\\settings.txt";
 
     public static string characterName;
     public static int characterLevel;
