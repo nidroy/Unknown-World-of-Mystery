@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
-using System.IO;
 
 public class Settings : MonoBehaviour
 {
@@ -13,10 +12,11 @@ public class Settings : MonoBehaviour
     public Slider volumeMusic;
 
     public StartMenu startMenu;
+    public FileManager fileManager;
 
-    public void GetSettings(string pathToSettings)
+    public string[] GetSettings(string pathToSettings)
     {
-        string[] setting = ReadingFile(pathToSettings).Split(new char[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
+        string[] setting = fileManager.ReadingFile(pathToSettings).Split(new char[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
         IEnumerator settings = setting.GetEnumerator();
         int counter = 0;
         while (settings.MoveNext())
@@ -24,45 +24,31 @@ public class Settings : MonoBehaviour
             setting[counter] = settings.Current.ToString().Substring(settings.Current.ToString().IndexOf(':') + 1);
             counter++;
         }
+
+        AudioManager.volumeSounds = float.Parse(setting[1]);
+        AudioManager.volumeMusic = float.Parse(setting[3]);
+
+        return setting;
+    }
+
+    public void SetSettings(string pathToSettings)
+    {
+        string settings = String.Format("screenResolution:{0}\nvolumeSounds:{1}\nscreenMode:{2}\nvolumeMusic:{3}", screenResolution.value, volumeSounds.value, screenMode.value, volumeMusic.value);
+        fileManager.WritingFile(pathToSettings, settings);
+    }
+
+    public void UpdateSettings(string[] setting)
+    {
         screenResolution.value = int.Parse(setting[0]);
         volumeSounds.value = float.Parse(setting[1]);
         screenMode.value = int.Parse(setting[2]);
         volumeMusic.value = float.Parse(setting[3]);
     }
 
-    public void SetSettings(string pathToSettings)
-    {
-        string settings = String.Format("screenResolution:{0}\nvolumeSounds:{1}\nscreenMode:{2}\nvolumeMusic:{3}", screenResolution.value, volumeSounds.value, screenMode.value, volumeMusic.value);
-        WritingFile(pathToSettings, settings);
-    }
-
     public void Apply()
     {
-        SetSettings(GameManager.pathToSettings);
+        SetSettings(FileManager.pathToSettings);
+        GetSettings(FileManager.pathToSettings);
         startMenu.HideStartMenuItems("isSettings");
-    }
-
-    public string ReadingFile(string filePath)
-    {
-        StreamReader sr = new StreamReader(filePath);
-
-        string result = "";
-
-        while (sr.EndOfStream != true)
-        {
-            result += sr.ReadLine() + "\n";
-        }
-
-        sr.Close();
-
-        return result.Remove(result.Length - 1);
-    }
-
-    public void WritingFile(string filePath, string text)
-    {
-        FileStream file = new FileStream(filePath, FileMode.Create);
-        StreamWriter writer = new StreamWriter(file);
-        writer.Write(text); 
-        writer.Close();
     }
 }

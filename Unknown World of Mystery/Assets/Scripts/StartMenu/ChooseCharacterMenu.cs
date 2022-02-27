@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 using System;
 
 public class ChooseCharacterMenu : MonoBehaviour
@@ -10,6 +11,7 @@ public class ChooseCharacterMenu : MonoBehaviour
     public RectTransform content;
 
     public StartMenu startMenu;
+    public AudioManager sound;
 
     public bool isUpdateItems { get; set; }
 
@@ -60,6 +62,7 @@ public class ChooseCharacterMenu : MonoBehaviour
                 GameManager.timeInTheGame = model.timeInTheGame;
                 GameManager.location = model.location;
                 startMenu.StartGame();
+                sound.PlayAudioClick();
             }
         );
     }

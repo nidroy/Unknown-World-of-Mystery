@@ -46,7 +46,7 @@ public class StartMenu : MonoBehaviour
 
     public void ShowSettings()
     {
-        settings.GetSettings(GameManager.pathToSettings);
+        settings.UpdateSettings(settings.GetSettings(FileManager.pathToSettings));
         menuAnim.SetBool("isSettings", true);
     }
 
@@ -74,6 +74,11 @@ public class StartMenu : MonoBehaviour
     public void StartGame()
     {
         gatesAnim.SetBool("isClose", true);
+    }
+
+    private void Start()
+    {
+        settings.GetSettings(FileManager.pathToSettings);
     }
 
     private void Update()
