@@ -9,6 +9,12 @@ public class Screensaver : MonoBehaviour
     public GameObject closeObject;
     public Animator gatesAnim;
 
+    void Start()
+    {
+        Settings.GetSettings(FileManager.pathToSettings);
+        ScreenManager.SetScreen();
+    }
+
     void Update()
     {
         if(closeObject.activeInHierarchy)

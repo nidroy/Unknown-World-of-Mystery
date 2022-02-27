@@ -25,7 +25,6 @@ public class StartMenu : MonoBehaviour
         if (serverResponse == "user found")
         {
             menuAnim.SetBool("isMenu", true);
-            ShowMessageBox("A local account is used.");
         }
         else
         {
@@ -46,7 +45,7 @@ public class StartMenu : MonoBehaviour
 
     public void ShowSettings()
     {
-        settings.UpdateSettings(settings.GetSettings(FileManager.pathToSettings));
+        settings.UpdateSettings(Settings.GetSettings(FileManager.pathToSettings));
         menuAnim.SetBool("isSettings", true);
     }
 
@@ -74,11 +73,6 @@ public class StartMenu : MonoBehaviour
     public void StartGame()
     {
         gatesAnim.SetBool("isClose", true);
-    }
-
-    private void Start()
-    {
-        settings.GetSettings(FileManager.pathToSettings);
     }
 
     private void Update()

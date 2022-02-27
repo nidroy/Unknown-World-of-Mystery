@@ -5,9 +5,9 @@ using System.IO;
 
 public class FileManager : MonoBehaviour
 {
-    public static string pathToSettings = "C:\\Settings\\settings.txt";
+    public static string pathToSettings = "C:\\Unknown World of Mystery\\Settings\\settings.txt";
 
-    public string ReadingFile(string filePath)
+    public static string ReadingFile(string filePath)
     {
         StreamReader sr = new StreamReader(filePath);
 
@@ -23,7 +23,7 @@ public class FileManager : MonoBehaviour
         return result.Remove(result.Length - 1);
     }
 
-    public void WritingFile(string filePath, string text)
+    public static void WritingFile(string filePath, string text)
     {
         FileStream file = new FileStream(filePath, FileMode.Create);
         StreamWriter writer = new StreamWriter(file);

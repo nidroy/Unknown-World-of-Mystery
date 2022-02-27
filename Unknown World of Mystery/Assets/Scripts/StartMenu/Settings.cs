@@ -12,11 +12,10 @@ public class Settings : MonoBehaviour
     public Slider volumeMusic;
 
     public StartMenu startMenu;
-    public FileManager fileManager;
 
-    public string[] GetSettings(string pathToSettings)
+    public static string[] GetSettings(string pathToSettings)
     {
-        string[] setting = fileManager.ReadingFile(pathToSettings).Split(new char[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
+        string[] setting = FileManager.ReadingFile(pathToSettings).Split(new char[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
         IEnumerator settings = setting.GetEnumerator();
         int counter = 0;
         while (settings.MoveNext())
@@ -25,7 +24,9 @@ public class Settings : MonoBehaviour
             counter++;
         }
 
+        ScreenManager.screenResolution = int.Parse(setting[0]);
         AudioManager.volumeSounds = float.Parse(setting[1]);
+        ScreenManager.screenMode = int.Parse(setting[2]);
         AudioManager.volumeMusic = float.Parse(setting[3]);
 
         return setting;
@@ -34,7 +35,7 @@ public class Settings : MonoBehaviour
     public void SetSettings(string pathToSettings)
     {
         string settings = String.Format("screenResolution:{0}\nvolumeSounds:{1}\nscreenMode:{2}\nvolumeMusic:{3}", screenResolution.value, volumeSounds.value, screenMode.value, volumeMusic.value);
-        fileManager.WritingFile(pathToSettings, settings);
+        FileManager.WritingFile(pathToSettings, settings);
     }
 
     public void UpdateSettings(string[] setting)
@@ -49,6 +50,7 @@ public class Settings : MonoBehaviour
     {
         SetSettings(FileManager.pathToSettings);
         GetSettings(FileManager.pathToSettings);
+        ScreenManager.SetScreen();
         startMenu.HideStartMenuItems("isSettings");
     }
 }
