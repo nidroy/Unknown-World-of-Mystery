@@ -7867,7 +7867,6 @@ MonoBehaviour:
   screenMode: {fileID: 2143941925}
   volumeMusic: {fileID: 1331031252}
   startMenu: {fileID: 188411304}
-  fileManager: {fileID: 188411305}
 --- !u!1 &1066246404
 GameObject:
   m_ObjectHideFlags: 0
@@ -14646,7 +14645,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2932962923345946936, guid: 4948671a48866b04bb975a8f0abaf5d4, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2932962923345946936, guid: 4948671a48866b04bb975a8f0abaf5d4, type: 3}
       propertyPath: m_AnchorMax.x
@@ -14721,13 +14720,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4552086986843087956, guid: 4948671a48866b04bb975a8f0abaf5d4, type: 3}
-      propertyPath: m_Volume
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4552086986843087956, guid: 4948671a48866b04bb975a8f0abaf5d4, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a2bd8a9c0b472ad4aa0fe6c2882ba98e, type: 3}
     - target: {fileID: 5504780753690576850, guid: 4948671a48866b04bb975a8f0abaf5d4, type: 3}
       propertyPath: m_Name
       value: LoadObject

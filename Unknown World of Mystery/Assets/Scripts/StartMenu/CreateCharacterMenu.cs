@@ -7,10 +7,14 @@ using System;
 
 public class CreateCharacterMenu : MonoBehaviour
 {
-    public InputField characterName;
-    public Dropdown characterLevel;
+    public InputField characterName;// имя персонажа
+    public Dropdown characterLevel;// уровень персонажа
 
-    public StartMenu startMenu;
+    public StartMenu startMenu;// начальное меню
+
+    /// <summary>
+    /// кнопка создания персонажа
+    /// </summary>
     public void Create()
     {
         if (GameManager.isLocalAccount)

@@ -5,6 +5,9 @@ using System.Threading;
 
 namespace Unknown_World_of_Mystery_server
 {
+    /// <summary>
+    /// создание патоков для клиентов
+    /// </summary>
     class Program
     {
         const int port = 8888;

@@ -7,14 +7,17 @@ using System;
 
 public class ChooseCharacterMenu : MonoBehaviour
 {
-    public RectTransform character;
-    public RectTransform content;
+    public RectTransform character;// префаб персонажа
+    public RectTransform content;// контент
 
-    public StartMenu startMenu;
-    public AudioManager sound;
+    public StartMenu startMenu;// начальное меню
+    public AudioManager sound;// звук нажатия на кнопку
 
-    public bool isUpdateItems { get; set; }
+    public bool isUpdateItems { get; set; }// обновление элементов
 
+    /// <summary>
+    /// обновить элементы после активации меню выбора персонажей
+    /// </summary>
     private void Update()
     {
         if(isUpdateItems && content.gameObject.activeInHierarchy)
@@ -24,6 +27,9 @@ public class ChooseCharacterMenu : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// обновить элементы
+    /// </summary>
     public void UpdateItems()
     {
         string[] characters = { "Character1-0-0-1", "Character2-1-0-1", "Character3-2-0-1" };
@@ -50,6 +56,11 @@ public class ChooseCharacterMenu : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// присвоение графическим элементам префаба персонажа элементы персонажа
+    /// </summary>
+    /// <param name="viewGameObject">класс графических элементов префаба персонажа</param>
+    /// <param name="model">класс элементов персонажа</param>
     void InitializeItemView(GameObject viewGameObject, ItemModel model)
     {
         ItemView view = new ItemView(viewGameObject.transform);
@@ -67,6 +78,13 @@ public class ChooseCharacterMenu : MonoBehaviour
         );
     }
 
+    /// <summary>
+    /// добавление персонажу элементов
+    /// </summary>
+    /// <param name="count">число персонажей</param>
+    /// <param name="callback">класс элементов персонажа</param>
+    /// <param name="characters">элементы персонажа</param>
+    /// <returns>инумератор</returns>
     IEnumerator GetItems(int count, System.Action<ItemModel[]> callback, string[] characters)
     {
         var results = new ItemModel[count];
@@ -84,6 +102,9 @@ public class ChooseCharacterMenu : MonoBehaviour
         yield return 0;
     }
 
+    /// <summary>
+    /// графические элементы префаба персонажа
+    /// </summary>
     public class ItemView
     {
         public Text name;
@@ -96,6 +117,9 @@ public class ChooseCharacterMenu : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// элементы персонажа
+    /// </summary>
     public class ItemModel
     {
         public string name;

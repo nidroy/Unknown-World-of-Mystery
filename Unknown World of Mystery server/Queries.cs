@@ -10,8 +10,16 @@ using System.Globalization;
 
 namespace Unknown_World_of_Mystery_server
 {
+    /// <summary>
+    /// запрос на получения имени пользователя
+    /// </summary>
     public class QueryGetUsernames : IQuery
     {
+        /// <summary>
+        /// выполнение запроса
+        /// </summary>
+        /// <param name="connectionString">строка подключения</param>
+        /// <returns></returns>
         public string Execute(string connectionString)
         {
             List<string> usernames = new List<string>();
@@ -40,15 +48,27 @@ namespace Unknown_World_of_Mystery_server
         }
     }
 
+    /// <summary>
+    /// запрос на получения пароля
+    /// </summary>
     public class QueryGetPassword : IQuery
     {
-        string[] user;
-
+        string[] user;// имя пользователя
+        
+        /// <summary>
+        /// конструктор
+        /// </summary>
+        /// <param name="user">элементы пользователя</param>
         public QueryGetPassword(string[] user)
         {
             this.user = user;
         }
 
+        /// <summary>
+        /// выполнение запроса
+        /// </summary>
+        /// <param name="connectionString">строка подключения</param>
+        /// <returns>пароль</returns>
         public string Execute(string connectionString)
         {
             string password = "";
@@ -71,15 +91,27 @@ namespace Unknown_World_of_Mystery_server
         }
     }
 
+    /// <summary>
+    /// запрос на создания пользователя
+    /// </summary>
     public class QueryCreateUser : IQuery
     {
-        string[] user;
+        string[] user;// имя пользователя и пароль
 
+        /// <summary>
+        /// конструктор
+        /// </summary>
+        /// <param name="user">элементы пользователя</param>
         public QueryCreateUser(string[] user)
         {
             this.user = user;
         }
 
+        /// <summary>
+        /// выполнение запроса
+        /// </summary>
+        /// <param name="connectionString">строка подключения</param>
+        /// <returns>подтверждение создания персонажа</returns>
         public string Execute(string connectionString)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -96,15 +128,27 @@ namespace Unknown_World_of_Mystery_server
         }
     }
 
+    /// <summary>
+    /// запрос на получение персонажей
+    /// </summary>
     public class QueryGetCharacters : IQuery
     {
-        string[] user;
+        string[] user;// имя пользователя
 
+        /// <summary>
+        /// конструктор
+        /// </summary>
+        /// <param name="user">элементы пользователя</param>
         public QueryGetCharacters(string[] user)
         {
             this.user = user;
         }
 
+        /// <summary>
+        /// выполнение запроса
+        /// </summary>
+        /// <param name="connectionString">строка подключения</param>
+        /// <returns>элементы всех персонажей</returns>
         public string Execute(string connectionString)
         {
             List<string> characters = new List<string>();
@@ -137,15 +181,27 @@ namespace Unknown_World_of_Mystery_server
         }
     }
 
+    /// <summary>
+    /// запрос на создания персонажа
+    /// </summary>
     public class QueryCreateCharacter : IQuery
     {
-        string[] character;
+        string[] character;// имя пользователя, имя персонажа, уровень персонажа
 
+        /// <summary>
+        /// конструктор
+        /// </summary>
+        /// <param name="character">элементы персонажа</param>
         public QueryCreateCharacter(string[] character)
         {
             this.character = character;
         }
 
+        /// <summary>
+        /// выполнение запроса
+        /// </summary>
+        /// <param name="connectionString">строка подключения</param>
+        /// <returns>подтверждение создания персонажа</returns>
         public string Execute(string connectionString)
         {   
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -162,15 +218,27 @@ namespace Unknown_World_of_Mystery_server
         }
     }
 
+    /// <summary>
+    /// запрос на получение имен персонажей
+    /// </summary>
     public class QueryGetCharacterNames : IQuery
     {
-        string[] user;
+        string[] user;// имя пользователя
 
+        /// <summary>
+        /// конструктор
+        /// </summary>
+        /// <param name="user">элементы пользователя</param>
         public QueryGetCharacterNames(string[] user)
         {
             this.user = user;
         }
 
+        /// <summary>
+        /// выполнение запроса
+        /// </summary>
+        /// <param name="connectionString">строка подключения</param>
+        /// <returns>имена персонажей</returns>
         public string Execute(string connectionString)
         {
             string characterNames = "";

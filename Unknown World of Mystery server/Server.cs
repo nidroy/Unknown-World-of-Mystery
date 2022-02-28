@@ -4,6 +4,9 @@ using System.Text;
 
 namespace Unknown_World_of_Mystery_server
 {
+    /// <summary>
+    /// сервер получает команды и формирует ответ
+    /// </summary>
     public class Server
     {
         public TcpClient client;
@@ -54,6 +57,11 @@ namespace Unknown_World_of_Mystery_server
             }
         }
 
+        /// <summary>
+        /// формирование ответа сервера
+        /// </summary>
+        /// <param name="command">команда</param>
+        /// <returns>ответ сервера</returns>
         public string FormResponse(string[] command)
         {
             Database database = new Database(

@@ -5,14 +5,14 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public static string username;
+    public static string username; // имя пользователя
 
-    public static bool isLocalAccount;
-    public static string localUsername = "username";
-    public static string localPassword = "password";
+    public static bool isLocalAccount; // вход в локальный аккаунт
+    public static string localUsername = "username"; // имя пользователя для входа в локальный аккаунт
+    public static string localPassword = "password"; // пароль для входа в локальный аккаунт
 
-    public static string characterName;
-    public static int characterLevel;
-    public static string timeInTheGame;
-    public static int location;
+    public static string characterName; // имя персонажа
+    public static int characterLevel; // уровень персонажа
+    public static string timeInTheGame; // время в игре
+    public static int location; // локация
 }

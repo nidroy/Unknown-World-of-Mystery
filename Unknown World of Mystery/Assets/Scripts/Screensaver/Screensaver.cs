@@ -5,16 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class Screensaver : MonoBehaviour
 {
-    public GameObject loadObject;
-    public GameObject closeObject;
-    public Animator gatesAnim;
+    public GameObject loadObject;// объект загрузки
+    public GameObject closeObject;// объект закрытия
 
+    public Animator gatesAnim;// анимации ворот
+
+    /// <summary>
+    /// применение настроек
+    /// </summary>
     void Start()
     {
         Settings.GetSettings(FileManager.pathToSettings);
         ScreenManager.SetScreen();
     }
 
+    /// <summary>
+    /// проигрывание начальной заставки игры
+    /// </summary>
     void Update()
     {
         if(closeObject.activeInHierarchy)

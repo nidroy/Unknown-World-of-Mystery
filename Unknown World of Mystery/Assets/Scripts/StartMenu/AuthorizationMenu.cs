@@ -6,11 +6,15 @@ using UnityEngine.UI;
 
 public class AuthorizationMenu : MonoBehaviour
 {
-    public InputField username;
-    public InputField password;
+    public InputField username;// имя пользователя
+    public InputField password;// пароль
 
-    public StartMenu startMenu;
+    public StartMenu startMenu;// начальное меню
 
+    /// <summary>
+    /// кнопка авторизации
+    /// </summary>
+    /// <returns>строка существование пользователя</returns>
     public string LogIn()
     {
         if (username.text != "" && password.text != "")
@@ -35,6 +39,9 @@ public class AuthorizationMenu : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// кнопка регистрации
+    /// </summary>
     public void Register()
     {
         if(username.text != "" && password.text != "")
