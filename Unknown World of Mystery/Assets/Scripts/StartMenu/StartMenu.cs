@@ -82,6 +82,8 @@ public class StartMenu : MonoBehaviour
     /// <param name="item">название элемента меню</param>
     public void HideStartMenuItems(string item)
     {
+        if (item == "isMenu")
+            GameManager.isLocalAccount = false;
         menuAnim.SetBool(item, false);
     }
 

@@ -1,3 +1,5 @@
+using System.Diagnostics;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -13,7 +15,10 @@ public class Screensaver : MonoBehaviour
     /// </summary>
     void Start()
     {
-        System.Diagnostics.Process.Start(Application.dataPath + "/Server/Unknown World of Mystery server.exe");
+        if (!Process.GetProcesses().Any(p => p.ProcessName == Application.dataPath + "/Server/Unknown World of Mystery server.exe"))
+        {
+            Process.Start(Application.dataPath + "/Server/Unknown World of Mystery server.exe");
+        }
         FileManager.pathToSettings = Application.dataPath + "/Settings/settings.txt";
         Settings.GetSettings(FileManager.pathToSettings);
         ScreenManager.SetScreen();
