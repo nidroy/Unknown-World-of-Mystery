@@ -11,10 +11,10 @@ namespace Unknown_World_of_Mystery_server
     /// </summary>
     public class Database
     {
-        // строка подключения к бд на пк
-        const string connectionString = "Data Source=MYCOMPUTER;Initial Catalog='Unknown World of Mystery database';Integrated Security=True";
-        // строка подключения к бд на ноуте
-        //const string connectionString = "Data Source=MYLAPTOP;Initial Catalog='Unknown World of Mystery database';Integrated Security=True";
+        // путь к бд
+        static string path = Environment.CurrentDirectory + "\\Database\\Unknown World of Mystery database.mdf";
+        // строка подключения
+        static string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename="+ path +";Integrated Security=True;Connect Timeout=30";
 
         /// <summary>
         /// словарь запросов

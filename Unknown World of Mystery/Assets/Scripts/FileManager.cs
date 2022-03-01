@@ -1,14 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 
 public class FileManager : MonoBehaviour
 {
-    /// <summary>
-    /// путь к файлу с настройками
-    /// </summary>
-    public static string pathToSettings = "C:\\Unknown World of Mystery\\Settings\\settings.txt"; 
+    public static string pathToSettings; // путь к файлу с настройками
 
     /// <summary>
     /// чтение файла
