@@ -15,11 +15,10 @@ public class Screensaver : MonoBehaviour
     /// </summary>
     void Start()
     {
-        if (!Process.GetProcesses().Any(p => p.ProcessName == Application.dataPath + "/Server/Unknown World of Mystery server.exe"))
+        if (!Process.GetProcesses().Any(p => p.ProcessName == FileManager.serverPath))
         {
-            Process.Start(Application.dataPath + "/Server/Unknown World of Mystery server.exe");
+            Process.Start(FileManager.serverPath);
         }
-        FileManager.pathToSettings = Application.dataPath + "/Settings/settings.txt";
         Settings.GetSettings(FileManager.pathToSettings);
         ScreenManager.SetScreen();
     }

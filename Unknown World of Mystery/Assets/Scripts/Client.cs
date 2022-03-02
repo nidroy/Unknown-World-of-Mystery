@@ -17,6 +17,7 @@ public class Client
     public static string SendingMessage(string username, string message)
     {
         TcpClient tcpClient = null;
+        ushort key;
         try
         {
             tcpClient = new TcpClient(address, port);
@@ -26,7 +27,11 @@ public class Client
                 // ввод сообщения
                 message = String.Format("{0}: {1}", username, message);
                 // преобразуем сообщение в массив байтов
-                byte[] data = Encoding.Unicode.GetBytes(message);
+                // меняем ключ
+                Random random = new Random();
+                FileManager.WritingFile(FileManager.pathToKey, random.Next(0, 39321).ToString());
+                key = ushort.Parse(FileManager.ReadingFile(FileManager.pathToKey));
+                byte[] data = Encoding.Unicode.GetBytes(EncryptionLibrary.EncryptionClass.EncryptDecrypt(message, key));
                 // отправка сообщения
                 stream.Write(data, 0, data.Length);
                 // получаем ответ
@@ -40,6 +45,9 @@ public class Client
                 }
                 while (stream.DataAvailable);
                 message = builder.ToString();
+                // расшифровываем ответ
+                key = ushort.Parse(FileManager.ReadingFile(FileManager.pathToKey));
+                message = EncryptionLibrary.EncryptionClass.EncryptDecrypt(message, key);
                 return message;
             }
         }

@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EncryptionLibrary">
+      <HintPath>..\EncryptionLibrary\bin\Debug\EncryptionLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.SqlClient, Version=4.6.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -49,6 +52,7 @@
     <Compile Include="Broker.cs" />
     <Compile Include="Commands.cs" />
     <Compile Include="Database.cs" />
+    <Compile Include="FileManager.cs" />
     <Compile Include="ICommand.cs" />
     <Compile Include="IQuery.cs" />
     <Compile Include="Queries.cs" />

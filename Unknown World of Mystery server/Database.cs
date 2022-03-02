@@ -8,10 +8,8 @@ namespace Unknown_World_of_Mystery_server
     /// </summary>
     public class Database
     {
-        // путь к бд
-        static string path = Environment.CurrentDirectory + "\\Database\\Unknown World of Mystery database.mdf";
         // строка подключения
-        static string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename="+ path +";Integrated Security=True;Connect Timeout=30";
+        static string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename="+ FileManager.pathToDatabase +";Integrated Security=True;Connect Timeout=30";
 
         /// <summary>
         /// словарь запросов

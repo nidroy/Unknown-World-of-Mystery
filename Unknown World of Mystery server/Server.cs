@@ -19,6 +19,7 @@ namespace Unknown_World_of_Mystery_server
         public void Process()
         {
             NetworkStream stream = null;
+            ushort key;
             try
             {
                 stream = client.GetStream();
@@ -35,11 +36,19 @@ namespace Unknown_World_of_Mystery_server
                     }
                     while (stream.DataAvailable);
                     string message = builder.ToString();
+                    // расшифровываем сообщение
+                    key = ushort.Parse(FileManager.ReadingFile(FileManager.pathToKey));
+                    message = EncryptionLibrary.EncryptionClass.EncryptDecrypt(message, key);
                     Console.WriteLine(message);
                     // отправляем сообщение
                     message = message.Substring(message.IndexOf(':') + 1).Trim();
                     string[] command = message.Split(new char[] { '_' }, StringSplitOptions.RemoveEmptyEntries);
-                    data = Encoding.Unicode.GetBytes(FormResponse(command));
+                    // зашифровываем ответ
+                    // меняем ключ
+                    Random random = new Random();
+                    FileManager.WritingFile(FileManager.pathToKey, random.Next(0, 39321).ToString());
+                    key = ushort.Parse(FileManager.ReadingFile(FileManager.pathToKey));
+                    data = Encoding.Unicode.GetBytes(EncryptionLibrary.EncryptionClass.EncryptDecrypt(FormResponse(command), key));
                     stream.Write(data, 0, data.Length);
                     break;
                 }

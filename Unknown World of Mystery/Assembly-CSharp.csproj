@@ -72,6 +72,8 @@
     <None Include="Assets\PackageManager\DemonicUI\Shaders\Fluid.shader" />
     <None Include="Assets\PackageManager\Worlds\Shaders\FSCG.cginc" />
     <None Include="Assets\PackageManager\Worlds\Shaders\Particles\ParticleAdditiveSoft.shader" />
+    <None Include="Assets\Scripts\Libraries\EncryptionLibrary.dll" />
+    <None Include="Assets\Key\key.txt" />
     <None Include="Assets\PackageManager\Worlds\Shaders\WaterDistortion.shader" />
     <None Include="Assets\PackageManager\DemonicUI\Shaders\BarShader.shader" />
     <None Include="Assets\PackageManager\Worlds\Shaders\WaterTexture.shader" />
@@ -303,6 +305,9 @@
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="EncryptionLibrary">
+      <HintPath>Assets\Scripts\Libraries\EncryptionLibrary.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>P:\Program Files\2020.3.25f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>
