@@ -7,8 +7,8 @@ public class AudioManager: MonoBehaviour
     public AudioClip clickSound;// звук нажатия  
     public AudioClip hoverSound;// звук наведения
 
-    public static float volumeSounds;// громкость звуков
-    public static float volumeMusic;// громкость музыки
+    public static float volumeSounds = 1f;// громкость звуков
+    public static float volumeMusic = 0.5f;// громкость музыки
 
     /// <summary>
     /// тригер воспроизведения звука нажатия
