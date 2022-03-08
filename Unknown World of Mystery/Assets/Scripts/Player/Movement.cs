@@ -8,22 +8,42 @@ public class Movement : MonoBehaviour
     public float speed;
 
     private Vector2 moveVector;
+    private int direction;
+
+    public void ChangeDirection(int newDirection)
+    {
+        direction = newDirection;
+    }
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        direction = 0;
     }
 
-    private void Update()
+    void Update()
     {
-        Move(1);
+        Move(direction);
     }
 
-    public void Move(int direction)
+    private void Move(int direction)
     {
-        //moveVector.x *= direction;
-        moveVector.x = Input.GetAxis("Horizontal");
-        Debug.Log(moveVector.x);
+        moveVector.x = direction;
+        if(direction == 0)
+            moveVector.x = Input.GetAxis("Horizontal");
+        if(moveVector.x < 0)
+        {
+            Flip(180);
+        }
+        else if (moveVector.x > 0)
+        {
+            Flip(0);
+        }
         rb.velocity = new Vector2(moveVector.x * speed, rb.velocity.y);
+    }
+
+    private void Flip(int rotation)
+    {
+        rb.transform.rotation = Quaternion.Euler(0, rotation, 0);
     }
 }
