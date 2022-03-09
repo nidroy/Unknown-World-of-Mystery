@@ -15,7 +15,6 @@ public class AudioManager: MonoBehaviour
     /// </summary>
     public void PlayAudioClick()
     {
-        sounds.volume = volumeSounds;
         sounds.PlayOneShot(clickSound);
     }
 
@@ -24,8 +23,37 @@ public class AudioManager: MonoBehaviour
     /// </summary>
     public void PlayAudioHover()
     {
-        sounds.volume = volumeSounds;
         sounds.PlayOneShot(hoverSound);
+    }
+
+    /// <summary>
+    /// воспроизведение звуков
+    /// </summary>
+    /// <param name="sound">звук</param>
+    public void PlaySounds(AudioSource sound)
+    {
+        sound.volume = volumeSounds;
+        sound.Play();
+    }
+
+    /// <summary>
+    /// воспроизведение музыки
+    /// </summary>
+    /// <param name="music">музыка</param>
+    public void PlayMusic(AudioSource music)
+    {
+        music.volume = volumeMusic;
+        music.Play();
+    }
+
+    /// <summary>
+    /// остановка воспроизведения звука
+    /// </summary>
+    /// <param name="sound">звук</param>
+
+    public void StopAudio(AudioSource sound)
+    {
+        sound.Stop();
     }
 
     /// <summary>
@@ -34,5 +62,6 @@ public class AudioManager: MonoBehaviour
     private void Update()
     {
         music.volume = volumeMusic;
+        sounds.volume = volumeSounds;
     }
 }

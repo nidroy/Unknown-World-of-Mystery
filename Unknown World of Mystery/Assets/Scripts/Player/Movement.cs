@@ -5,6 +5,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     public Rigidbody2D rb;
+    public Animator playerAnim;
     public float speed;
 
     private Vector2 moveVector;
@@ -31,12 +32,18 @@ public class Movement : MonoBehaviour
         moveVector.x = direction;
         if(direction == 0)
             moveVector.x = Input.GetAxis("Horizontal");
-        if(moveVector.x < 0)
+        if (moveVector.x == 0)
         {
+            playerAnim.SetBool("isRun", false);
+        }
+        else if (moveVector.x < 0)
+        {
+            playerAnim.SetBool("isRun", true);
             Flip(180);
         }
         else if (moveVector.x > 0)
         {
+            playerAnim.SetBool("isRun", true);
             Flip(0);
         }
         rb.velocity = new Vector2(moveVector.x * speed, rb.velocity.y);

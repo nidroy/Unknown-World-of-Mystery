@@ -15,10 +15,10 @@ public class Screensaver : MonoBehaviour
     /// </summary>
     void Start()
     {
-        if (!Process.GetProcesses().Any(p => p.ProcessName == FileManager.serverPath))
-        {
-            Process.Start(FileManager.serverPath);
-        }
+        //if (!Process.GetProcesses().Any(p => p.ProcessName == FileManager.serverPath))
+        //{
+        //    Process.Start(FileManager.serverPath);
+        //}
         Settings.GetSettings(FileManager.pathToSettings);
         ScreenManager.SetScreen();
     }
