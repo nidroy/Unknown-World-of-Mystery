@@ -68,6 +68,8 @@
     <Compile Include="Assets\Scripts\StartMenu\Settings.cs" />
     <Compile Include="Assets\Scripts\Parallax\ParallaxLayer.cs" />
     <Compile Include="Assets\Scripts\Player\Movement.cs" />
+    <Compile Include="Assets\Scripts\FirstLocation\FirstLocation.cs" />
+    <Compile Include="Assets\Scripts\Player\Interaction.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\PackageManager\DemonicUI\Shaders\Fluid.shader" />

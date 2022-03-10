@@ -15,6 +15,7 @@ public class AudioManager: MonoBehaviour
     /// </summary>
     public void PlayAudioClick()
     {
+        sounds.volume = volumeSounds;
         sounds.PlayOneShot(clickSound);
     }
 
@@ -23,6 +24,7 @@ public class AudioManager: MonoBehaviour
     /// </summary>
     public void PlayAudioHover()
     {
+        sounds.volume = volumeSounds;
         sounds.PlayOneShot(hoverSound);
     }
 
@@ -62,6 +64,5 @@ public class AudioManager: MonoBehaviour
     private void Update()
     {
         music.volume = volumeMusic;
-        sounds.volume = volumeSounds;
     }
 }
