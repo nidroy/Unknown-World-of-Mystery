@@ -12,8 +12,7 @@ GameObject:
   - component: {fileID: 6915793114530195774}
   - component: {fileID: 6915793114530195769}
   - component: {fileID: 6915793114530195768}
-  - component: {fileID: 6915793114530195770}
-  - component: {fileID: 6915793114530195716}
+  - component: {fileID: 2492967815570785108}
   - component: {fileID: 6915793114530195771}
   - component: {fileID: 6915793114530195717}
   m_Layer: 0
@@ -135,7 +134,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.92, y: 1.5}
   m_EdgeRadius: 0
---- !u!114 &6915793114530195770
+--- !u!114 &2492967815570785108
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,26 +143,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 6915793114530195773}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f07e6b37f449f344c8ad08dafa560b0f, type: 3}
+  m_Script: {fileID: 11500000, guid: 510b1a46f61ff6f40ba643f73edde5bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 6915793114530195769}
-  playerAnim: {fileID: 6915793114530195771}
+  characterAnim: {fileID: 6915793114530195771}
   steps: {fileID: 6915793114530195717}
   speed: 6.5
---- !u!114 &6915793114530195716
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6915793114530195773}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51b860950f91e2345a239eecbea33965, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  houseAnim: {fileID: 0}
 --- !u!95 &6915793114530195771
 Animator:
   serializedVersion: 3

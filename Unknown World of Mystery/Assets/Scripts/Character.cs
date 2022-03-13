@@ -2,18 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Movement : MonoBehaviour
+public abstract class Character : MonoBehaviour
 {
     public Rigidbody2D rb;
-    public Animator playerAnim;
+    public Animator characterAnim;
     public AudioSource steps;
     public float speed;
 
     private Vector2 moveVector;
     private int direction;
-    private bool isFloor;
 
-    public static bool isMove;
+    public bool isMove { get; set; }
+    public bool isFloor { get; set; }
 
     public void ChangeDirection(int newDirection)
     {
@@ -34,7 +34,7 @@ public class Movement : MonoBehaviour
             Move(direction);
         else
         {
-            playerAnim.SetBool("isRun", false);
+            characterAnim.SetBool("isRun", false);
             steps.mute = true;
         }
     }
@@ -42,11 +42,9 @@ public class Movement : MonoBehaviour
     private void Move(int direction)
     {
         moveVector.x = direction;
-        if(direction == 0)
-            moveVector.x = Input.GetAxis("Horizontal");
         if (moveVector.x == 0)
         {
-            playerAnim.SetBool("isRun", false);
+            characterAnim.SetBool("isRun", false);
             steps.mute = true;
         }
         else if (moveVector.x < 0)
@@ -54,7 +52,7 @@ public class Movement : MonoBehaviour
             Flip(180);
             if (isFloor)
             {
-                playerAnim.SetBool("isRun", true);
+                characterAnim.SetBool("isRun", true);
                 steps.mute = false;
             }
         }
@@ -63,7 +61,7 @@ public class Movement : MonoBehaviour
             Flip(0);
             if (isFloor)
             {
-                playerAnim.SetBool("isRun", true);
+                characterAnim.SetBool("isRun", true);
                 steps.mute = false;
             }
         }
@@ -73,22 +71,5 @@ public class Movement : MonoBehaviour
     private void Flip(int rotation)
     {
         rb.transform.rotation = Quaternion.Euler(0, rotation, 0);
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Floor"))
-        {
-            isFloor = true;
-        }
-    }
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if(collision.gameObject.CompareTag("Floor"))
-        {
-            isFloor = false;
-            steps.mute = true;
-            playerAnim.SetBool("isRun", false);
-        }
     }
 }

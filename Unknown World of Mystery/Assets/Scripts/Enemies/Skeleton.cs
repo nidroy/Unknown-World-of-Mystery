@@ -1,0 +1,31 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Skeleton : Character
+{
+    public GameObject dialogButton;
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Floor"))
+        {
+            isFloor = true;
+        }
+        if (collision.gameObject.CompareTag("Trigger"))
+        {
+            isMove = false;
+            dialogButton.SetActive(true);
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Floor"))
+        {
+            isFloor = false;
+            steps.mute = true;
+            characterAnim.SetBool("isRun", false);
+        }
+    }
+}
