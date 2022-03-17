@@ -6,6 +6,10 @@ public class Skeleton : Character
 {
     public GameObject dialogButton;
 
+    public void OpenTeleport()
+    {
+        characterAnim.SetBool("isAttack", true);
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Floor"))
@@ -18,7 +22,6 @@ public class Skeleton : Character
             dialogButton.SetActive(true);
         }
     }
-
     private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Floor"))

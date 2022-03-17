@@ -6,7 +6,6 @@ public class FirstLocation : MonoBehaviour
 {
     public Animator interfaceAnim;
     public Animator houseAnim;
-    public Animator dialogueAnim;
     public AudioSource door;
     public Skeleton skeleton;
     public Player player;
@@ -35,10 +34,5 @@ public class FirstLocation : MonoBehaviour
     {
         interfaceAnim.SetBool("isShow", true);
         player.isMove = true;
-    }
-
-    public void ShowDialogue(bool isShow)
-    {
-        dialogueAnim.SetBool("isShow", isShow);
     }
 }

@@ -55,6 +55,9 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\StartMenu\ChooseCharacterMenu.cs" />
     <Compile Include="Assets\Scripts\Screensaver\Screensaver.cs" />
+    <Compile Include="Assets\Scripts\Player\Player.cs" />
+    <Compile Include="Assets\Scripts\Character.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Skeleton.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\StartMenu\CreateCharacterMenu.cs" />
     <Compile Include="Assets\Scripts\StartMenu\StartMenu.cs" />
@@ -65,12 +68,11 @@
     <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Parallax\ParallaxCamera.cs" />
     <Compile Include="Assets\Scripts\Client.cs" />
+    <Compile Include="Assets\Scripts\FirstLocation\Dialogue.cs" />
     <Compile Include="Assets\Scripts\StartMenu\AuthorizationMenu.cs" />
     <Compile Include="Assets\Scripts\StartMenu\Settings.cs" />
     <Compile Include="Assets\Scripts\Parallax\ParallaxLayer.cs" />
-    <Compile Include="Assets\Scripts\Enemies\Skeleton.cs" />
-    <Compile Include="Assets\Scripts\Character.cs" />
-    <Compile Include="Assets\Scripts\Player\Player.cs" />
+    <Compile Include="Assets\Scripts\FirstLocation\TicTacToe.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\PackageManager\DemonicUI\Shaders\Fluid.shader" />
