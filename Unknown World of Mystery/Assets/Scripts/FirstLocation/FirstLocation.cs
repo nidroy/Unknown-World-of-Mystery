@@ -6,11 +6,15 @@ public class FirstLocation : MonoBehaviour
 {
     public Animator interfaceAnim;
     public Animator houseAnim;
+    public Animator gatesAnim;
     public AudioSource door;
     public Skeleton skeleton;
     public Player player;
     public AudioManager audioManager;
     public GameObject openObject;
+    public GameObject teleport;
+    public GameObject completeObject;
+    public GameObject loadObject;
 
     public static bool isOpenDoor;
 
@@ -28,6 +32,19 @@ public class FirstLocation : MonoBehaviour
             skeleton.isMove = true;
             skeleton.ChangeDirection(-1);
         }
+        if (teleport.activeInHierarchy)
+        {
+            player.Teleportation();
+        }
+        if (completeObject.activeInHierarchy)
+        {
+            gatesAnim.SetBool("isClose", true);
+        }
+        if (loadObject.activeInHierarchy)
+        {
+            // следующая локация и сохранение
+        }
+
     }
 
     public void HideTutorial()

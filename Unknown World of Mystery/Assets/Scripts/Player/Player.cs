@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Player : Character
 {
+    public void Teleportation()
+    {
+        characterAnim.SetBool("isTeleportation", true);
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Floor"))

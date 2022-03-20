@@ -61,6 +61,7 @@
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\StartMenu\CreateCharacterMenu.cs" />
     <Compile Include="Assets\Scripts\StartMenu\StartMenu.cs" />
+    <Compile Include="Assets\Scripts\FirstLocation\TicTacToe.cs" />
     <Compile Include="Assets\Scripts\Parallax\ParallaxBackground.cs" />
     <Compile Include="Assets\Scripts\FirstLocation\FirstLocation.cs" />
     <Compile Include="Assets\Scripts\ScreenManager.cs" />
@@ -72,7 +73,6 @@
     <Compile Include="Assets\Scripts\StartMenu\AuthorizationMenu.cs" />
     <Compile Include="Assets\Scripts\StartMenu\Settings.cs" />
     <Compile Include="Assets\Scripts\Parallax\ParallaxLayer.cs" />
-    <Compile Include="Assets\Scripts\FirstLocation\TicTacToe.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\PackageManager\DemonicUI\Shaders\Fluid.shader" />

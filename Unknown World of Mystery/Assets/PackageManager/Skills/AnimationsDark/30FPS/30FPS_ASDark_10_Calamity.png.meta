@@ -1,0 +1,2280 @@
+fileFormatVersion: 2
+guid: 0168f1e112f624943a863adf81ab9f3d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4054504413319123400
+    second: 30FPS_ASDark_10_Calamity_0
+  - first:
+      213: 1483814388949677938
+    second: 30FPS_ASDark_10_Calamity_1
+  - first:
+      213: -6332167342375408413
+    second: 30FPS_ASDark_10_Calamity_2
+  - first:
+      213: -947284917994959262
+    second: 30FPS_ASDark_10_Calamity_3
+  - first:
+      213: 8459677608175775866
+    second: 30FPS_ASDark_10_Calamity_4
+  - first:
+      213: -8445086692844022444
+    second: 30FPS_ASDark_10_Calamity_5
+  - first:
+      213: -8831080112583510849
+    second: 30FPS_ASDark_10_Calamity_6
+  - first:
+      213: -3600787014124934316
+    second: 30FPS_ASDark_10_Calamity_7
+  - first:
+      213: 4724225922554134905
+    second: 30FPS_ASDark_10_Calamity_8
+  - first:
+      213: 4954351774870050264
+    second: 30FPS_ASDark_10_Calamity_9
+  - first:
+      213: -1283756161262840607
+    second: 30FPS_ASDark_10_Calamity_10
+  - first:
+      213: 2623603831452941659
+    second: 30FPS_ASDark_10_Calamity_11
+  - first:
+      213: -7782021903823102732
+    second: 30FPS_ASDark_10_Calamity_12
+  - first:
+      213: -8820105451317979042
+    second: 30FPS_ASDark_10_Calamity_13
+  - first:
+      213: 652378313407989902
+    second: 30FPS_ASDark_10_Calamity_14
+  - first:
+      213: -4169714062710021487
+    second: 30FPS_ASDark_10_Calamity_15
+  - first:
+      213: 1977040204271978189
+    second: 30FPS_ASDark_10_Calamity_16
+  - first:
+      213: -9114469096925058469
+    second: 30FPS_ASDark_10_Calamity_17
+  - first:
+      213: 1467097147269173694
+    second: 30FPS_ASDark_10_Calamity_18
+  - first:
+      213: -862728959391090391
+    second: 30FPS_ASDark_10_Calamity_19
+  - first:
+      213: 3031787568431121139
+    second: 30FPS_ASDark_10_Calamity_20
+  - first:
+      213: -912627952846256513
+    second: 30FPS_ASDark_10_Calamity_21
+  - first:
+      213: 4172156613614672373
+    second: 30FPS_ASDark_10_Calamity_22
+  - first:
+      213: 5051312622298380482
+    second: 30FPS_ASDark_10_Calamity_23
+  - first:
+      213: 5568636123638953424
+    second: 30FPS_ASDark_10_Calamity_24
+  - first:
+      213: -1935171447748724157
+    second: 30FPS_ASDark_10_Calamity_25
+  - first:
+      213: 7211143868784371087
+    second: 30FPS_ASDark_10_Calamity_26
+  - first:
+      213: 3616142096444575965
+    second: 30FPS_ASDark_10_Calamity_27
+  - first:
+      213: -4072972300265762191
+    second: 30FPS_ASDark_10_Calamity_28
+  - first:
+      213: -5894362533990401752
+    second: 30FPS_ASDark_10_Calamity_29
+  - first:
+      213: -8922346083003191868
+    second: 30FPS_ASDark_10_Calamity_30
+  - first:
+      213: 3845812558339773667
+    second: 30FPS_ASDark_10_Calamity_31
+  - first:
+      213: -9173387076643163261
+    second: 30FPS_ASDark_10_Calamity_32
+  - first:
+      213: -5492201460287476392
+    second: 30FPS_ASDark_10_Calamity_33
+  - first:
+      213: 6573369444460189220
+    second: 30FPS_ASDark_10_Calamity_34
+  - first:
+      213: -3377202232947688622
+    second: 30FPS_ASDark_10_Calamity_35
+  - first:
+      213: 1927332204611481578
+    second: 30FPS_ASDark_10_Calamity_36
+  - first:
+      213: -8428927851054170500
+    second: 30FPS_ASDark_10_Calamity_37
+  - first:
+      213: 1772219875364603221
+    second: 30FPS_ASDark_10_Calamity_38
+  - first:
+      213: 8557572713112522785
+    second: 30FPS_ASDark_10_Calamity_39
+  - first:
+      213: -8860535100856242157
+    second: 30FPS_ASDark_10_Calamity_40
+  - first:
+      213: -2809538771912178643
+    second: 30FPS_ASDark_10_Calamity_41
+  - first:
+      213: 1248570055580824701
+    second: 30FPS_ASDark_10_Calamity_42
+  - first:
+      213: 3231122710200000097
+    second: 30FPS_ASDark_10_Calamity_43
+  - first:
+      213: 8144264696461621687
+    second: 30FPS_ASDark_10_Calamity_44
+  - first:
+      213: -4040986771680576625
+    second: 30FPS_ASDark_10_Calamity_45
+  - first:
+      213: 3041733190001323127
+    second: 30FPS_ASDark_10_Calamity_46
+  - first:
+      213: 4266773790245077954
+    second: 30FPS_ASDark_10_Calamity_47
+  - first:
+      213: -187684163602225632
+    second: 30FPS_ASDark_10_Calamity_48
+  - first:
+      213: 1342777309646574312
+    second: 30FPS_ASDark_10_Calamity_49
+  - first:
+      213: 3530617115032796440
+    second: 30FPS_ASDark_10_Calamity_50
+  - first:
+      213: -7975530994404365993
+    second: 30FPS_ASDark_10_Calamity_51
+  - first:
+      213: -4178662159781092563
+    second: 30FPS_ASDark_10_Calamity_52
+  - first:
+      213: 5146339655744977041
+    second: 30FPS_ASDark_10_Calamity_53
+  - first:
+      213: -7992517114875075797
+    second: 30FPS_ASDark_10_Calamity_54
+  - first:
+      213: 7813682460215775437
+    second: 30FPS_ASDark_10_Calamity_55
+  - first:
+      213: 7036292087466390278
+    second: 30FPS_ASDark_10_Calamity_56
+  - first:
+      213: 2668900747912858657
+    second: 30FPS_ASDark_10_Calamity_57
+  - first:
+      213: 2256746779415045174
+    second: 30FPS_ASDark_10_Calamity_58
+  - first:
+      213: -7280080375636283904
+    second: 30FPS_ASDark_10_Calamity_59
+  - first:
+      213: -2381230184198751346
+    second: 30FPS_ASDark_10_Calamity_60
+  - first:
+      213: -3373361485909660563
+    second: 30FPS_ASDark_10_Calamity_61
+  - first:
+      213: 605180276333831904
+    second: 30FPS_ASDark_10_Calamity_62
+  - first:
+      213: -7124185702728650967
+    second: 30FPS_ASDark_10_Calamity_63
+  - first:
+      213: 6448489394965310676
+    second: 30FPS_ASDark_10_Calamity_64
+  - first:
+      213: 2829248578271457913
+    second: 30FPS_ASDark_10_Calamity_65
+  - first:
+      213: -2329152553171544013
+    second: 30FPS_ASDark_10_Calamity_66
+  - first:
+      213: 484335538441269171
+    second: 30FPS_ASDark_10_Calamity_67
+  - first:
+      213: -3779305540895265532
+    second: 30FPS_ASDark_10_Calamity_68
+  - first:
+      213: 7124815002874284643
+    second: 30FPS_ASDark_10_Calamity_69
+  - first:
+      213: -6556947373676492567
+    second: 30FPS_ASDark_10_Calamity_70
+  - first:
+      213: 3857289161101546494
+    second: 30FPS_ASDark_10_Calamity_71
+  - first:
+      213: -3964132168901933648
+    second: 30FPS_ASDark_10_Calamity_72
+  - first:
+      213: 5798122146209539441
+    second: 30FPS_ASDark_10_Calamity_73
+  - first:
+      213: 374798635589300731
+    second: 30FPS_ASDark_10_Calamity_74
+  - first:
+      213: 9215295036581234951
+    second: 30FPS_ASDark_10_Calamity_75
+  - first:
+      213: 4164585158160323667
+    second: 30FPS_ASDark_10_Calamity_76
+  - first:
+      213: -8072883070024861575
+    second: 30FPS_ASDark_10_Calamity_77
+  - first:
+      213: -3577316806312687242
+    second: 30FPS_ASDark_10_Calamity_78
+  - first:
+      213: 8030273573839709981
+    second: 30FPS_ASDark_10_Calamity_79
+  - first:
+      213: 1756341082821765318
+    second: 30FPS_ASDark_10_Calamity_80
+  - first:
+      213: 4686420731125642964
+    second: 30FPS_ASDark_10_Calamity_81
+  - first:
+      213: 109988973064200827
+    second: 30FPS_ASDark_10_Calamity_82
+  - first:
+      213: -8310820911719118574
+    second: 30FPS_ASDark_10_Calamity_83
+  - first:
+      213: -688051879428425385
+    second: 30FPS_ASDark_10_Calamity_84
+  - first:
+      213: 5599821914689452974
+    second: 30FPS_ASDark_10_Calamity_85
+  - first:
+      213: -1776085363324122038
+    second: 30FPS_ASDark_10_Calamity_86
+  - first:
+      213: 5354817361094744975
+    second: 30FPS_ASDark_10_Calamity_87
+  - first:
+      213: -6511054677137194099
+    second: 30FPS_ASDark_10_Calamity_88
+  - first:
+      213: -2911723375434043337
+    second: 30FPS_ASDark_10_Calamity_89
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3264
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83e2cdfb7b18bb7c0800000000000000
+      internalID: -4054504413319123400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_1
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 3264
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27775fd3351979410800000000000000
+      internalID: 1483814388949677938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_2
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 3264
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ec6263f95f9f18a0800000000000000
+      internalID: -6332167342375408413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_3
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 3264
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26e43d1d2619ad2f0800000000000000
+      internalID: -947284917994959262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_4
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 3264
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a70b4ad96ffc66570800000000000000
+      internalID: 8459677608175775866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3072
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45557a795660dca80800000000000000
+      internalID: -8445086692844022444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 3072
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb4717a3d63b17580800000000000000
+      internalID: -8831080112583510849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_7
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 3072
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45b6e37d94f670ec0800000000000000
+      internalID: -3600787014124934316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_8
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 3072
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97108805272df8140800000000000000
+      internalID: 4724225922554134905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_9
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 3072
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d59471a0b461c440800000000000000
+      internalID: 4954351774870050264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2880
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e495bda29e2f2ee0800000000000000
+      internalID: -1283756161262840607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_11
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 2880
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5d3b15c8c9e86420800000000000000
+      internalID: 2623603831452941659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_12
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 2880
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fc90543f44b00490800000000000000
+      internalID: -7782021903823102732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_13
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 2880
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5894bca2d0b89580800000000000000
+      internalID: -8820105451317979042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_14
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 2880
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e880add9e96bd0900800000000000000
+      internalID: 652378313407989902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2688
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 192e73de6233226c0800000000000000
+      internalID: -4169714062710021487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_16
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 2688
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc60c4a479bdf6b10800000000000000
+      internalID: 1977040204271978189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_17
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 2688
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5aa18995a6e28180800000000000000
+      internalID: -9114469096925058469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_18
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 2688
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb1d7f9151d2c5410800000000000000
+      internalID: 1467097147269173694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_19
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 2688
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9293d061598f604f0800000000000000
+      internalID: -862728959391090391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2496
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f248cafab2131a20800000000000000
+      internalID: 3031787568431121139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_21
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 2496
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f76c18256b1b553f0800000000000000
+      internalID: -912627952846256513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_22
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 2496
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f99cc5c55a76e930800000000000000
+      internalID: 4172156613614672373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_23
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 2496
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c8ba85211ed91640800000000000000
+      internalID: 5051312622298380482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_24
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 2496
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d578e0fc05c74d40800000000000000
+      internalID: 5568636123638953424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2304
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34a757d32d3e425e0800000000000000
+      internalID: -1935171447748724157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_26
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 2304
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f85e0237421231460800000000000000
+      internalID: 7211143868784371087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_27
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 2304
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd05aebd31e1f2230800000000000000
+      internalID: 3616142096444575965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_28
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 2304
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17257aeb545e977c0800000000000000
+      internalID: -4072972300265762191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_29
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 2304
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82971284184033ea0800000000000000
+      internalID: -5894362533990401752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2112
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cd2f7792857d2480800000000000000
+      internalID: -8922346083003191868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_31
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 2112
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e4149455221f5530800000000000000
+      internalID: 3845812558339773667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_32
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 2112
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38376857e0591b080800000000000000
+      internalID: -9173387076643163261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_33
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 2112
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85deeaceed7c7c3b0800000000000000
+      internalID: -5492201460287476392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_34
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 2112
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 426d47abeac493b50800000000000000
+      internalID: 6573369444460189220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1920
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25b3f7a5674c121d0800000000000000
+      internalID: -3377202232947688622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_36
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1920
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aefa90cbd624fba10800000000000000
+      internalID: 1927332204611481578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_37
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1920
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7ef48027ce660b80800000000000000
+      internalID: -8428927851054170500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_38
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1920
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5558ef64690389810800000000000000
+      internalID: 1772219875364603221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_39
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1920
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 120d5a8ea0b92c670800000000000000
+      internalID: 8557572713112522785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1728
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3107599554e090580800000000000000
+      internalID: -8860535100856242157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_41
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1728
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d24cc7d5f538209d0800000000000000
+      internalID: -2809538771912178643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_42
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1728
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d74b510b9dfc35110800000000000000
+      internalID: 1248570055580824701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_43
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1728
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16e1b275cf047dc20800000000000000
+      internalID: 3231122710200000097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_44
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1728
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b9795d579d360170800000000000000
+      internalID: 8144264696461621687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1536
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8b3de3f0f78be7c0800000000000000
+      internalID: -4040986771680576625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_46
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1536
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77c6b837838663a20800000000000000
+      internalID: 3041733190001323127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_47
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1536
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c34188e720a63b30800000000000000
+      internalID: 4266773790245077954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_48
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1536
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 026e5826f36356df0800000000000000
+      internalID: -187684163602225632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_49
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1536
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e250f949d082a210800000000000000
+      internalID: 1342777309646574312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1344
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81db1736f854ff030800000000000000
+      internalID: 3530617115032796440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_51
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1344
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 759e86711d8315190800000000000000
+      internalID: -7975530994404365993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_52
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1344
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d23a1e9b7e86206c0800000000000000
+      internalID: -4178662159781092563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_53
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1344
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1987f2286a87b6740800000000000000
+      internalID: 5146339655744977041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_54
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1344
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2324aab700e41190800000000000000
+      internalID: -7992517114875075797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_55
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1152
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc09cd48cc6cf6c60800000000000000
+      internalID: 7813682460215775437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_56
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1152
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6037359af5ee5a160800000000000000
+      internalID: 7036292087466390278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_57
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1152
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12cce1cf617d90520800000000000000
+      internalID: 2668900747912858657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_58
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1152
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6346a073d33915f10800000000000000
+      internalID: 2256746779415045174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_59
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1152
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00e28e94875f7fa90800000000000000
+      internalID: -7280080375636283904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 960
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8b356683cb24fed0800000000000000
+      internalID: -2381230184198751346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_61
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 960
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6cee55f9996f21d0800000000000000
+      internalID: -3373361485909660563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_62
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 960
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e663f34148066800800000000000000
+      internalID: 605180276333831904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_63
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 960
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92f21f259dec12d90800000000000000
+      internalID: -7124185702728650967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_64
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 960
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dce7cc60f2ad7950800000000000000
+      internalID: 6448489394965310676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_65
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97236298792834720800000000000000
+      internalID: 2829248578271457913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_66
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 768
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3381480e7103dafd0800000000000000
+      internalID: -2329152553171544013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_67
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 768
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bfa3e82b94b8b600800000000000000
+      internalID: 484335538441269171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_68
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 768
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40da54952a53d8bc0800000000000000
+      internalID: -3779305540895265532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_69
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 768
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36a02b80f7d60e260800000000000000
+      internalID: 7124815002874284643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 576
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e805159a1b0105a0800000000000000
+      internalID: -6556947373676492567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_71
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 576
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef31c632e08d78530800000000000000
+      internalID: 3857289161101546494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_72
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 576
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b5c6e59bc29cf8c0800000000000000
+      internalID: -3964132168901933648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_73
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 576
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17525294f51177050800000000000000
+      internalID: 5798122146209539441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_74
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 576
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf1f9909f5d833500800000000000000
+      internalID: 374798635589300731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_75
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70948d3d20e43ef70800000000000000
+      internalID: 9215295036581234951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_76
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 384
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 354920de2249bc930800000000000000
+      internalID: 4164585158160323667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_77
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 384
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97837e9ae9b57ff80800000000000000
+      internalID: -8072883070024861575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_78
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 384
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67982be6151da5ec0800000000000000
+      internalID: -3577316806312687242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_79
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 384
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d172ce9e443417f60800000000000000
+      internalID: 8030273573839709981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c8240ac8e6cf5810800000000000000
+      internalID: 1756341082821765318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_81
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d635c243d2890140800000000000000
+      internalID: 4686420731125642964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_82
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b72a3b46362c68100800000000000000
+      internalID: 109988973064200827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_83
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2190815d9680aac80800000000000000
+      internalID: -8310820911719118574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_84
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 759f0ab067c8376f0800000000000000
+      internalID: -688051879428425385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_85
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eab338ebc5096bd40800000000000000
+      internalID: 5599821914689452974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_86
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4c8b4ca5c31a57e0800000000000000
+      internalID: -1776085363324122038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_87
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8b9525d402205a40800000000000000
+      internalID: 5354817361094744975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_88
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d838718a44614a5a0800000000000000
+      internalID: -6511054677137194099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30FPS_ASDark_10_Calamity_89
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7307d0b540b7797d0800000000000000
+      internalID: -2911723375434043337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
