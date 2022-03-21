@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FirstLocation : MonoBehaviour
 {
@@ -42,7 +43,8 @@ public class FirstLocation : MonoBehaviour
         }
         if (loadObject.activeInHierarchy)
         {
-            // следующая локация и сохранение
+            SceneManager.LoadScene(3);
+            GameManager.location = 2;
         }
 
     }
