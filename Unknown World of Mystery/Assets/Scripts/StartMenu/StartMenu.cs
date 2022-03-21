@@ -7,6 +7,9 @@ public class StartMenu : MonoBehaviour
     public AuthorizationMenu authorizationMenu; // меню авторизации
     public Settings settings;// настройки
     public ChooseCharacterMenu chooseCharacterMenu;// меню выбора персонажа
+    public AudioManager audioManager;// менеджер звуков
+
+    public AudioSource music;// музыка
 
     public Animator menuAnim;// анимации начального меню
     public Animator gatesAnim;// анимеции ворот
@@ -100,7 +103,16 @@ public class StartMenu : MonoBehaviour
     /// </summary>
     public void StartGame()
     {
+        menuAnim.SetBool("isStartGame", true);
         gatesAnim.SetBool("isClose", true);
+    }
+
+    /// <summary>
+    /// запуск музыки
+    /// </summary>
+    private void Start()
+    {
+        audioManager.PlayMusic(music);
     }
 
     /// <summary>

@@ -9,7 +9,8 @@ public class ChooseCharacterMenu : MonoBehaviour
     public RectTransform content;// контент
 
     public StartMenu startMenu;// начальное меню
-    public AudioManager sound;// звук нажатия на кнопку
+    public AudioManager audioManager;// менеджер звуков
+    public AudioSource sound;// звук нажатия на кнопку
 
     public bool isUpdateItems { get; set; }// обновление элементов
 
@@ -30,7 +31,7 @@ public class ChooseCharacterMenu : MonoBehaviour
     /// </summary>
     public void UpdateItems()
     {
-        string[] characters = { "Character1-0-0-1", "Character2-1-0-1", "Character3-2-0-1" };
+        string[] characters = { "Character1-0-0-1", "Character2-1-0-1" };
         if (!GameManager.isLocalAccount)
         {
             characters = Client.SendingMessage(GameManager.username, String.Format("ChooseCharacter_{0}", GameManager.username)).Split(new char[] { '_' }, StringSplitOptions.RemoveEmptyEntries);
@@ -66,12 +67,12 @@ public class ChooseCharacterMenu : MonoBehaviour
         view.button.onClick.AddListener(
             () =>
             {
+                audioManager.PlaySounds(sound);
                 GameManager.characterName = model.name;
                 GameManager.characterLevel = model.level;
                 GameManager.timeInTheGame = model.timeInTheGame;
                 GameManager.location = model.location;
                 startMenu.StartGame();
-                sound.PlayAudioClick();
             }
         );
     }

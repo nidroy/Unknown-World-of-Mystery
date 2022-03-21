@@ -1274,7 +1274,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadObject: {fileID: 2130912421}
   closeObject: {fileID: 1096741212}
+  audioManager: {fileID: 2039452383}
   gatesAnim: {fileID: 1526873317}
+  music: {fileID: 1526873316}
 --- !u!114 &2039452383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1287,10 +1289,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 388ef62a67af8994681fd1b25fd05f47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds: {fileID: 0}
-  music: {fileID: 1526873316}
-  clickSound: {fileID: 0}
-  hoverSound: {fileID: 0}
 --- !u!1 &2054599775
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,6 +10,9 @@ public class Screensaver : MonoBehaviour
 
     public Animator gatesAnim;// анимации ворот
 
+    public AudioManager audioManager;// менеджер звуков
+    public AudioSource music;// музыка
+
     /// <summary>
     /// применение настроек
     /// </summary>
@@ -21,6 +24,7 @@ public class Screensaver : MonoBehaviour
         }
         Settings.GetSettings(FileManager.pathToSettings);
         ScreenManager.SetScreen();
+        audioManager.PlayMusic(music);
     }
 
     /// <summary>

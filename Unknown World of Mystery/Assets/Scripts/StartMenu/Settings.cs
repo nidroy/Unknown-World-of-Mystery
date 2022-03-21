@@ -66,6 +66,7 @@ public class Settings : MonoBehaviour
         SetSettings(FileManager.pathToSettings);
         GetSettings(FileManager.pathToSettings);
         ScreenManager.SetScreen();
+        startMenu.music.volume = AudioManager.volumeMusic;
         startMenu.HideStartMenuItems("isSettings");
     }
 }
