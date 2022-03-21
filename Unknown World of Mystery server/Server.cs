@@ -83,7 +83,7 @@ namespace Unknown_World_of_Mystery_server
 
             Broker broker = new Broker(
                 new CommandLogIn(command, database),
-                new CommandRegister(database),
+                new CommandRegister(command, database),
                 new CommandChooseCharacter(database),
                 new CommandCreateCharacter(command, database));
 

@@ -46,14 +46,17 @@ namespace Unknown_World_of_Mystery_server
     /// </summary>
     public class CommandRegister : ICommand
     {
-        Database database;// бд
+        string[] user;// имя пользователя
+        Database database;// бд        
 
         /// <summary>
         /// конструктор
         /// </summary>
+        /// <param name="user">элементы пользователя</param>
         /// <param name="database">бд</param>
-        public CommandRegister(Database database)
+        public CommandRegister(string[] user, Database database)
         {
+            this.user = user;
             this.database = database;
         }
 
@@ -63,6 +66,15 @@ namespace Unknown_World_of_Mystery_server
         /// <returns>создание нового пользователя</returns>
         public string Execute()
         {
+            string[] userNames = database.ExecuteQuery("GetUsernames").Split(new char[] { '_' }, StringSplitOptions.RemoveEmptyEntries);
+            IEnumerator userName = userNames.GetEnumerator();
+            while (userName.MoveNext())
+            {
+                if (userName.Current.ToString() == user[1])
+                {
+                    return "The user exists";
+                }
+            }
             return database.ExecuteQuery("CreateUser");
         }
     }
@@ -105,7 +117,7 @@ namespace Unknown_World_of_Mystery_server
         /// конструктор
         /// </summary>
         /// <param name="character">элементы персонажа</param>
-        /// <param name="database"></param>
+        /// <param name="database">бд</param>
         public CommandCreateCharacter(string[] character, Database database)
         {
             this.character = character;

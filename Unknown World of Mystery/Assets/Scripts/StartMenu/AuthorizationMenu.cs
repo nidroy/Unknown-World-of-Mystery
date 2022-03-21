@@ -50,8 +50,14 @@ public class AuthorizationMenu : MonoBehaviour
             }
             else
             {
-                startMenu.ShowMessageBox("The user is registered. Log in.");
-                Debug.Log(Client.SendingMessage(GameManager.username, String.Format("Register_{0}_{1}", username.text, password.text)));
+                if (Client.SendingMessage(GameManager.username, String.Format("Register_{0}_{1}", username.text, password.text)) == "The user exists")
+                {
+                    startMenu.ShowMessageBox("The user exists.");
+                }
+                else
+                {
+                    startMenu.ShowMessageBox("The user is registered. Log in.");
+                }
                 username.text = "";
                 password.text = "";
             }
