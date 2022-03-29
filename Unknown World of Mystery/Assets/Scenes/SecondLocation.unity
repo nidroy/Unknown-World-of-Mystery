@@ -281,6 +281,7 @@ GameObject:
   m_Component:
   - component: {fileID: 164412461}
   - component: {fileID: 164412462}
+  - component: {fileID: 164412463}
   m_Layer: 0
   m_Name: Bat
   m_TagString: Untagged
@@ -353,6 +354,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &164412463
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164412460}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: be63d19cd75bd3349b9fee6b4cfb8a56, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &181765886
 GameObject:
   m_ObjectHideFlags: 0
@@ -446,7 +466,7 @@ GameObject:
   - component: {fileID: 202092647}
   - component: {fileID: 202092648}
   m_Layer: 0
-  m_Name: timber_brace_1
+  m_Name: TimberBrace2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -981,6 +1001,7 @@ GameObject:
   - component: {fileID: 307029122}
   - component: {fileID: 307029121}
   - component: {fileID: 307029126}
+  - component: {fileID: 307029127}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1099,7 +1120,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6a84a4c6df3ca3489df4836d226c8df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interfaceAnim: {fileID: 307029127}
   player: {fileID: 1678199316}
+  briefing: {fileID: 260789232}
+--- !u!95 &307029127
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 307029120}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d3bf9b8664a67b54a8f144bed0b28fc5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &319201723
 GameObject:
   m_ObjectHideFlags: 0
@@ -1272,6 +1314,7 @@ GameObject:
   m_Component:
   - component: {fileID: 397519850}
   - component: {fileID: 397519851}
+  - component: {fileID: 397519852}
   m_Layer: 0
   m_Name: Firebowl2
   m_TagString: Untagged
@@ -1344,6 +1387,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &397519852
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 397519849}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6c47c925290c7b04089fb4e4b930a742, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &412758764
 GameObject:
   m_ObjectHideFlags: 0
@@ -1702,6 +1764,7 @@ GameObject:
   m_Component:
   - component: {fileID: 782560411}
   - component: {fileID: 782560412}
+  - component: {fileID: 782560413}
   m_Layer: 0
   m_Name: Firebowl1
   m_TagString: Untagged
@@ -1774,6 +1837,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &782560413
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782560410}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6c47c925290c7b04089fb4e4b930a742, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &865635110
 GameObject:
   m_ObjectHideFlags: 0
@@ -1835,7 +1917,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 865635110}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.63, y: 0.19999999, z: -10}
+  m_LocalPosition: {x: 21.55, y: 1.22, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 911062403}
@@ -2079,7 +2161,7 @@ GameObject:
   - component: {fileID: 924251711}
   - component: {fileID: 924251712}
   m_Layer: 0
-  m_Name: timber_brace_1
+  m_Name: TimberBrace1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2189,6 +2271,10 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 1262990610}
+    - target: {fileID: 1866301458070531512, guid: cd0aecc93937a834c99fbc6556073a6f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -180
+      objectReference: {fileID: 0}
     - target: {fileID: 1866301458312261762, guid: cd0aecc93937a834c99fbc6556073a6f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2313,6 +2399,10 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 1262990610}
+    - target: {fileID: 1866301459173313126, guid: cd0aecc93937a834c99fbc6556073a6f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 122
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd0aecc93937a834c99fbc6556073a6f, type: 3}
 --- !u!224 &934938689 stripped
@@ -3192,6 +3282,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1425135682}
   - component: {fileID: 1425135683}
+  - component: {fileID: 1425135684}
   m_Layer: 0
   m_Name: Firebowl3
   m_TagString: Untagged
@@ -3264,6 +3355,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1425135684
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425135681}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6c47c925290c7b04089fb4e4b930a742, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1481978403
 GameObject:
   m_ObjectHideFlags: 0
@@ -3471,7 +3581,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1541292888}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.41111, y: 0.19999951, z: -10}
+  m_LocalPosition: {x: 17.41111, y: 0.29999995, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3566,6 +3676,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6915793114530195769, guid: daf50fccfbe0fdc43a1e3172ca37b38a, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6915793114530195773, guid: daf50fccfbe0fdc43a1e3172ca37b38a, type: 3}
       propertyPath: m_Name
       value: Player
@@ -3575,12 +3689,20 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6915793114530195775, guid: daf50fccfbe0fdc43a1e3172ca37b38a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6915793114530195775, guid: daf50fccfbe0fdc43a1e3172ca37b38a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6915793114530195775, guid: daf50fccfbe0fdc43a1e3172ca37b38a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 21.63
+      value: 21.55
       objectReference: {fileID: 0}
     - target: {fileID: 6915793114530195775, guid: daf50fccfbe0fdc43a1e3172ca37b38a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8
+      value: 0.22
       objectReference: {fileID: 0}
     - target: {fileID: 6915793114530195775, guid: daf50fccfbe0fdc43a1e3172ca37b38a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4160,8 +4282,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1916634042}
   - component: {fileID: 1916634043}
+  - component: {fileID: 1916634044}
   m_Layer: 0
-  m_Name: torch
+  m_Name: Torch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4232,6 +4355,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1916634044
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1916634041}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 281dc1b5fd630d04c95ee268512c7571, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &1933987992 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4890560715393503479, guid: 12a72571ca68512449de5b29beb0d1ab, type: 3}

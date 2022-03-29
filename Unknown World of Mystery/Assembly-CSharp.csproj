@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -53,6 +53,9 @@
     <UnityVersion>2020.3.25f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Assets\Scripts\StartMenu\ChooseCharacterMenu.cs" />
     <Compile Include="Assets\Scripts\Screensaver\Screensaver.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
@@ -68,12 +71,12 @@
     <Compile Include="Assets\Scripts\FileManager.cs" />
     <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Parallax\ParallaxCamera.cs" />
+    <Compile Include="Assets\Scripts\SecondLocation\SecondLocation.cs" />
     <Compile Include="Assets\Scripts\Client.cs" />
     <Compile Include="Assets\Scripts\FirstLocation\Dialogue.cs" />
     <Compile Include="Assets\Scripts\StartMenu\AuthorizationMenu.cs" />
     <Compile Include="Assets\Scripts\StartMenu\Settings.cs" />
     <Compile Include="Assets\Scripts\Parallax\ParallaxLayer.cs" />
-    <Compile Include="Assets\Scripts\SecondLocation\SecondLocation.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\PackageManager\DemonicUI\Shaders\Fluid.shader" />

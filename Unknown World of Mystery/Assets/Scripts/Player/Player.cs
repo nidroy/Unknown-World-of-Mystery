@@ -9,11 +9,18 @@ public class Player : Character
         characterAnim.SetBool("isTeleportation", true);
     }
 
+    public void EndTeleportation()
+    {
+        characterAnim.SetBool("isTeleportation", false);
+        characterAnim.SetBool("isEndTeleportation", true);
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Floor"))
         {
             isFloor = true;
+            characterAnim.SetBool("isEndTeleportation", false);
         }
         if (collision.gameObject.CompareTag("Trigger"))
         {
