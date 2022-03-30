@@ -7,12 +7,13 @@ public class SecondLocation : MonoBehaviour
     public Animator interfaceAnim;
     public Player player;
     public GameObject briefing;
+    public Bat bat;
     private bool isStart = true;
 
     public void HideBriefing()
     {
         interfaceAnim.SetBool("isShow", true);
-        player.isMove = true;
+        bat.isMove = true;
     }
 
     private void Start()

@@ -13,6 +13,7 @@ public class Player : Character
     {
         characterAnim.SetBool("isTeleportation", false);
         characterAnim.SetBool("isEndTeleportation", true);
+        isMove = true;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
