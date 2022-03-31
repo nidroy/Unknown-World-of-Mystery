@@ -10,7 +10,7 @@ public abstract class Character : MonoBehaviour
     public float speed;
 
     private Vector2 moveVector;
-    public int direction;
+    private int direction;
 
     public bool isMove { get; set; }
     public bool isFloor { get; set; }
