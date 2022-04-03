@@ -8,6 +8,7 @@ public class TicTacToe : MonoBehaviour
 {
     public Animator ticTacToeAnim;
     public Dialogue dialogue;
+
     public Sprite playerIcon;
     public Sprite skeletonIcon;
 
@@ -16,6 +17,7 @@ public class TicTacToe : MonoBehaviour
     public EventTrigger[] trigger;
 
     private int[] arrayCells = new int[]{ 1, 1, 1, 1, 1, 1, 1, 1, 1 };
+
     private bool isPlayerMove = false;
     private bool isSkeletonMove = true;
 

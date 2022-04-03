@@ -11,5 +11,4 @@ public class GameManager : MonoBehaviour
     public static string characterName; // имя персонажа
     public static int characterLevel; // уровень персонажа
     public static string timeInTheGame; // время в игре
-    public static int location; // локация
 }

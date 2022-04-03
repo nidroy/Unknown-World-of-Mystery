@@ -122,7 +122,7 @@ public class StartMenu : MonoBehaviour
     {
         if(loadObject.activeInHierarchy)
         {
-            SceneManager.LoadScene(GameManager.location + 1);
+            SceneManager.LoadScene(GameManager.characterLevel + 2);
         }
     }
 }

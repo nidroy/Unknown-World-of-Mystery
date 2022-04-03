@@ -151,14 +151,14 @@ namespace Unknown_World_of_Mystery_server
             {
                 SqlCommand command = new SqlCommand();
                 command.Connection = connection;
-                command.CommandText = String.Format("SELECT [Name], [Level], [TimeInTheGame], [Location] FROM [Character] JOIN [User] ON [Character].[UserID] = [User].[ID] WHERE [Username] = '{0}';", user[1]);
+                command.CommandText = String.Format("SELECT [Name], [Level], [TimeInTheGame] FROM [Character] JOIN [User] ON [Character].[UserID] = [User].[ID] WHERE [Username] = '{0}';", user[1]);
 
                 connection.Open();
                 SqlDataReader reader = command.ExecuteReader();
 
                 while (reader.Read())
                 {
-                    characters.Add(String.Format("{0}-{1}-{2}-{3}", reader[0], reader[1], reader[2], reader[3]));
+                    characters.Add(String.Format("{0}-{1}-{2}", reader[0], reader[1], reader[2]));
                 }
                 connection.Close();
             }
@@ -203,7 +203,7 @@ namespace Unknown_World_of_Mystery_server
             {
                 SqlCommand command = new SqlCommand();
                 command.Connection = connection;
-                command.CommandText = String.Format("INSERT INTO [Character] VALUES((SELECT [ID] FROM [User] WHERE [Username] = '{0}'),'{1}','{2}','0','1');", character[1], character[2], character[3]);
+                command.CommandText = String.Format("INSERT INTO [Character] VALUES((SELECT [ID] FROM [User] WHERE [Username] = '{0}'),'{1}','{2}','0');", character[1], character[2], character[3]);
 
                 connection.Open();
                 SqlDataReader reader = command.ExecuteReader();

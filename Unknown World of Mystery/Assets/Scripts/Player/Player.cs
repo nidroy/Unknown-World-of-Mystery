@@ -13,29 +13,21 @@ public class Player : Character
     {
         characterAnim.SetBool("isTeleportation", false);
         characterAnim.SetBool("isEndTeleportation", true);
-        isMove = true;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Floor"))
         {
-            isFloor = true;
             characterAnim.SetBool("isEndTeleportation", false);
+            isFloor = true;
         }
         if (collision.gameObject.CompareTag("Trigger"))
         {
             FirstLocation.isOpenDoor = true;
+            SecondLocation.isOpenDoor = true;
             isMove = false;
         }
     }
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Floor"))
-        {
-            isFloor = false;
-            steps.mute = true;
-            characterAnim.SetBool("isRun", false);
-        }
-    }
+   
 }

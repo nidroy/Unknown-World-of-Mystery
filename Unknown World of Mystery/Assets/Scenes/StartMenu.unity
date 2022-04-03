@@ -10713,7 +10713,11 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Level 1
+    - m_Text: Training
+      m_Image: {fileID: 0}
+    - m_Text: Mathematics
+      m_Image: {fileID: 0}
+    - m_Text: Days of week
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
@@ -11239,7 +11243,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Level 1
+  m_Text: Training
 --- !u!222 &1692132690
 CanvasRenderer:
   m_ObjectHideFlags: 0

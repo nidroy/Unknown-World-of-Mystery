@@ -712,16 +712,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interfaceAnim: {fileID: 121287961}
+  player: {fileID: 639578720}
+  audioManager: {fileID: 121287959}
+  completeObject: {fileID: 1193592301}
+  loadObject: {fileID: 916730532}
   houseAnim: {fileID: 50415636}
   gatesAnim: {fileID: 1095037095}
   door: {fileID: 1427242707}
   skeleton: {fileID: 944788624}
-  player: {fileID: 639578720}
-  audioManager: {fileID: 121287959}
   openObject: {fileID: 774581639}
   teleport: {fileID: 934569714}
-  completeObject: {fileID: 1193592301}
-  loadObject: {fileID: 916730532}
 --- !u!1 &129474198
 GameObject:
   m_ObjectHideFlags: 0
@@ -8224,9 +8224,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1603573114}
-        m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
-        m_MethodName: NextDialog
+      - m_Target: {fileID: 145884011}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Text, UnityEngine.UI
+        m_MethodName: set_text
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8236,6 +8236,42 @@ MonoBehaviour:
           m_StringArgument: What a pity! But this is just the beginning of your journey
             into the world of knowledge, which begins right now.
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2096976359}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1595124026}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 326906702}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!1 &1603573109
 GameObject:
@@ -8350,11 +8386,6 @@ MonoBehaviour:
   dialogueAnim: {fileID: 1603573113}
   skeleton: {fileID: 944788624}
   skeletonDialog: {fileID: 145884011}
-  dialogButton: {fileID: 1619163509}
-  button:
-  - {fileID: 2096976359}
-  - {fileID: 1595124026}
-  - {fileID: 326906702}
 --- !u!1 &1617289636
 GameObject:
   m_ObjectHideFlags: 0
@@ -8610,6 +8641,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1619163509}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1619163514
 MonoBehaviour:
@@ -10204,7 +10247,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2083081956}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1193592301}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 121287962}
+        m_TargetAssemblyTypeName: Location, Assembly-CSharp
+        m_MethodName: set_isExitMenu
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &2083081959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10890,6 +10957,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 639578720}
     - target: {fileID: 1866301457741761265, guid: cd0aecc93937a834c99fbc6556073a6f, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: set_direction
+      objectReference: {fileID: 0}
+    - target: {fileID: 1866301457741761265, guid: cd0aecc93937a834c99fbc6556073a6f, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: set_direction
+      objectReference: {fileID: 0}
+    - target: {fileID: 1866301457741761265, guid: cd0aecc93937a834c99fbc6556073a6f, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 1912039886}
@@ -11001,6 +11076,14 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 639578720}
+    - target: {fileID: 1866301458750295270, guid: cd0aecc93937a834c99fbc6556073a6f, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: set_direction
+      objectReference: {fileID: 0}
+    - target: {fileID: 1866301458750295270, guid: cd0aecc93937a834c99fbc6556073a6f, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: set_direction
+      objectReference: {fileID: 0}
     - target: {fileID: 1866301458750295270, guid: cd0aecc93937a834c99fbc6556073a6f, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 

@@ -3,23 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class FirstLocation : MonoBehaviour
+public class FirstLocation : Location
 {
-    public Animator interfaceAnim;
     public Animator houseAnim;
     public Animator gatesAnim;
+
     public AudioSource door;
+
     public Skeleton skeleton;
-    public Player player;
-    public AudioManager audioManager;
+
     public GameObject openObject;
     public GameObject teleport;
-    public GameObject completeObject;
-    public GameObject loadObject;
 
     public static bool isOpenDoor;
 
-    void Update()
+    private void Start()
+    {
+        isOpenDoor = false;
+        isExitMenu = false;
+    }
+
+    private void Update()
     {
         if(isOpenDoor)
         {
@@ -31,7 +35,7 @@ public class FirstLocation : MonoBehaviour
         {
             skeleton.gameObject.SetActive(true);
             skeleton.isMove = true;
-            skeleton.ChangeDirection(-1);
+            skeleton.direction = -1;
         }
         if (teleport.activeInHierarchy)
         {
@@ -43,15 +47,17 @@ public class FirstLocation : MonoBehaviour
         }
         if (loadObject.activeInHierarchy)
         {
-            SceneManager.LoadScene(3);
-            GameManager.location = 2;
+            if (isExitMenu)
+            {
+                ExitMenu();
+            }
+            else
+            {
+                GameManager.characterLevel = 1;
+                SceneManager.LoadScene(GameManager.characterLevel + 2);
+            }
         }
 
     }
 
-    public void HideTutorial()
-    {
-        interfaceAnim.SetBool("isShow", true);
-        player.isMove = true;
-    }
 }

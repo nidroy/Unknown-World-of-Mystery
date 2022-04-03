@@ -23,13 +23,4 @@ public class Skeleton : Character
             dialogButton.SetActive(true);
         }
     }
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Floor"))
-        {
-            isFloor = false;
-            steps.mute = true;
-            characterAnim.SetBool("isRun", false);
-        }
-    }
 }

@@ -31,7 +31,7 @@ public class ChooseCharacterMenu : MonoBehaviour
     /// </summary>
     public void UpdateItems()
     {
-        string[] characters = { "Character1-0-0-1", "Character2-1-0-1" };
+        string[] characters = { "Character training-0-0", "Character math-1-0", "Character days of week-2-0" };
         if (!GameManager.isLocalAccount)
         {
             characters = Client.SendingMessage(GameManager.username, String.Format("ChooseCharacter_{0}", GameManager.username)).Split(new char[] { '_' }, StringSplitOptions.RemoveEmptyEntries);
@@ -71,7 +71,6 @@ public class ChooseCharacterMenu : MonoBehaviour
                 GameManager.characterName = model.name;
                 GameManager.characterLevel = model.level;
                 GameManager.timeInTheGame = model.timeInTheGame;
-                GameManager.location = model.location;
                 startMenu.StartGame();
             }
         );
@@ -94,7 +93,6 @@ public class ChooseCharacterMenu : MonoBehaviour
             results[i].name = character[0];
             results[i].level = int.Parse(character[1]);
             results[i].timeInTheGame = character[2];
-            results[i].location = int.Parse(character[3]);
         }
 
         callback(results);
@@ -124,6 +122,5 @@ public class ChooseCharacterMenu : MonoBehaviour
         public string name;
         public int level;
         public string timeInTheGame;
-        public int location;
     }
 }
