@@ -4,23 +4,30 @@ using UnityEngine;
 
 public class Skeleton : Character
 {
-    public GameObject dialogButton;
+    public GameObject dialogButton; // кнопка начала диалога
 
+    /// <summary>
+    /// открыть телепорт
+    /// </summary>
     public void OpenTeleport()
     {
-        characterAnim.SetBool("isAttack", true);
+        characterAnim.SetBool("isOpenTeleport", true);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    /// <summary>
+    /// коснуться пола
+    /// </summary>
+    public override void EnterFloor()
     {
-        if (collision.gameObject.CompareTag("Floor"))
-        {
-            isFloor = true;
-        }
-        if (collision.gameObject.CompareTag("Trigger"))
-        {
-            isMove = false;
-            dialogButton.SetActive(true);
-        }
+        isFloor = true;
+    }
+
+    /// <summary>
+    /// коснуться тригера
+    /// </summary>
+    public override void EnterTrigger()
+    {
+        isMove = false;
+        dialogButton.SetActive(true);
     }
 }

@@ -18,12 +18,14 @@ namespace Unknown_World_of_Mystery_server
         /// <param name="Register">команда регистрации</param>
         /// <param name="ChooseCharacter">комада выбора персонажа</param>
         /// <param name="CreateCharacter">команда создания персонажа</param>
-        public Broker(ICommand LogIn, ICommand Register, ICommand ChooseCharacter, ICommand CreateCharacter)
+        /// <param name="Save">команда сохранения</param>
+        public Broker(ICommand LogIn, ICommand Register, ICommand ChooseCharacter, ICommand CreateCharacter, ICommand Save)
         {
             command.Add(LogIn);
             command.Add(Register);
             command.Add(ChooseCharacter);
             command.Add(CreateCharacter);
+            command.Add(Save);
         }
 
         /// <summary>
@@ -36,6 +38,7 @@ namespace Unknown_World_of_Mystery_server
             commandDictionary.Add("Register", command[1]);
             commandDictionary.Add("ChooseCharacter", command[2]);
             commandDictionary.Add("CreateCharacter", command[3]);
+            commandDictionary.Add("Save", command[4]);
         }
 
         /// <summary>

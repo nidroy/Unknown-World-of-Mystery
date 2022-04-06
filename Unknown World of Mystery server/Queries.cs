@@ -259,4 +259,41 @@ namespace Unknown_World_of_Mystery_server
             return characterNames.Remove(characterNames.Length - 1);
         }
     }
+
+    /// <summary>
+    /// запрос на обновление персонажа
+    /// </summary>
+    public class QueryUpdateCharacter : IQuery
+    {
+        string[] character;// имя пользователя, имя персонажа, уровень персонажа, время персонажа в игре
+
+        /// <summary>
+        /// конструктор
+        /// </summary>
+        /// <param name="character">элементы персонажа</param>
+        public QueryUpdateCharacter(string[] character)
+        {
+            this.character = character;
+        }
+
+        /// <summary>
+        /// выполнение запроса
+        /// </summary>
+        /// <param name="connectionString">строка подключения</param>
+        /// <returns>подтверждение создания персонажа</returns>
+        public string Execute(string connectionString)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand();
+                command.Connection = connection;
+                command.CommandText = String.Format("UPDATE [Character] SET [Level] = '{2}', [TimeInTheGame] = '{3}' WHERE [Name] = '{1}' AND [UserID] = (SELECT [ID] FROM [User] WHERE [Username] = '{0}');", character[1], character[2], character[3], character[4]);
+
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                connection.Close();
+            }
+            return "the character has been updated";
+        }
+    }
 }

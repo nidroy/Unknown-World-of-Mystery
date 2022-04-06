@@ -1,4 +1,4 @@
 screenResolution:0
-volumeSounds:0,7566357
+volumeSounds:0,7494395
 screenMode:0
-volumeMusic:0,1002255
+volumeMusic:0,1074217

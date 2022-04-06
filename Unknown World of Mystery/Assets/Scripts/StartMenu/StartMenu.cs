@@ -6,7 +6,6 @@ public class StartMenu : MonoBehaviour
 {
     public AuthorizationMenu authorizationMenu; // меню авторизации
     public Settings settings;// настройки
-    public ChooseCharacterMenu chooseCharacterMenu;// меню выбора персонажа
     public AudioManager audioManager;// менеджер звуков
 
     public AudioSource music;// музыка
@@ -28,6 +27,7 @@ public class StartMenu : MonoBehaviour
         if (serverResponse == "user found")
         {
             menuAnim.SetBool("isMenu", true);
+            ShowStartMenuItem("isMenu");
         }
         else
         {
@@ -36,29 +36,14 @@ public class StartMenu : MonoBehaviour
     }
 
     /// <summary>
-    /// показать меню выбора персонажа
+    /// показать элемент начального меню
     /// </summary>
-    public void ShowChooseCharacter()
+    /// <param name="item">название элемента меню</param>
+    public void ShowStartMenuItem(string item)
     {
-        menuAnim.SetBool("isChooseCharacter", true);
-        chooseCharacterMenu.isUpdateItems = true;
-    }
-
-    /// <summary>
-    /// показать меню создания персонажа
-    /// </summary>
-    public void ShowCreateCharacter()
-    {
-        menuAnim.SetBool("isCreateCharacter", true);
-    }
-
-    /// <summary>
-    /// показать настройки
-    /// </summary>
-    public void ShowSettings()
-    {
-        settings.UpdateSettings(Settings.GetSettings(FileManager.pathToSettings));
-        menuAnim.SetBool("isSettings", true);
+        if (item == "isSettings")
+            settings.UpdateSettings(Settings.GetSettings(FileManager.pathToSettings));
+        menuAnim.SetBool(item, true);
     }
 
     /// <summary>
@@ -72,18 +57,10 @@ public class StartMenu : MonoBehaviour
     }
 
     /// <summary>
-    /// закрыть окно сообщений
-    /// </summary>
-    public void HideMessageBox()
-    {
-        messageBox.SetActive(false);
-    }
-
-    /// <summary>
-    /// закрыть элементы начального меню
+    /// закрыть элемент начального меню
     /// </summary>
     /// <param name="item">название элемента меню</param>
-    public void HideStartMenuItems(string item)
+    public void HideStartMenuItem(string item)
     {
         if (item == "isMenu")
             GameManager.isLocalAccount = false;

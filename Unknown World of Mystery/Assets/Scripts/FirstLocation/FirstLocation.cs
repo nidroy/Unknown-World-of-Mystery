@@ -5,8 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class FirstLocation : Location
 {
-    public Animator houseAnim;
-    public Animator gatesAnim;
+    public Animator doorAnim;
 
     public AudioSource door;
 
@@ -27,7 +26,7 @@ public class FirstLocation : Location
     {
         if(isOpenDoor)
         {
-            houseAnim.SetBool("isOpen", true);
+            doorAnim.SetBool("isOpen", true);
             audioManager.PlaySounds(door);
             isOpenDoor = false;
         }
@@ -39,24 +38,9 @@ public class FirstLocation : Location
         }
         if (teleport.activeInHierarchy)
         {
-            player.Teleportation();
+            player.StartTeleportation();
         }
-        if (completeObject.activeInHierarchy)
-        {
-            gatesAnim.SetBool("isClose", true);
-        }
-        if (loadObject.activeInHierarchy)
-        {
-            if (isExitMenu)
-            {
-                ExitMenu();
-            }
-            else
-            {
-                GameManager.characterLevel = 1;
-                SceneManager.LoadScene(GameManager.characterLevel + 2);
-            }
-        }
+        CompleteLevel(1);
 
     }
 

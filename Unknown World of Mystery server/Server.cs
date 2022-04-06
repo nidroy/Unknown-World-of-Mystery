@@ -24,6 +24,7 @@ namespace Unknown_World_of_Mystery_server
             {
                 stream = client.GetStream();
                 byte[] data = new byte[64]; // буфер для получаемых данных
+                string response = ""; // ответ
                 while (true)
                 {
                     // получаем сообщение
@@ -48,7 +49,9 @@ namespace Unknown_World_of_Mystery_server
                     Random random = new Random();
                     FileManager.WritingFile(FileManager.pathToKey, random.Next(0, 39321).ToString());
                     key = ushort.Parse(FileManager.ReadingFile(FileManager.pathToKey));
-                    data = Encoding.Unicode.GetBytes(EncryptionLibrary.EncryptionClass.EncryptDecrypt(FormResponse(command), key));
+                    response = FormResponse(command);
+                    Console.WriteLine("Server: " + response);
+                    data = Encoding.Unicode.GetBytes(EncryptionLibrary.EncryptionClass.EncryptDecrypt(response, key));
                     stream.Write(data, 0, data.Length);
                     break;
                 }
@@ -79,13 +82,15 @@ namespace Unknown_World_of_Mystery_server
                 new QueryCreateUser(command),
                 new QueryGetCharacters(command),
                 new QueryCreateCharacter(command),
-                new QueryGetCharacterNames(command));
+                new QueryGetCharacterNames(command),
+                new QueryUpdateCharacter(command));
 
             Broker broker = new Broker(
                 new CommandLogIn(command, database),
                 new CommandRegister(command, database),
                 new CommandChooseCharacter(database),
-                new CommandCreateCharacter(command, database));
+                new CommandCreateCharacter(command, database),
+                new CommandSave(database));
 
             database.FillInTheQueryDictionary();
             broker.FillInTheCommandDictionary();

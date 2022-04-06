@@ -16,7 +16,7 @@ public class Screensaver : MonoBehaviour
     /// <summary>
     /// применение настроек
     /// </summary>
-    void Start()
+    private void Start()
     {
         //if (!Process.GetProcesses().Any(p => p.ProcessName == FileManager.serverPath))
         //{
@@ -30,7 +30,7 @@ public class Screensaver : MonoBehaviour
     /// <summary>
     /// проигрывание начальной заставки игры
     /// </summary>
-    void Update()
+    private void Update()
     {
         if(closeObject.activeInHierarchy)
         {

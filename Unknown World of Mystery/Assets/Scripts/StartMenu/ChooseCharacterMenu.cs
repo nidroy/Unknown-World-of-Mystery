@@ -40,7 +40,7 @@ public class ChooseCharacterMenu : MonoBehaviour
         StartCoroutine(GetItems(modelsCount, results => OnReceivedModels(results), characters));
     }
 
-    void OnReceivedModels(ItemModel[] models)
+    private void OnReceivedModels(ItemModel[] models)
     {
         foreach (Transform child in content)
         {
@@ -60,7 +60,7 @@ public class ChooseCharacterMenu : MonoBehaviour
     /// </summary>
     /// <param name="viewGameObject">класс графических элементов префаба персонажа</param>
     /// <param name="model">класс элементов персонажа</param>
-    void InitializeItemView(GameObject viewGameObject, ItemModel model)
+    private void InitializeItemView(GameObject viewGameObject, ItemModel model)
     {
         ItemView view = new ItemView(viewGameObject.transform);
         view.name.text = model.name;

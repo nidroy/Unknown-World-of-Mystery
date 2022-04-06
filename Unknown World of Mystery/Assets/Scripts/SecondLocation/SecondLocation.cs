@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class SecondLocation : Location
 {
     public Animator[] statueAnim;
-    public Animator gatesAnim;
     public GameObject briefing;
     public GameObject trigger;
     public GameObject[] riddle;
@@ -22,7 +21,7 @@ public class SecondLocation : Location
     private void Start()
     {
         isOpenDoor = false;
-        player.Teleportation();
+        player.StartTeleportation();
         isChoosingShape = false;
         isEquations = false;
         isExitMenu = false;
@@ -53,24 +52,7 @@ public class SecondLocation : Location
             isOpenDoor = false;
             completeObject.SetActive(true);
         }
-        if (completeObject.activeInHierarchy)
-        {
-            gatesAnim.SetBool("isClose", true);
-            if(!isExitMenu)
-                player.gameObject.SetActive(false);
-        }
-        if (loadObject.activeInHierarchy)
-        {
-            if (isExitMenu)
-            {
-                ExitMenu();
-            }
-            else
-            {
-                GameManager.characterLevel = 2;
-                SceneManager.LoadScene(GameManager.characterLevel + 2);
-            }
-        }
+        CompleteLevel(2);
     }
 
     public void ShowRiddle(string name)

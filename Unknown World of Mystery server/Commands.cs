@@ -143,4 +143,29 @@ namespace Unknown_World_of_Mystery_server
         }
     }
 
+    /// <summary>
+    /// команда сохранения
+    /// </summary>
+    public class CommandSave : ICommand
+    {
+        Database database;// бд
+
+        /// <summary>
+        /// конструктор
+        /// </summary>
+        /// <param name="database">бд</param>
+        public CommandSave(Database database)
+        {
+            this.database = database;
+        }
+
+        /// <summary>
+        /// выполнение команды
+        /// </summary>
+        /// <returns>персонажи</returns>
+        public string Execute()
+        {
+            return database.ExecuteQuery("UpdateCharacter");
+        }
+    }
 }

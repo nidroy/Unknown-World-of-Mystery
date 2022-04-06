@@ -2,28 +2,80 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
 
-public class Location : MonoBehaviour
+public abstract class Location : MonoBehaviour
 {
-    public Animator interfaceAnim;
+    public Animator interfaceAnim; // анимации интерфейса
+    public Animator gatesAnim; // анимации ворот
 
-    public Player player;
+    public Player player; // игрок
 
-    public AudioManager audioManager;
+    public AudioManager audioManager; // менеджер звуков
 
-    public GameObject completeObject;
-    public GameObject loadObject;
+    public GameObject completeObject; // объект для завершения уровня
+    public GameObject loadObject; // объект для загрузки
 
-    public bool isExitMenu { get; set; }
+    public bool isExitMenu { get; set; } // выйти в меню?
 
+    /// <summary>
+    /// закрыть туториал
+    /// </summary>
     public void HideTutorial()
     {
         interfaceAnim.SetBool("isShow", true);
         player.isMove = true;
     }
 
-    public void ExitMenu()
+    /// <summary>
+    /// завершить уровень
+    /// </summary>
+    /// <param name="level">уровень</param>
+    public void CompleteLevel(int level)
     {
+        if (completeObject.activeInHierarchy)
+        {
+            gatesAnim.SetBool("isClose", true);
+            if (!isExitMenu)
+                player.gameObject.SetActive(false);
+        }
+        if (loadObject.activeInHierarchy)
+        {
+            if (isExitMenu)
+            {
+                ExitMenu();
+            }
+            else
+            {
+                LoadLevel(level);
+            }
+        }
+    }
+
+    /// <summary>
+    /// загрузить уровень
+    /// </summary>
+    /// <param name="level">уровень</param>
+    private void LoadLevel(int level)
+    {
+        GameManager.characterLevel = level;
+        SceneManager.LoadScene(GameManager.characterLevel + 2);
+    }
+
+    /// <summary>
+    /// выход в главное меню
+    /// </summary>
+    private void ExitMenu()
+    {
+        SaveGame();
         SceneManager.LoadScene(1);
+    }
+
+    /// <summary>
+    /// сохранить игру
+    /// </summary>
+    private void SaveGame()
+    {
+        Client.SendingMessage(GameManager.username, String.Format("Save_{0}_{1}_{2}_{3}", GameManager.username, GameManager.characterName, GameManager.characterLevel, GameManager.timeInTheGame));
     }
 }

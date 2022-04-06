@@ -4,30 +4,39 @@ using UnityEngine;
 
 public class Player : Character
 {
-    public void Teleportation()
+    /// <summary>
+    /// начать талепортацию
+    /// </summary>
+    public void StartTeleportation()
     {
-        characterAnim.SetBool("isTeleportation", true);
+        characterAnim.SetBool("isStartTeleportation", true);
     }
 
+    /// <summary>
+    /// закончить телепортацию
+    /// </summary>
     public void EndTeleportation()
     {
-        characterAnim.SetBool("isTeleportation", false);
+        characterAnim.SetBool("isStartTeleportation", false);
         characterAnim.SetBool("isEndTeleportation", true);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    /// <summary>
+    /// коснуться пола
+    /// </summary>
+    public override void EnterFloor()
     {
-        if (collision.gameObject.CompareTag("Floor"))
-        {
-            characterAnim.SetBool("isEndTeleportation", false);
-            isFloor = true;
-        }
-        if (collision.gameObject.CompareTag("Trigger"))
-        {
-            FirstLocation.isOpenDoor = true;
-            SecondLocation.isOpenDoor = true;
-            isMove = false;
-        }
+        characterAnim.SetBool("isEndTeleportation", false);
+        isFloor = true;
     }
-   
+
+    /// <summary>
+    /// коснуться тригера
+    /// </summary>
+    public override void EnterTrigger()
+    {
+        FirstLocation.isOpenDoor = true;
+        SecondLocation.isOpenDoor = true;
+        isMove = false;
+    }
 }

@@ -712,12 +712,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interfaceAnim: {fileID: 121287961}
+  gatesAnim: {fileID: 1095037095}
   player: {fileID: 639578720}
   audioManager: {fileID: 121287959}
   completeObject: {fileID: 1193592301}
   loadObject: {fileID: 916730532}
-  houseAnim: {fileID: 50415636}
-  gatesAnim: {fileID: 1095037095}
+  doorAnim: {fileID: 50415636}
   door: {fileID: 1427242707}
   skeleton: {fileID: 944788624}
   openObject: {fileID: 774581639}

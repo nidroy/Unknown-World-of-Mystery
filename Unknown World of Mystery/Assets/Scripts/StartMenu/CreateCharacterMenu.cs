@@ -29,7 +29,7 @@ public class CreateCharacterMenu : MonoBehaviour
                 }
                 else
                 {
-                    startMenu.HideStartMenuItems("isCreateCharacter");
+                    startMenu.HideStartMenuItem("isCreateCharacter");
                 }
                 characterName.text = "";
                 characterLevel.value = 0;

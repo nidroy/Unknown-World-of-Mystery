@@ -20,14 +20,12 @@ public class AuthorizationMenu : MonoBehaviour
             if(username.text == GameManager.localUsername && password.text == GameManager.localPassword)
             {
                 GameManager.isLocalAccount = true;
-                username.text = "";
-                password.text = "";
+                ResetInputFields();
                 return "user found";
             }
             GameManager.username = username.text;
             string message = Client.SendingMessage(GameManager.username, String.Format("LogIn_{0}_{1}", username.text, password.text));
-            username.text = "";
-            password.text = "";
+            ResetInputFields();
             return message;
 
         }
@@ -58,13 +56,21 @@ public class AuthorizationMenu : MonoBehaviour
                 {
                     startMenu.ShowMessageBox("The user is registered. Log in.");
                 }
-                username.text = "";
-                password.text = "";
             }
         }
         else
         {
             startMenu.ShowMessageBox("Login or password not entered.");
-        }      
+        }
+        ResetInputFields();
+    }
+
+    /// <summary>
+    /// сборсить входные поля
+    /// </summary>
+    private void ResetInputFields()
+    {
+        username.text = "";
+        password.text = "";
     }
 }

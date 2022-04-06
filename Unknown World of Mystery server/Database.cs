@@ -26,7 +26,8 @@ namespace Unknown_World_of_Mystery_server
         /// <param name="GetCharacters">запрос на получения персонажей</param>
         /// <param name="CreateCharacter">запрос на создания персонажа</param>
         /// <param name="GetCharacterNames">запрос на получения имен персонажей</param>
-        public Database(IQuery GetUsernames, IQuery GetPassword, IQuery CreateUser, IQuery GetCharacters, IQuery CreateCharacter, IQuery GetCharacterNames)
+        /// <param name="UpdateCharacter">запрос на обновление персонажа</param>
+        public Database(IQuery GetUsernames, IQuery GetPassword, IQuery CreateUser, IQuery GetCharacters, IQuery CreateCharacter, IQuery GetCharacterNames, IQuery UpdateCharacter)
         {
             query.Add(GetUsernames);
             query.Add(GetPassword);
@@ -34,6 +35,7 @@ namespace Unknown_World_of_Mystery_server
             query.Add(GetCharacters);
             query.Add(CreateCharacter);
             query.Add(GetCharacterNames);
+            query.Add(UpdateCharacter);
         }
 
         /// <summary>
@@ -48,6 +50,7 @@ namespace Unknown_World_of_Mystery_server
             queryDictionary.Add("GetCharacters", query[3]);
             queryDictionary.Add("CreateCharacter", query[4]);
             queryDictionary.Add("GetCharacterNames", query[5]);
+            queryDictionary.Add("UpdateCharacter", query[6]);
         }
 
         /// <summary>

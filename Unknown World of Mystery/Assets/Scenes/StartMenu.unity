@@ -1060,7 +1060,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   authorizationMenu: {fileID: 1818836292}
   settings: {fileID: 1065889036}
-  chooseCharacterMenu: {fileID: 2110880712}
   audioManager: {fileID: 188411307}
   music: {fileID: 2932962922875755331}
   menuAnim: {fileID: 188411303}
@@ -1250,14 +1249,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 188411304}
         m_TargetAssemblyTypeName: StartMenu, Assembly-CSharp
-        m_MethodName: ShowSettings
-        m_Mode: 1
+        m_MethodName: ShowStartMenuItem
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: isSettings
           m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &227615580
@@ -2676,7 +2675,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 188411304}
         m_TargetAssemblyTypeName: StartMenu, Assembly-CSharp
-        m_MethodName: HideStartMenuItems
+        m_MethodName: HideStartMenuItem
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4251,7 +4250,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 188411304}
         m_TargetAssemblyTypeName: StartMenu, Assembly-CSharp
-        m_MethodName: HideStartMenuItems
+        m_MethodName: HideStartMenuItem
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4572,6 +4571,75 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!1001 &696273572
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1792407593}
+    m_Modifications:
+    - target: {fileID: 121100, guid: 15df05295ee0dae498b4267962e36447, type: 3}
+      propertyPath: m_Name
+      value: torch
+      objectReference: {fileID: 0}
+    - target: {fileID: 491456, guid: 15df05295ee0dae498b4267962e36447, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 491456, guid: 15df05295ee0dae498b4267962e36447, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 491456, guid: 15df05295ee0dae498b4267962e36447, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 491456, guid: 15df05295ee0dae498b4267962e36447, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 491456, guid: 15df05295ee0dae498b4267962e36447, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 491456, guid: 15df05295ee0dae498b4267962e36447, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.70710677
+      objectReference: {fileID: 0}
+    - target: {fileID: 491456, guid: 15df05295ee0dae498b4267962e36447, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071069
+      objectReference: {fileID: 0}
+    - target: {fileID: 491456, guid: 15df05295ee0dae498b4267962e36447, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 491456, guid: 15df05295ee0dae498b4267962e36447, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 491456, guid: 15df05295ee0dae498b4267962e36447, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 491456, guid: 15df05295ee0dae498b4267962e36447, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 491456, guid: 15df05295ee0dae498b4267962e36447, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19902902, guid: 15df05295ee0dae498b4267962e36447, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19921574, guid: 15df05295ee0dae498b4267962e36447, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 15df05295ee0dae498b4267962e36447, type: 3}
 --- !u!1 &702150990
 GameObject:
   m_ObjectHideFlags: 0
@@ -6142,7 +6210,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 188411304}
         m_TargetAssemblyTypeName: StartMenu, Assembly-CSharp
-        m_MethodName: HideStartMenuItems
+        m_MethodName: HideStartMenuItem
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10095,6 +10163,11 @@ Transform:
   m_Father: {fileID: 702150991}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1490620254 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 491456, guid: 15df05295ee0dae498b4267962e36447, type: 3}
+  m_PrefabInstance: {fileID: 696273572}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1491693465
 GameObject:
   m_ObjectHideFlags: 0
@@ -11478,10 +11551,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 188411304}
-        m_TargetAssemblyTypeName: StartMenu, Assembly-CSharp
-        m_MethodName: HideMessageBox
-        m_Mode: 1
+      - m_Target: {fileID: 1604398372}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -11815,14 +11888,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 188411304}
         m_TargetAssemblyTypeName: StartMenu, Assembly-CSharp
-        m_MethodName: ShowCreateCharacter
-        m_Mode: 1
+        m_MethodName: ShowStartMenuItem
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: isCreateCharacter
           m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1761120331
@@ -12067,7 +12140,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 4.7316127, y: -0.96, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1490620254}
   m_Father: {fileID: 2052792482}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12227,8 +12301,20 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 188411304}
         m_TargetAssemblyTypeName: StartMenu, Assembly-CSharp
-        m_MethodName: ShowChooseCharacter
-        m_Mode: 1
+        m_MethodName: ShowStartMenuItem
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: isChooseCharacter
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2110880712}
+        m_TargetAssemblyTypeName: ChooseCharacterMenu, Assembly-CSharp
+        m_MethodName: set_isUpdateItems
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -14820,7 +14906,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2932962923345946935, guid: 4948671a48866b04bb975a8f0abaf5d4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2932962923345946936, guid: 4948671a48866b04bb975a8f0abaf5d4, type: 3}
       propertyPath: m_Pivot.x
@@ -14910,6 +14996,10 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: a2bd8a9c0b472ad4aa0fe6c2882ba98e, type: 3}
+    - target: {fileID: 4552086986843087956, guid: 4948671a48866b04bb975a8f0abaf5d4, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5504780753690576850, guid: 4948671a48866b04bb975a8f0abaf5d4, type: 3}
       propertyPath: m_Name
       value: LoadObject
