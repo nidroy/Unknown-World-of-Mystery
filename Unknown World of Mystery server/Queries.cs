@@ -203,7 +203,7 @@ namespace Unknown_World_of_Mystery_server
             {
                 SqlCommand command = new SqlCommand();
                 command.Connection = connection;
-                command.CommandText = String.Format("INSERT INTO [Character] VALUES((SELECT [ID] FROM [User] WHERE [Username] = '{0}'),'{1}','{2}','0');", character[1], character[2], character[3]);
+                command.CommandText = String.Format("INSERT INTO [Character] VALUES((SELECT [ID] FROM [User] WHERE [Username] = '{0}'),'{1}','{2}','0:0:0');", character[1], character[2], character[3]);
 
                 connection.Open();
                 SqlDataReader reader = command.ExecuteReader();

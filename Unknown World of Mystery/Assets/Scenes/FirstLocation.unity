@@ -714,6 +714,7 @@ MonoBehaviour:
   interfaceAnim: {fileID: 121287961}
   gatesAnim: {fileID: 1095037095}
   player: {fileID: 639578720}
+  timer: {fileID: 1866301458745889647}
   audioManager: {fileID: 121287959}
   completeObject: {fileID: 1193592301}
   loadObject: {fileID: 916730532}
@@ -11094,6 +11095,17 @@ PrefabInstance:
       objectReference: {fileID: 963120904}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd0aecc93937a834c99fbc6556073a6f, type: 3}
+--- !u!114 &1866301458745889647 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5605648354642726335, guid: cd0aecc93937a834c99fbc6556073a6f, type: 3}
+  m_PrefabInstance: {fileID: 1866301458745889646}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 265c7663a05a54046b6d734cacccc305, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5244828027610679324
 PrefabInstance:
   m_ObjectHideFlags: 0

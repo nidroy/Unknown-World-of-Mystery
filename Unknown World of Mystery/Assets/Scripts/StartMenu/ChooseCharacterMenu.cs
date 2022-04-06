@@ -31,7 +31,7 @@ public class ChooseCharacterMenu : MonoBehaviour
     /// </summary>
     public void UpdateItems()
     {
-        string[] characters = { "Character training-0-0", "Character math-1-0", "Character days of week-2-0" };
+        string[] characters = { "Character training-0-0:0:0", "Character math-1-0:0:0", "Character days of week-2-0:0:0" };
         if (!GameManager.isLocalAccount)
         {
             characters = Client.SendingMessage(GameManager.username, String.Format("ChooseCharacter_{0}", GameManager.username)).Split(new char[] { '_' }, StringSplitOptions.RemoveEmptyEntries);

@@ -1680,14 +1680,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interfaceAnim: {fileID: 307029127}
+  gatesAnim: {fileID: 2132950196}
   player: {fileID: 1678199316}
+  timer: {fileID: 934938690}
   audioManager: {fileID: 307029121}
   completeObject: {fileID: 687381419}
   loadObject: {fileID: 2132950195}
   statueAnim:
   - {fileID: 1861477950}
   - {fileID: 707570056}
-  gatesAnim: {fileID: 2132950196}
   briefing: {fileID: 260789232}
   trigger: {fileID: 104993420}
   riddle:
@@ -4659,6 +4660,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1866301458312261762, guid: cd0aecc93937a834c99fbc6556073a6f, type: 3}
   m_PrefabInstance: {fileID: 934938688}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &934938690 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5605648354642726335, guid: cd0aecc93937a834c99fbc6556073a6f, type: 3}
+  m_PrefabInstance: {fileID: 934938688}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 265c7663a05a54046b6d734cacccc305, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &952328908
 GameObject:
   m_ObjectHideFlags: 0

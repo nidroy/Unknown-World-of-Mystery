@@ -10,6 +10,7 @@ public abstract class Location : MonoBehaviour
     public Animator gatesAnim; // анимации ворот
 
     public Player player; // игрок
+    public Timer timer; // таймер
 
     public AudioManager audioManager; // менеджер звуков
 
@@ -24,6 +25,7 @@ public abstract class Location : MonoBehaviour
     public void HideTutorial()
     {
         interfaceAnim.SetBool("isShow", true);
+        timer.StartTimer();
         player.isMove = true;
     }
 
