@@ -38,6 +38,7 @@ public abstract class Location : MonoBehaviour
         if (completeObject.activeInHierarchy)
         {
             gatesAnim.SetBool("isClose", true);
+            timer.StopTimer();
             if (!isExitMenu)
                 player.gameObject.SetActive(false);
         }

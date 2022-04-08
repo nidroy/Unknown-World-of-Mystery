@@ -6,38 +6,63 @@ using System;
 
 public class Timer : MonoBehaviour
 {
-    public Text time;
+    public Text clock; // поле вывода времени
 
-    private float seconds;
-    private int minutes;
-    private int hours;
+    private float seconds; // секунды
+    private int minutes; // минуты
+    private int hours; // часы
 
-    private bool isPause;
+    private bool isPause; // пауза
 
+    /// <summary>
+    /// инициализация переменных
+    /// </summary>
     private void Start()
     {
         isPause = false;   
     }
 
+    /// <summary>
+    /// работа таймера
+    /// </summary>
     private void Update()
     {
         if(!isPause)
         {
-            seconds += Time.deltaTime;
-            if(seconds >= 60)
-            {
-                minutes++;
-                seconds = 0;
-            }
-            if(minutes == 60)
-            {
-                hours++;
-                minutes = 0;
-            }
-            time.text = String.Format("{0}:{1}:{2}", hours, minutes, (int)seconds);
+            TimeCounting();
+            TimeDisplay();
         }
     }
 
+    /// <summary>
+    /// отсчет времени
+    /// </summary>
+    private void TimeCounting()
+    {
+        seconds += Time.deltaTime;
+        if (seconds >= 60)
+        {
+            minutes++;
+            seconds = 0;
+        }
+        if (minutes == 60)
+        {
+            hours++;
+            minutes = 0;
+        }
+    }
+
+    /// <summary>
+    /// вывод времени на экран
+    /// </summary>
+    private void TimeDisplay()
+    {
+        clock.text = String.Format("{0}:{1}:{2}", hours, minutes, (int)seconds);
+    }
+
+    /// <summary>
+    /// запуск таймера
+    /// </summary>
     public void StartTimer()
     {
         string[] time = GameManager.timeInTheGame.Split(new char[] { ':' }, StringSplitOptions.RemoveEmptyEntries);
@@ -45,5 +70,14 @@ public class Timer : MonoBehaviour
         minutes = int.Parse(time[1]);
         hours = int.Parse(time[2]);
         isPause = false;
+    }
+
+    /// <summary>
+    /// остановка таймера
+    /// </summary>
+    public void StopTimer()
+    {
+        isPause = true;
+        GameManager.timeInTheGame = clock.text;
     }
 }
