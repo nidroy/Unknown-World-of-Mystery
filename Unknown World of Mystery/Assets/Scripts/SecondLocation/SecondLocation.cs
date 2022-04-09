@@ -6,74 +6,90 @@ using UnityEngine.SceneManagement;
 
 public class SecondLocation : Location
 {
-    public Animator[] statueAnim;
-    public GameObject briefing;
-    public GameObject trigger;
-    public GameObject[] riddle;
-    public SpriteRenderer door;
-    public Sprite openDoor;
-    private bool isStart = true;
-    public static bool isOpenDoor = false;
+    public GameObject tutorial; // обучение
+    public GameObject trigger; // тригер
+    public GameObject[] riddleIsSolvedObject; // объекты разгадки загадки
 
-    public bool isChoosingShape { get; set; }
-    public bool isEquations { get; set; }
+    public SpriteRenderer door; // дверь
+    public Sprite openDoor; // иконка открытой двери
+    public AudioSource doorSound; // звук двери
 
+    public AudioSource teleportationSound; // звук телепортации
+
+    private bool isStart; // запуск локации?
+    private bool isOpenDoor; // открыта ли дверь?
+
+    public static bool isСomplete; // завершение локации
+
+    /// <summary>
+    /// инициализация переменных
+    /// </summary>
     private void Start()
     {
+        isStart = true;
         isOpenDoor = false;
-        player.StartTeleportation();
-        isChoosingShape = false;
-        isEquations = false;
+        isСomplete = false;
         isExitMenu = false;
+        player.StartTeleportation();
     }
 
+    /// <summary>
+    /// работа локации
+    /// </summary>
     private void Update()
     {
-        if(!briefing.activeInHierarchy && isStart)
-        {
-            isStart = false;
-            player.EndTeleportation();
-        }
-        if(isChoosingShape && isEquations)
-        {
-            door.sprite = openDoor;
-            trigger.SetActive(true);
-        }
-        if(!riddle[0].activeInHierarchy && isEquations)
-        {
-            statueAnim[0].SetBool("isOpen", true);
-        }
-        if (!riddle[1].activeInHierarchy && isChoosingShape)
-        {
-            statueAnim[1].SetBool("isOpen", true);
-        }
-        if (isOpenDoor)
-        {
-            isOpenDoor = false;
-            completeObject.SetActive(true);
-        }
+        Teleportation();
+        OpenDoor();
+        Сomplete();
         CompleteLevel(2);
     }
 
-    public void ShowRiddle(string name)
+    /// <summary>
+    /// функция открытия двери
+    /// </summary>
+    private void OpenDoor()
     {
-        interfaceAnim.SetBool(name, true);
+        if(riddleIsSolvedObject[0].activeInHierarchy && riddleIsSolvedObject[1].activeInHierarchy && !isOpenDoor)
+        {
+            StartCoroutine(Open());
+            isOpenDoor = true;
+        }
     }
 
-    public void HideRiddle(string name)
+    /// <summary>
+    /// открыть дверь
+    /// </summary>
+    /// <returns></returns>
+    private IEnumerator Open()
     {
-        interfaceAnim.SetBool(name, false);
+        yield return new WaitForSeconds(0.4f);
+        audioManager.PlaySounds(doorSound);
+        door.sprite = openDoor;
+        trigger.SetActive(true);
     }
 
-    public void SolveChoosingShape()
+    /// <summary>
+    /// функция завершения локации
+    /// </summary>
+    private void Сomplete()
     {
-        interfaceAnim.SetBool("isChoosingShape", false);
-        isChoosingShape = true;
+        if (isСomplete)
+        {
+            isСomplete = false;
+            completeObject.SetActive(true);
+        }
     }
 
-    public void SolveEquations()
+    /// <summary>
+    /// функция телепортации
+    /// </summary>
+    private void Teleportation()
     {
-        interfaceAnim.SetBool("isEquations", false);
-        isEquations = true;
+        if (!tutorial.activeInHierarchy && isStart)
+        {
+            isStart = false;
+            audioManager.PlaySounds(teleportationSound);
+            player.EndTeleportation();
+        }
     }
 }

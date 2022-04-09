@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System;
@@ -35,6 +33,15 @@ public abstract class Location : MonoBehaviour
     /// <param name="level">уровень</param>
     public void CompleteLevel(int level)
     {
+        Complete();
+        Load(level);
+    }
+
+    /// <summary>
+    /// функция завершения
+    /// </summary>
+    private void Complete()
+    {
         if (completeObject.activeInHierarchy)
         {
             gatesAnim.SetBool("isClose", true);
@@ -42,6 +49,14 @@ public abstract class Location : MonoBehaviour
             if (!isExitMenu)
                 player.gameObject.SetActive(false);
         }
+    }
+
+    /// <summary>
+    /// функция загрузки
+    /// </summary>
+    /// <param name="level">уровень</param>
+    private void Load(int level)
+    {
         if (loadObject.activeInHierarchy)
         {
             if (isExitMenu)

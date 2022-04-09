@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
 public class Player : Character
 {
@@ -36,7 +33,7 @@ public class Player : Character
     public override void EnterTrigger()
     {
         FirstLocation.isOpenDoor = true;
-        SecondLocation.isOpenDoor = true;
+        SecondLocation.is—omplete = true;
         isMove = false;
     }
 }

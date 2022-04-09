@@ -10,5 +10,5 @@ public class GameManager : MonoBehaviour
 
     public static string characterName; // имя персонажа
     public static int characterLevel; // уровень персонажа
-    public static string timeInTheGame; // время в игре
+    public static string timeInTheGame = "0:0:0"; // время в игре
 }

@@ -1,47 +1,84 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class FirstLocation : Location
 {
-    public Animator doorAnim;
+    public Animator doorAnim; // анимации двери
 
-    public AudioSource door;
+    public AudioSource doorSound; // звук двери
+    public AudioSource teleportSound; // звук телепорта
 
-    public Skeleton skeleton;
+    public Skeleton skeleton; // скелет
 
-    public GameObject openObject;
-    public GameObject teleport;
+    public GameObject openObject; // тригер открытия двери
+    public GameObject teleport; // телепорт
 
-    public static bool isOpenDoor;
+    public static bool isOpenDoor; // дверь открыта?
 
+    /// <summary>
+    /// инициализация переменных
+    /// </summary>
     private void Start()
     {
         isOpenDoor = false;
         isExitMenu = false;
     }
 
+    /// <summary>
+    /// работа локации
+    /// </summary>
     private void Update()
     {
-        if(isOpenDoor)
+        OpenDoor();
+        SkeletonAppeared();
+        Teleportation();
+        CompleteLevel(1);
+
+    }
+
+    /// <summary>
+    /// функция открытия двери
+    /// </summary>
+    private void OpenDoor()
+    {
+        if (isOpenDoor)
         {
             doorAnim.SetBool("isOpen", true);
-            audioManager.PlaySounds(door);
+            audioManager.PlaySounds(doorSound);
             isOpenDoor = false;
         }
-        if(openObject.activeInHierarchy)
+    }
+
+    /// <summary>
+    /// функция появления скелета
+    /// </summary>
+    private void SkeletonAppeared()
+    {
+        if (openObject.activeInHierarchy)
         {
             skeleton.gameObject.SetActive(true);
             skeleton.isMove = true;
             skeleton.direction = -1;
         }
+    }
+
+    /// <summary>
+    /// функция телепортации
+    /// </summary>
+    private void Teleportation()
+    {
         if (teleport.activeInHierarchy)
         {
             player.StartTeleportation();
         }
-        CompleteLevel(1);
+    }
 
+    /// <summary>
+    /// открыть телепорт
+    /// </summary>
+    public void OpenTeleport()
+    {
+        audioManager.PlaySounds(teleportSound);
+        skeleton.OpenTeleport();
     }
 
 }

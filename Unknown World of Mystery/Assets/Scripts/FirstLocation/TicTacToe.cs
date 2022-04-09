@@ -3,29 +3,48 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using System;
 
 public class TicTacToe : MonoBehaviour
 {
-    public Animator ticTacToeAnim;
-    public Dialogue dialogue;
+    public Animator ticTacToeAnim; // анимации крестиков ноликов
+    public Dialogue dialogue; // диалог
 
-    public Sprite playerIcon;
-    public Sprite skeletonIcon;
+    public Sprite playerIcon; // иконка игрока
+    public Sprite skeletonIcon; // иконка скелета
 
-    public Image[] icon;
-    public Button[] button;
-    public EventTrigger[] trigger;
+    public Image[] icon; // иконки на кнопках
+    public Button[] button; // кнопки
+    public EventTrigger[] trigger; // тригеры на кнопках
 
-    private int[] arrayCells = new int[]{ 1, 1, 1, 1, 1, 1, 1, 1, 1 };
+    private int[] arrayCells = new int[]{ 1, 1, 1, 1, 1, 1, 1, 1, 1 }; // массив €чеек
 
-    private bool isPlayerMove = false;
-    private bool isSkeletonMove = true;
+    private bool isPlayerMove = false; // будет ли ход игрока?
+    private bool isSkeletonMove = true; // будет лиход скелета?
 
+    private Dictionary<int, string> victoryDictionary = new Dictionary<int, string>()
+    {
+        [0] = "0 1 2",
+        [1] = "3 4 5",
+        [2] = "6 7 8",
+        [3] = "0 3 6",
+        [4] = "1 4 7",
+        [5] = "2 5 8",
+        [6] = "0 4 8",
+        [7] = "2 4 6"
+    }; // словарь победы
+
+    /// <summary>
+    /// начать крестики нолики
+    /// </summary>
     public void StartTicTacToe()
     {
         ticTacToeAnim.SetBool("isShow", true);
     }
 
+    /// <summary>
+    /// закончить крестики нолики
+    /// </summary>
     public void EndTicTacToe()
     {
         ticTacToeAnim.SetBool("isShow", false);
@@ -33,21 +52,38 @@ public class TicTacToe : MonoBehaviour
         dialogue.ShowDialog();
     }
 
-    public void CellSelection(int cellNumber)
+    /// <summary>
+    /// ход игрока
+    /// </summary>
+    /// <param name="cellNumber">номер €чейки</param>
+    public void PlayerMove(int cellNumber)
     {
         if (isPlayerMove && arrayCells[cellNumber] == 1)
         {
-            icon[cellNumber].sprite = playerIcon;
-            icon[cellNumber].gameObject.SetActive(true);
-            button[cellNumber].enabled = false;
-            trigger[cellNumber].enabled = false;
-            arrayCells[cellNumber] = 0;
+            CellSelection(cellNumber, playerIcon, 0);
             isPlayerMove = false;
             isSkeletonMove = true;
         }
     }
 
+    /// <summary>
+    /// выбор €чейки
+    /// </summary>
+    /// <param name="cellNumber">номер €чейки</param>
+    /// <param name="characterIcon">иконка персонажа</param>
+    /// <param name="element">элемент массива</param>
+    private void CellSelection(int cellNumber, Sprite characterIcon, int element)
+    {
+        icon[cellNumber].sprite = characterIcon;
+        icon[cellNumber].gameObject.SetActive(true);
+        button[cellNumber].enabled = false;
+        trigger[cellNumber].enabled = false;
+        arrayCells[cellNumber] = element;
+    }
 
+    /// <summary>
+    /// действи€ в игре
+    /// </summary>
     void FixedUpdate()
     {
         if (Victory(0) || Victory(6) || Draw())
@@ -58,7 +94,7 @@ public class TicTacToe : MonoBehaviour
         }
         else if (!isPlayerMove && isSkeletonMove)
         {
-            int cellNumber = Random.Range(0, 9);
+            int cellNumber = UnityEngine.Random.Range(0, 9);
             if (arrayCells[cellNumber] == 1)
             {
                 isSkeletonMove = false;
@@ -67,6 +103,10 @@ public class TicTacToe : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// закончить игру
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator FinishGame()
     {
         yield return new WaitForSeconds(0.4f);
@@ -74,18 +114,22 @@ public class TicTacToe : MonoBehaviour
         EndTicTacToe();
     }
 
+    /// <summary>
+    /// ход скелета
+    /// </summary>
+    /// <param name="cellNumber">номер €чейки</param>
+    /// <returns></returns>
     private IEnumerator SkeletonMove(int cellNumber)
     {
         yield return new WaitForSeconds(0.2f);
 
-        icon[cellNumber].sprite = skeletonIcon;
-        icon[cellNumber].gameObject.SetActive(true);
-        button[cellNumber].enabled = false;
-        trigger[cellNumber].enabled = false;
-        arrayCells[cellNumber] = 2;
+        CellSelection(cellNumber, skeletonIcon, 2);
         isPlayerMove = true;
     }
 
+    /// <summary>
+    /// обновление пол€
+    /// </summary>
     private void UpdatingField()
     {
         for (int i = 0; i < 9; i++)
@@ -97,27 +141,26 @@ public class TicTacToe : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// победа
+    /// </summary>
+    /// <param name="result">результат суммы</param>
+    /// <returns>будет или нет</returns>
     private bool Victory(int result)
     {
-        if (arrayCells[0] + arrayCells[1] + arrayCells[2] == result)
-            return true;
-        else if (arrayCells[3] + arrayCells[4] + arrayCells[5] == result)
-            return true;
-        else if(arrayCells[6] + arrayCells[7] + arrayCells[8] == result)
-            return true;
-        else if(arrayCells[0] + arrayCells[3] + arrayCells[6] == result)
-            return true;
-        else if(arrayCells[1] + arrayCells[4] + arrayCells[7] == result)
-            return true;
-        else if(arrayCells[2] + arrayCells[5] + arrayCells[8] == result)
-            return true;
-        else if(arrayCells[0] + arrayCells[4] + arrayCells[8] == result)
-            return true;
-        else if(arrayCells[2] + arrayCells[4] + arrayCells[6] == result)
-            return true;
+        for(int i = 0; i < 8; i ++)
+        {
+            string[] element = victoryDictionary[i].Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            if (arrayCells[int.Parse(element[0])] + arrayCells[int.Parse(element[1])] + arrayCells[int.Parse(element[2])] == result)
+                return true;
+        }
         return false;
     }
 
+    /// <summary>
+    /// ничь€
+    /// </summary>
+    /// <returns>будет или нет</returns>
     private bool Draw()
     {
         for(int i = 0; i < 9; i++)
