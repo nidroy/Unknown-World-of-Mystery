@@ -5,8 +5,8 @@ public class FileManager : MonoBehaviour
 {
     public static string pathToSettings = Application.dataPath + "/Settings/settings.txt"; // путь к файлу с настройками
     public static string serverPath = Application.dataPath + "/Server/Unknown World of Mystery server.exe"; // путь к серверу 
-    //public static string pathToKey = Application.dataPath + "/Key/key.txt"; // путь к файлу с ключем 
-    public static string pathToKey = "P:\\Projects\\UnityProjects\\Unknown World of Mystery\\Unknown-World-of-Mystery-repository\\Unknown World of Mystery server\\bin\\Debug\\Unknown World of Mystery_Data\\Key\\key.txt"; // путь к файлу с ключем 
+    public static string pathToKey = Application.dataPath + "/Key/key.txt"; // путь к файлу с ключем 
+    //public static string pathToKey = "P:\\Projects\\UnityProjects\\Unknown World of Mystery\\Unknown-World-of-Mystery-repository\\Unknown World of Mystery server\\bin\\Debug\\Unknown World of Mystery_Data\\Key\\key.txt"; // путь к файлу с ключем 
 
     /// <summary>
     /// чтение файла

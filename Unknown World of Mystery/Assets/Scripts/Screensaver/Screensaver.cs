@@ -18,10 +18,10 @@ public class Screensaver : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        //if (!Process.GetProcesses().Any(p => p.ProcessName == FileManager.serverPath))
-        //{
-        //    Process.Start(FileManager.serverPath);
-        //}
+        if (!Process.GetProcesses().Any(p => p.ProcessName == FileManager.serverPath))
+        {
+            Process.Start(FileManager.serverPath);
+        }
         Settings.GetSettings(FileManager.pathToSettings);
         ScreenManager.SetScreen();
         audioManager.PlayMusic(music);
