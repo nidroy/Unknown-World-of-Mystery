@@ -64,9 +64,9 @@ public class Timer : MonoBehaviour
     public void StartTimer()
     {
         string[] time = GameManager.timeInTheGame.Split(new char[] { ':' }, StringSplitOptions.RemoveEmptyEntries);
-        seconds = float.Parse(time[0]);
+        hours = int.Parse(time[0]);
         minutes = int.Parse(time[1]);
-        hours = int.Parse(time[2]);
+        seconds = float.Parse(time[2]);
         isPause = false;
     }
 

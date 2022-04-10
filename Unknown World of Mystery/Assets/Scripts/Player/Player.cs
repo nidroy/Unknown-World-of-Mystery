@@ -34,6 +34,7 @@ public class Player : Character
     {
         FirstLocation.isOpenDoor = true;
         SecondLocation.is—omplete = true;
+        ThirdLocation.is—omplete = true;
         isMove = false;
     }
 }

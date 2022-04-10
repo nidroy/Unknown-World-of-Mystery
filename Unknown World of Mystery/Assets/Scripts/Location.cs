@@ -76,8 +76,14 @@ public abstract class Location : MonoBehaviour
     /// <param name="level">уровень</param>
     private void LoadLevel(int level)
     {
-        GameManager.characterLevel = level;
-        SceneManager.LoadScene(GameManager.characterLevel + 2);
+        if (GameManager.isLocalAccount)
+            SceneManager.LoadScene(5);
+        else
+        {
+            GameManager.characterLevel = level;
+            SaveGame();
+            SceneManager.LoadScene(GameManager.characterLevel + 2);
+        }
     }
 
     /// <summary>
@@ -94,6 +100,7 @@ public abstract class Location : MonoBehaviour
     /// </summary>
     private void SaveGame()
     {
-        Client.SendingMessage(GameManager.username, String.Format("Save_{0}_{1}_{2}_{3}", GameManager.username, GameManager.characterName, GameManager.characterLevel, GameManager.timeInTheGame));
+        if(!GameManager.isLocalAccount)
+            Client.SendingMessage(GameManager.username, String.Format("Save_{0}_{1}_{2}_{3}", GameManager.username, GameManager.characterName, GameManager.characterLevel, GameManager.timeInTheGame));
     }
 }
