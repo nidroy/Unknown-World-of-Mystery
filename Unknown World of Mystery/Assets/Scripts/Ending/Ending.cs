@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using System;
 
 public class Ending : MonoBehaviour
 {
@@ -48,6 +49,14 @@ public class Ending : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         audioManager.PlayMusic(music);
+    }
+
+    /// <summary>
+    /// показать список лидеров
+    /// </summary>
+    public void ShowListLeaders()
+    {
+        Client.SendingMessage(GameManager.username, String.Format("ShowListLeaders_{0}", 5));
     }
 
     /// <summary>

@@ -170,17 +170,22 @@ namespace Unknown_World_of_Mystery_server
         }
     }
 
-    public class CommandShowListLeaders
+    /// <summary>
+    /// команда показа списка лидеров
+    /// </summary>
+    public class CommandShowListLeaders : ICommand
     {
+        string[] listLength;// длинна списка
         Database database;// бд        
 
         /// <summary>
         /// конструктор
         /// </summary>
-        /// <param name="user">элементы пользователя</param>
+        /// /// <param name="listLength">длинна списка</param>
         /// <param name="database">бд</param>
-        public CommandShowListLeaders(Database database)
+        public CommandShowListLeaders(string[] listLength, Database database)
         {
+            this.listLength = listLength;
             this.database = database;
         }
 
@@ -208,11 +213,62 @@ namespace Unknown_World_of_Mystery_server
                     list.Add(userName.Current.ToString() + "-" + attributes[0] + "-" + attributes[2]);
                 }
             }
-            IEnumerator enumerator = list.GetEnumerator();
+            IEnumerator enumerator = Sort(list, int.Parse(listLength[1])).GetEnumerator();
             while (enumerator.MoveNext())
             {
-                result += enumerator.Current.ToString();
+                result += enumerator.Current.ToString() + "\n";
             }
+            return result.Remove(result.Length - 1);
+        }
+
+        /// <summary>
+        /// сортировка персонажей
+        /// </summary>
+        /// <param name="list">список персонажей</param>
+        /// <param name="length">длинна списка</param>
+        /// <returns>список отсортированных персонажей</returns>
+        private List<string> Sort(List<string> list, int length)
+        {
+            bool isRecord = true;
+            List<string> result = new List<string>();
+            result.Clear();
+            for (int i = 0; i < length; i++)
+            {
+                IEnumerator characters = list.GetEnumerator();
+                while (characters.MoveNext())
+                {
+                    string[] characterAttributes = characters.Current.ToString().Split(new char[] { '-' }, StringSplitOptions.RemoveEmptyEntries);
+                    if(isRecord)
+                    {
+                        result.Add(characters.Current.ToString());
+                        isRecord = false;
+                    }
+                    string[] attributes = result[i].Split(new char[] { '-' }, StringSplitOptions.RemoveEmptyEntries);
+
+                    string[] characterTime = characterAttributes[2].Split(new char[] { ':' }, StringSplitOptions.RemoveEmptyEntries);
+                    string[] time = attributes[2].Split(new char[] { ':' }, StringSplitOptions.RemoveEmptyEntries);
+
+                    if(((int.Parse(characterTime[0]) * 3600) + (int.Parse(characterTime[1]) * 60) + (int.Parse(characterTime[2]))) < ((int.Parse(time[0]) * 3600) + (int.Parse(time[1]) * 60) + (int.Parse(time[2]))))
+                    {
+                        if (i == 0)
+                        {
+                            result[i] = characters.Current.ToString();
+                        }
+                        else
+                        {
+                            string[] resultAttributes = result[i - 1].Split(new char[] { '-' }, StringSplitOptions.RemoveEmptyEntries);
+                            string[] resultTime = resultAttributes[2].Split(new char[] { ':' }, StringSplitOptions.RemoveEmptyEntries);
+                            if (((int.Parse(characterTime[0]) * 3600) + (int.Parse(characterTime[1]) * 60) + (int.Parse(characterTime[2]))) != ((int.Parse(resultTime[0]) * 3600) + (int.Parse(resultTime[1]) * 60) + (int.Parse(resultTime[2]))))
+                            {
+                                result[i] = characters.Current.ToString();
+                            }
+                        }
+                    }
+                }
+
+                isRecord = true;
+            }
+
             return result;
         }
     }

@@ -90,7 +90,8 @@ namespace Unknown_World_of_Mystery_server
                 new CommandRegister(command, database),
                 new CommandChooseCharacter(database),
                 new CommandCreateCharacter(command, database),
-                new CommandSave(database));
+                new CommandSave(database),
+                new CommandShowListLeaders(command, database));
 
             database.FillInTheQueryDictionary();
             broker.FillInTheCommandDictionary();
