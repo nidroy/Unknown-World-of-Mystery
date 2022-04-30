@@ -216,7 +216,7 @@ namespace Unknown_World_of_Mystery_server
             IEnumerator enumerator = Sort(list, int.Parse(listLength[1])).GetEnumerator();
             while (enumerator.MoveNext())
             {
-                result += enumerator.Current.ToString() + "\n";
+                result += enumerator.Current.ToString() + "_";
             }
             return result.Remove(result.Length - 1);
         }
@@ -265,10 +265,13 @@ namespace Unknown_World_of_Mystery_server
                         }
                     }
                 }
-
+                if (i > 0 && result[i] == result[i - 1])
+                {
+                    result.RemoveAt(i);
+                    return result;
+                }
                 isRecord = true;
             }
-
             return result;
         }
     }
