@@ -9,7 +9,7 @@ namespace Unknown_World_of_Mystery_server
     public class Database
     {
         // строка подключения
-        static string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename="+ FileManager.pathToDatabase +";Integrated Security=True;Connect Timeout=30";
+        public static string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename="+ FileManager.pathToDatabase +";Integrated Security=True;Connect Timeout=30";
 
         /// <summary>
         /// словарь запросов

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace Unknown_World_of_Mystery_server
 {
@@ -166,6 +167,53 @@ namespace Unknown_World_of_Mystery_server
         public string Execute()
         {
             return database.ExecuteQuery("UpdateCharacter");
+        }
+    }
+
+    public class CommandShowListLeaders
+    {
+        Database database;// бд        
+
+        /// <summary>
+        /// конструктор
+        /// </summary>
+        /// <param name="user">элементы пользователя</param>
+        /// <param name="database">бд</param>
+        public CommandShowListLeaders(Database database)
+        {
+            this.database = database;
+        }
+
+        /// <summary>
+        /// выполнение команды
+        /// </summary>
+        /// <returns>создание нового пользователя</returns>
+        public string Execute()
+        {
+            string result = "";
+            string[] name = { "" , "" };
+            List<string> list = new List<string>();
+            list.Clear();
+            string[] userNames = database.ExecuteQuery("GetUsernames").Split(new char[] { '_' }, StringSplitOptions.RemoveEmptyEntries);
+            IEnumerator userName = userNames.GetEnumerator();
+            while (userName.MoveNext())
+            {
+                name[1] = userName.Current.ToString();
+                IQuery getCharacters = new QueryGetCharacters(name);
+                string[] characters = getCharacters.Execute(Database.connectionString).Split(new char[] { '_' }, StringSplitOptions.RemoveEmptyEntries);
+                IEnumerator character = characters.GetEnumerator();
+                while (character.MoveNext())
+                {
+                    string[] attributes = character.Current.ToString().Split(new char[] { '-' }, StringSplitOptions.RemoveEmptyEntries);
+                    list.Add(userName.Current.ToString() + "-" + attributes[0] + "-" + attributes[2]);
+                }
+            }
+            IEnumerator enumerator = list.GetEnumerator();
+            while (enumerator.MoveNext())
+            {
+                result += enumerator.Current.ToString();
+            }
+            return result;
         }
     }
 }
