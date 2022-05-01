@@ -91,7 +91,7 @@ public abstract class Location : MonoBehaviour
     /// </summary>
     private void ExitMenu()
     {
-        SaveGame();
+        GameManager.isLocalAccount = false;
         SceneManager.LoadScene(1);
     }
 

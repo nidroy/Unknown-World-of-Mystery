@@ -52,14 +52,6 @@ public class Ending : MonoBehaviour
     }
 
     /// <summary>
-    /// показать список лидеров
-    /// </summary>
-    public void ShowListLeaders()
-    {
-        Client.SendingMessage(GameManager.username, String.Format("ShowListLeaders_{0}", 5));
-    }
-
-    /// <summary>
     /// выход в главное меню
     /// </summary>
     public void ExitMenu()

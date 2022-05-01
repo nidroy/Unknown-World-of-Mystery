@@ -210,13 +210,22 @@ namespace Unknown_World_of_Mystery_server
                 while (character.MoveNext())
                 {
                     string[] attributes = character.Current.ToString().Split(new char[] { '-' }, StringSplitOptions.RemoveEmptyEntries);
-                    list.Add(userName.Current.ToString() + "-" + attributes[0] + "-" + attributes[2]);
+                    string[] time = attributes[2].Split(new char[] { ':' }, StringSplitOptions.RemoveEmptyEntries);
+                    int seconds = (int.Parse(time[0]) * 3600) + (int.Parse(time[1]) * 60) + (int.Parse(time[2]));
+                    if (seconds != 0 && int.Parse(attributes[1]) == 3)
+                    {
+                        list.Add(userName.Current.ToString() + "-" + attributes[0] + "-" + attributes[2]);
+                    }
                 }
             }
             IEnumerator enumerator = Sort(list, int.Parse(listLength[1])).GetEnumerator();
             while (enumerator.MoveNext())
             {
                 result += enumerator.Current.ToString() + "_";
+            }
+            if (result == "")
+            {
+                return result;
             }
             return result.Remove(result.Length - 1);
         }
@@ -232,23 +241,32 @@ namespace Unknown_World_of_Mystery_server
             bool isRecord = true;
             List<string> result = new List<string>();
             result.Clear();
+            if(list.Count == 0)
+            {
+                result.Add("");
+                return result;
+            }
+            string initialElement = list[0];
             for (int i = 0; i < length; i++)
             {
                 IEnumerator characters = list.GetEnumerator();
                 while (characters.MoveNext())
                 {
-                    string[] characterAttributes = characters.Current.ToString().Split(new char[] { '-' }, StringSplitOptions.RemoveEmptyEntries);
-                    if(isRecord)
+                    int characterSeconds = TimeCounting(characters.Current.ToString());
+
+                    if (isRecord)
                     {
-                        result.Add(characters.Current.ToString());
+                        result.Add(initialElement);
                         isRecord = false;
                     }
-                    string[] attributes = result[i].Split(new char[] { '-' }, StringSplitOptions.RemoveEmptyEntries);
+                    int seconds = TimeCounting(result[i]);
 
-                    string[] characterTime = characterAttributes[2].Split(new char[] { ':' }, StringSplitOptions.RemoveEmptyEntries);
-                    string[] time = attributes[2].Split(new char[] { ':' }, StringSplitOptions.RemoveEmptyEntries);
+                    if (characterSeconds > TimeCounting(initialElement))
+                    {
+                        initialElement = characters.Current.ToString();
+                    }
 
-                    if(((int.Parse(characterTime[0]) * 3600) + (int.Parse(characterTime[1]) * 60) + (int.Parse(characterTime[2]))) < ((int.Parse(time[0]) * 3600) + (int.Parse(time[1]) * 60) + (int.Parse(time[2]))))
+                    if (characterSeconds < seconds)
                     {
                         if (i == 0)
                         {
@@ -256,9 +274,9 @@ namespace Unknown_World_of_Mystery_server
                         }
                         else
                         {
-                            string[] resultAttributes = result[i - 1].Split(new char[] { '-' }, StringSplitOptions.RemoveEmptyEntries);
-                            string[] resultTime = resultAttributes[2].Split(new char[] { ':' }, StringSplitOptions.RemoveEmptyEntries);
-                            if (((int.Parse(characterTime[0]) * 3600) + (int.Parse(characterTime[1]) * 60) + (int.Parse(characterTime[2]))) != ((int.Parse(resultTime[0]) * 3600) + (int.Parse(resultTime[1]) * 60) + (int.Parse(resultTime[2]))))
+                            int resultSeconds = TimeCounting(result[i - 1]);
+
+                            if (characterSeconds > resultSeconds)
                             {
                                 result[i] = characters.Current.ToString();
                             }
@@ -273,6 +291,14 @@ namespace Unknown_World_of_Mystery_server
                 isRecord = true;
             }
             return result;
+        }
+
+        private int TimeCounting(string element)
+        {
+            string[] attributes = element.Split(new char[] { '-' }, StringSplitOptions.RemoveEmptyEntries);
+            string[] time = attributes[2].Split(new char[] { ':' }, StringSplitOptions.RemoveEmptyEntries);
+            int seconds = (int.Parse(time[0]) * 3600) + (int.Parse(time[1]) * 60) + (int.Parse(time[2]));
+            return seconds;
         }
     }
 }
