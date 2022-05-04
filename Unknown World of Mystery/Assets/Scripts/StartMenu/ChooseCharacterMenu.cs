@@ -34,7 +34,7 @@ public class ChooseCharacterMenu : MonoBehaviour
         string[] characters = { "Character training-0-0:0:0", "Character math-1-0:0:0", "Character days of week-2-0:0:0" };
         if (!GameManager.isLocalAccount)
         {
-            characters = Client.SendingMessage(GameManager.username, String.Format("ChooseCharacter_{0}", GameManager.username)).Split(new char[] { '_' }, StringSplitOptions.RemoveEmptyEntries);
+            characters = Client.SendingMessage(GameManager.clientId, String.Format("ChooseCharacter_{0}", GameManager.username)).Split(new char[] { '_' }, StringSplitOptions.RemoveEmptyEntries);
         }
         int modelsCount = characters.Length;
         StartCoroutine(GetItems(modelsCount, results => OnReceivedModels(results), characters));

@@ -24,7 +24,7 @@ public class AuthorizationMenu : MonoBehaviour
                 return "user found";
             }
             GameManager.username = username.text;
-            string message = Client.SendingMessage(GameManager.username, String.Format("LogIn_{0}_{1}", username.text, password.text));
+            string message = Client.SendingMessage(GameManager.clientId, String.Format("LogIn_{0}_{1}", username.text, password.text));
             ResetInputFields();
             return message;
 
@@ -48,7 +48,7 @@ public class AuthorizationMenu : MonoBehaviour
             }
             else
             {
-                if (Client.SendingMessage(GameManager.username, String.Format("Register_{0}_{1}", username.text, password.text)) == "The user exists")
+                if (Client.SendingMessage(GameManager.clientId, String.Format("Register_{0}_{1}", username.text, password.text)) == "The user exists")
                 {
                     startMenu.ShowMessageBox("The user exists.");
                 }

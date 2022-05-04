@@ -47,7 +47,7 @@ namespace Unknown_World_of_Mystery_server
     /// </summary>
     public class CommandRegister : ICommand
     {
-        string[] user;// имя пользователя
+        string[] user;// имя пользователя и пароль 
         Database database;// бд        
 
         /// <summary>

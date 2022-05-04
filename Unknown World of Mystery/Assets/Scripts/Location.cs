@@ -101,6 +101,6 @@ public abstract class Location : MonoBehaviour
     private void SaveGame()
     {
         if(!GameManager.isLocalAccount)
-            Client.SendingMessage(GameManager.username, String.Format("Save_{0}_{1}_{2}_{3}", GameManager.username, GameManager.characterName, GameManager.characterLevel, GameManager.timeInTheGame));
+            Client.SendingMessage(GameManager.clientId, String.Format("Save_{0}_{1}_{2}_{3}", GameManager.username, GameManager.characterName, GameManager.characterLevel, GameManager.timeInTheGame));
     }
 }

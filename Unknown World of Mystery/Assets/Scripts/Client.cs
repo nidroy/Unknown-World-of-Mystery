@@ -10,11 +10,11 @@ public class Client
     /// <summary>
     /// отправка сообщения на сервер
     /// </summary>
-    /// <param name="username">имя пользователя</param>
+    /// <param name="clientId">номер пользователя</param>
     /// <param name="message">сообщение</param>
     /// <returns>ответ сервера</returns>
 
-    public static string SendingMessage(string username, string message)
+    public static string SendingMessage(string clientId, string message)
     {
         TcpClient tcpClient = null;
         ushort key;
@@ -25,7 +25,7 @@ public class Client
             while (true)
             {
                 // ввод сообщения
-                message = String.Format("{0}: {1}", username, message);
+                message = String.Format("{0}: {1}", clientId, message);
                 // преобразуем сообщение в массив байтов
                 // меняем ключ
                 Random random = new Random();

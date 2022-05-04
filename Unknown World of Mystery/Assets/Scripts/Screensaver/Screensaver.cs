@@ -20,6 +20,35 @@ public class Screensaver : MonoBehaviour
     /// </summary>
     private void Start()
     {
+        StartServer();
+        Settings.GetSettings(FileManager.pathToSettings);
+        ScreenManager.SetScreen();
+        audioManager.PlayMusic(music);
+        System.Random random = new System.Random();
+        int clientId = random.Next(0, 1000000);
+        GameManager.clientId = "Client number: " + clientId.ToString();
+    }
+
+    /// <summary>
+    /// проигрывание начальной заставки игры
+    /// </summary>
+    private void Update()
+    {
+        if(closeObject.activeInHierarchy)
+        {
+            gatesAnim.SetBool("isClose", true);
+        }
+        if(loadObject.activeInHierarchy)
+        {
+            SceneManager.LoadScene(1);
+        }
+    }
+
+    /// <summary>
+    /// метод запуска сервера
+    /// </summary>
+    private void StartServer()
+    {
         if (!Process.GetProcesses().Any(p => p.ProcessName == "Unknown World of Mystery server"))
         {
             Process.Start(FileManager.serverPath);
@@ -36,24 +65,6 @@ public class Screensaver : MonoBehaviour
                 pathToKey += enumerator.Current.ToString() + "\\";
             }
             FileManager.pathToKey = pathToKey + "Key\\key.txt";
-        }
-        Settings.GetSettings(FileManager.pathToSettings);
-        ScreenManager.SetScreen();
-        audioManager.PlayMusic(music);
-    }
-
-    /// <summary>
-    /// проигрывание начальной заставки игры
-    /// </summary>
-    private void Update()
-    {
-        if(closeObject.activeInHierarchy)
-        {
-            gatesAnim.SetBool("isClose", true);
-        }
-        if(loadObject.activeInHierarchy)
-        {
-            SceneManager.LoadScene(1);
         }
     }
 }

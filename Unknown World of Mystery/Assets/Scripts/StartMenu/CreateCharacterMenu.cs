@@ -23,7 +23,7 @@ public class CreateCharacterMenu : MonoBehaviour
         {
             if (characterName.text != "")
             {
-                if (Client.SendingMessage(GameManager.username, String.Format("CreateCharacter_{0}_{1}_{2}", GameManager.username, characterName.text, characterLevel.value)) == "The character exists")
+                if (Client.SendingMessage(GameManager.clientId, String.Format("CreateCharacter_{0}_{1}_{2}", GameManager.username, characterName.text, characterLevel.value)) == "The character exists")
                 {
                     startMenu.ShowMessageBox("The character exists.");
                 }

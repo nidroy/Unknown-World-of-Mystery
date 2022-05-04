@@ -31,7 +31,7 @@ public class Leaderboard : MonoBehaviour
         string[] listLeaders = { GameManager.localUsername + "-" + GameManager.characterName + "-" + GameManager.timeInTheGame };
         if (!GameManager.isLocalAccount)
         {
-            listLeaders = Client.SendingMessage(GameManager.username, String.Format("ShowListLeaders_{0}", 5)).Split(new char[] { '_' }, StringSplitOptions.RemoveEmptyEntries);
+            listLeaders = Client.SendingMessage(GameManager.clientId, String.Format("ShowListLeaders_{0}", 5)).Split(new char[] { '_' }, StringSplitOptions.RemoveEmptyEntries);
         }
         int modelsCount = listLeaders.Length;
         if (modelsCount != 0)
