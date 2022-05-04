@@ -26,7 +26,7 @@ public class Screensaver : MonoBehaviour
         audioManager.PlayMusic(music);
         System.Random random = new System.Random();
         int clientId = random.Next(0, 1000000);
-        GameManager.clientId = "Client number: " + clientId.ToString();
+        GameManager.clientId = "Client number " + clientId.ToString();
     }
 
     /// <summary>
