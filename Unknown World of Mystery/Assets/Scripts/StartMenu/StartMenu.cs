@@ -18,15 +18,6 @@ public class StartMenu : MonoBehaviour
     public GameObject loadObject;// объект для загрузки
 
     /// <summary>
-    /// показать меню
-    /// </summary>
-    public void ShowMenu()
-    {
-        menuAnim.SetBool("isMenu", true);
-        ShowStartMenuItem("isMenu");
-    }
-
-    /// <summary>
     /// показать элемент начального меню
     /// </summary>
     /// <param name="item">название элемента меню</param>

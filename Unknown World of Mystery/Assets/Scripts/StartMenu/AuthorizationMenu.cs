@@ -21,7 +21,7 @@ public class AuthorizationMenu : MonoBehaviour
             {
                 GameManager.isLocalAccount = true;
                 ResetInputFields();
-                startMenu.ShowMenu();
+                startMenu.ShowStartMenuItem("isMenu"); 
             }
             else
             {
@@ -30,7 +30,7 @@ public class AuthorizationMenu : MonoBehaviour
                 ResetInputFields();
                 if (message == "user found")
                 {
-                    startMenu.ShowMenu();
+                    startMenu.ShowStartMenuItem("isMenu"); 
                 }
                 else
                 {
