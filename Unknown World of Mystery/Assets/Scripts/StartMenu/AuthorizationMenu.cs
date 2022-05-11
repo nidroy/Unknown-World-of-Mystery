@@ -13,25 +13,35 @@ public class AuthorizationMenu : MonoBehaviour
     /// кнопка авторизации
     /// </summary>
     /// <returns>строка существование пользователя</returns>
-    public string LogIn()
+    public void LogIn()
     {
         if (username.text != "" && password.text != "")
         {
-            if(username.text == GameManager.localUsername && password.text == GameManager.localPassword)
+            if (username.text == GameManager.localUsername && password.text == GameManager.localPassword)
             {
                 GameManager.isLocalAccount = true;
                 ResetInputFields();
-                return "user found";
+                startMenu.ShowMenu();
             }
-            GameManager.username = username.text;
-            string message = Client.SendingMessage(GameManager.clientId, String.Format("LogIn_{0}_{1}", username.text, password.text));
-            ResetInputFields();
-            return message;
+            else
+            {
+                GameManager.username = username.text;
+                string message = Client.SendingMessage(GameManager.clientId, String.Format("LogIn_{0}_{1}", username.text, password.text));
+                ResetInputFields();
+                if (message == "user found")
+                {
+                    startMenu.ShowMenu();
+                }
+                else
+                {
+                    startMenu.ShowMessageBox("This user does not exist.");
+                }
+            }
 
         }
         else
         {
-            return "user not found";
+            startMenu.ShowMessageBox("This user does not exist."); ;
         }
     }
 

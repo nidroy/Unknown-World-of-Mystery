@@ -23,16 +23,8 @@ public class StartMenu : MonoBehaviour
     /// </summary>
     public void ShowMenu()
     {
-        string serverResponse = authorizationMenu.LogIn();
-        if (serverResponse == "user found")
-        {
-            menuAnim.SetBool("isMenu", true);
-            ShowStartMenuItem("isMenu");
-        }
-        else
-        {
-            ShowMessageBox("This user does not exist.");
-        }
+        menuAnim.SetBool("isMenu", true);
+        ShowStartMenuItem("isMenu");
     }
 
     /// <summary>
