@@ -4,7 +4,6 @@ using UnityEngine.SceneManagement;
 
 public class StartMenu : MonoBehaviour
 {
-    public AuthorizationMenu authorizationMenu; // меню авторизации
     public Settings settings;// настройки
     public AudioManager audioManager;// менеджер звуков
 
