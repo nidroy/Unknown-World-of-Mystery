@@ -66,7 +66,7 @@ public class FirstLocation : Location
     /// </summary>
     private void Teleportation()
     {
-        if (teleport.activeInHierarchy)
+        if (teleport.activeInHierarchy && !isExitMenu)
         {
             player.StartTeleportation();
         }
