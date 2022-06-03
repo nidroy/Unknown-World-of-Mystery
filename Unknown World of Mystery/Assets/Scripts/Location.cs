@@ -38,6 +38,17 @@ public abstract class Location : MonoBehaviour
     }
 
     /// <summary>
+    /// пропуск уровня
+    /// </summary>
+    /// <param name="level">уровень</param>
+    public void Skip(int level)
+    {
+        completeObject.SetActive(true);
+        Complete();
+        LoadLevel(level);
+    }
+
+    /// <summary>
     /// функция завершения
     /// </summary>
     private void Complete()
