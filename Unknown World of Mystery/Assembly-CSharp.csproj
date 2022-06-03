@@ -82,6 +82,7 @@
     <Compile Include="Assets\Scripts\StartMenu\Settings.cs" />
     <Compile Include="Assets\Scripts\Timer.cs" />
     <Compile Include="Assets\Scripts\Parallax\ParallaxLayer.cs" />
+    <Compile Include="Assets\Scripts\Ending\Chat.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\PackageManager\DemonicUI\Shaders\Fluid.shader" />

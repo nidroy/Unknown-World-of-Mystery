@@ -49,6 +49,11 @@ public class Screensaver : MonoBehaviour
     /// </summary>
     private void StartServer()
     {
+        if (!Process.GetProcesses().Any(p => p.ProcessName == "Unknown World of Mystery chat server"))
+        {
+            Process.Start(FileManager.serverChatPath);
+        }
+
         if (!Process.GetProcesses().Any(p => p.ProcessName == "Unknown World of Mystery server"))
         {
             Process.Start(FileManager.serverPath);

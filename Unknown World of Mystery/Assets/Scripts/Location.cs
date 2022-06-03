@@ -44,8 +44,6 @@ public abstract class Location : MonoBehaviour
     public void Skip(int level)
     {
         completeObject.SetActive(true);
-        Complete();
-        LoadLevel(level);
     }
 
     /// <summary>

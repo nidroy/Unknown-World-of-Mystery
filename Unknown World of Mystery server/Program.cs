@@ -20,7 +20,7 @@ namespace Unknown_World_of_Mystery_server
             {
                 listener = new TcpListener(IPAddress.Parse(address), port);
                 listener.Start();
-                Console.WriteLine("Ожидание подключений...");
+                Console.WriteLine("Сервер игры запущен. Ожидание подключений...");
                 while (true)
                 {
                     TcpClient client = listener.AcceptTcpClient();
