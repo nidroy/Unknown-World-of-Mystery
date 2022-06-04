@@ -56,7 +56,7 @@ namespace Unknown_World_of_Mystery_chat_server
         }
 
         // отправляем сообщение всем клиентам кроме того кто отправил сообщение
-        protected internal void BroadcastMessage(string message, string id)
+        protected internal void BroadcastMessageEveryone(string message, string id)
         {
             byte[] data = Encoding.Unicode.GetBytes(message); // перевод сообщение в байты
             for (int i = 0; i < clients.Count; i++) // отправляем сообщение всем клиентам
@@ -68,13 +68,16 @@ namespace Unknown_World_of_Mystery_chat_server
             }
         }
 
-        // отправляем сообщение всем клиентам 
-        protected internal void BroadcastMessage(string message)
+        // отправка сообщение клиенту который отправил сообщение
+        protected internal void BroadcastMessageOnlyone(string message, string id)
         {
             byte[] data = Encoding.Unicode.GetBytes(message); // перевод сообщение в байты
             for (int i = 0; i < clients.Count; i++) // отправляем сообщение всем клиентам
             {
-                clients[i].Stream.Write(data, 0, data.Length); //передача данных
+                if (clients[i].Id == id) // если id клиента не равно id отправляющего
+                {
+                    clients[i].Stream.Write(data, 0, data.Length); //передача данных
+                }
             }
         }
 

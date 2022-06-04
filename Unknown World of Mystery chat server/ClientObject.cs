@@ -33,7 +33,7 @@ namespace Unknown_World_of_Mystery_chat_server
 
                 message = String.Format("{0} connected to the chat", userName);
                 // посылаем сообщение о входе в чат всем подключенным пользователям
-                server.BroadcastMessage(message, this.Id);
+                server.BroadcastMessageEveryone(message, this.Id);
                 Console.WriteLine(message);
                 // в бесконечном цикле получаем сообщения от клиента
                 while (true)
@@ -41,15 +41,25 @@ namespace Unknown_World_of_Mystery_chat_server
                     try
                     {
                         message = GetMessage(); // получаем сообщение
+                        string[] command = message.Split(new char[] { '.' }, StringSplitOptions.RemoveEmptyEntries);
                         message = String.Format("{0}: {1}", userName, message); // построение сообщения
                         Console.WriteLine(message); // вывод на экран сервера
-                        server.BroadcastMessage(message, this.Id); // передача сообщения другим клиентам
+                        if (command[0] == "chat bot")
+                        {
+                            ChatBot bot = new ChatBot();
+                            server.BroadcastMessageOnlyone(bot.FormResponse(command[1]), this.Id); // ответ пользователю
+                        }
+                        else
+                        {
+                            server.BroadcastMessageEveryone(message, this.Id); // передача сообщения другим клиентам
+                        }
+                      
                     }
                     catch
                     {
                         message = String.Format("{0} disconnected from the chat", userName);
                         Console.WriteLine(message);
-                        server.BroadcastMessage(message, this.Id);
+                        server.BroadcastMessageEveryone(message, this.Id);
                         break;
                     }
                 }
