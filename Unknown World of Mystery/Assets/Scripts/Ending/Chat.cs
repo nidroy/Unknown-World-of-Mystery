@@ -26,7 +26,7 @@ public class Chat : MonoBehaviour
 
     private void Update()
     {
-        if(outputText.text.Length >= 100)
+        if(outputText.text.Length >= 2500)
         {
             outputText.text = "";
         }

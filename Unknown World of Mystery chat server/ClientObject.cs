@@ -1,5 +1,4 @@
-﻿using System;
-using System.Net.Sockets;
+﻿using System.Net.Sockets;
 using System.Text;
 
 namespace Unknown_World_of_Mystery_chat_server
@@ -44,10 +43,11 @@ namespace Unknown_World_of_Mystery_chat_server
                         string[] command = message.Split(new char[] { '.' }, StringSplitOptions.RemoveEmptyEntries);
                         message = String.Format("{0}: {1}", userName, message); // построение сообщения
                         Console.WriteLine(message); // вывод на экран сервера
-                        if (command[0] == "chat bot")
+                        if (command[0] == "Bot")
                         {
-                            ChatBot bot = new ChatBot();
-                            server.BroadcastMessageOnlyone(bot.FormResponse(command[1]), this.Id); // ответ пользователю
+                            message = String.Format("Bot: {0}", ChatBot.FormResponse(command[1]));
+                            Console.WriteLine(message); // вывод на экран сервера
+                            server.BroadcastMessageOnlyone(message, this.Id); // ответ пользователю
                         }
                         else
                         {
