@@ -32,7 +32,23 @@ public class FirstLocation : Location
         SkeletonAppeared();
         Teleportation();
         CompleteLevel(1);
-        InstallLocalization(5, 15);
+        InstallLocalization();
+    }
+
+    private void InstallLocalization()
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            if (i != 1)
+            {
+                locationText[i].text = Settings.localizedText[i + 15];
+            }
+        }
+    }
+
+    public void InstallLocalizationDialogue()
+    {
+        locationText[1].text = Settings.localizedText[16];
     }
 
     /// <summary>
