@@ -14,6 +14,8 @@ public class Ending : MonoBehaviour
     public AudioManager audioManager; // менеджер звуков
     public AudioSource music;// музыка
 
+    public Text[] endingText;
+
     private bool isStart; // запуск локации?
 
     /// <summary>
@@ -39,6 +41,7 @@ public class Ending : MonoBehaviour
         {
             SceneManager.LoadScene(1);
         }
+        InstallLocalization();
     }
 
     /// <summary>
@@ -57,5 +60,13 @@ public class Ending : MonoBehaviour
     public void ExitMenu()
     {
         gatesAnim.SetBool("isClose", true);
+    }
+
+    private void InstallLocalization()
+    {
+        for (int i = 0; i < 2; i++)
+        {
+            endingText[i].text = Settings.localizedText[i + 35];
+        }
     }
 }

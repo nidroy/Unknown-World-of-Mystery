@@ -1111,7 +1111,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -100, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &229062371
 MonoBehaviour:
@@ -1146,10 +1146,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'In this location you will have to test your
-
-    knowledge in the field
-    of mathematics.'
+  m_Text: In this location you will have to test your knowledge in the field of mathematics.
 --- !u!222 &229062372
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1788,6 +1785,11 @@ MonoBehaviour:
   audioManager: {fileID: 307029121}
   completeObject: {fileID: 687381419}
   loadObject: {fileID: 2132950195}
+  locationText:
+  - {fileID: 6898630791641901890}
+  - {fileID: 229062371}
+  - {fileID: 591239883}
+  - {fileID: 1947252047}
   tutorial: {fileID: 260789232}
   trigger: {fileID: 104993420}
   riddleIsSolvedObject:
@@ -10958,3 +10960,14 @@ PrefabInstance:
       objectReference: {fileID: 1262990610}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac0d87129cb1afd408036d3748a787e0, type: 3}
+--- !u!114 &6898630791641901890 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6898630793240281444, guid: ac0d87129cb1afd408036d3748a787e0, type: 3}
+  m_PrefabInstance: {fileID: 6898630791641901889}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

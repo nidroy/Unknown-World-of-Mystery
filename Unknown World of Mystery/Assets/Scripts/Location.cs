@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System;
+using UnityEngine.UI;
 
 public abstract class Location : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public abstract class Location : MonoBehaviour
 
     public GameObject completeObject; // объект для завершения уровня
     public GameObject loadObject; // объект для загрузки
+
+    public Text[] locationText;
 
     public bool isExitMenu { get; set; } // выйти в меню?
 
@@ -44,6 +47,14 @@ public abstract class Location : MonoBehaviour
     public void Skip(int level)
     {
         completeObject.SetActive(true);
+    }
+
+    public void InstallLocalization(int number1, int number2)
+    {
+        for(int i = 0; i < number1; i++)
+        {
+            locationText[i].text = Settings.localizedText[i + number2];
+        }
     }
 
     /// <summary>

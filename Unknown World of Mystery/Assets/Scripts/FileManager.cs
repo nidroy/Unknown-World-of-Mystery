@@ -4,6 +4,8 @@ using System.IO;
 public class FileManager : MonoBehaviour
 {
     public static string pathToSettings = Application.dataPath + "/Settings/settings.txt"; // путь к файлу с настройками
+    public static string pathToLocalizationRU = Application.dataPath + "/Localization/RU.txt"; // путь к файлу с русской локализацией
+    public static string pathToLocalizationEN = Application.dataPath + "/Localization/EN.txt"; // путь к файлу с английской локализацией
     public static string serverPath = Application.dataPath + "/Server/Unknown World of Mystery server.exe"; // путь к серверу 
     public static string serverChatPath = Application.dataPath + "/ChatServer/Unknown World of Mystery chat server.exe"; // путь к серверу чата
     public static string pathToKey = Application.dataPath + "/Key/key.txt"; // путь к файлу с ключем 

@@ -21,7 +21,9 @@ public class Screensaver : MonoBehaviour
     private void Start()
     {
         StartServer();
+        Settings.isLocalizationRu = false;
         Settings.GetSettings(FileManager.pathToSettings);
+        Settings.localizedText = FileManager.ReadingFile(FileManager.pathToLocalizationEN).Split(new char[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
         ScreenManager.SetScreen();
         audioManager.PlayMusic(music);
         System.Random random = new System.Random();

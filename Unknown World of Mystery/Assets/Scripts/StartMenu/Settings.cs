@@ -5,10 +5,14 @@ using System;
 
 public class Settings : MonoBehaviour
 {
+    public static bool isLocalizationRu; // установленна ли русская локализация
+    public static string[] localizedText; // локализированный текст
+
     public Dropdown screenResolution;// разрешение экрана
     public Slider volumeSounds;// громкость звуков
     public Dropdown screenMode;// вид экрана
     public Slider volumeMusic;// громкость музыки
+    public Text localization; // текст на кнопки локализации
 
     public StartMenu startMenu;// начальное меню
 
@@ -68,5 +72,21 @@ public class Settings : MonoBehaviour
         ScreenManager.SetScreen();
         startMenu.music.volume = AudioManager.volumeMusic;
         startMenu.HideStartMenuItem("isSettings");
+    }
+
+    public void Localization()
+    {
+        if(isLocalizationRu)
+        {
+            localizedText = FileManager.ReadingFile(FileManager.pathToLocalizationEN).Split(new char[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
+            localization.text = "Russian";
+            isLocalizationRu = false;
+        }
+        else
+        {
+            localizedText = FileManager.ReadingFile(FileManager.pathToLocalizationRU).Split(new char[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
+            localization.text = "English";
+            isLocalizationRu = true;
+        }
     }
 }

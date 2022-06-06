@@ -19,6 +19,8 @@ public class StartMenu : MonoBehaviour
 
     public GameObject loadObject;// объект для загрузки
 
+    public Text[] menuText;
+
     /// <summary>
     /// показать элемент начального меню
     /// </summary>
@@ -81,9 +83,18 @@ public class StartMenu : MonoBehaviour
     /// </summary>
     private void Update()
     {
-        if(loadObject.activeInHierarchy)
+        InstallLocalization();
+        if (loadObject.activeInHierarchy)
         {
             SceneManager.LoadScene(GameManager.characterLevel + 2);
+        }
+    }
+
+    private void InstallLocalization()
+    {
+        for (int i = 0; i < 15; i++)
+        {
+            menuText[i].text = Settings.localizedText[i];
         }
     }
 }

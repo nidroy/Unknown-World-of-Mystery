@@ -22,6 +22,7 @@ public class ThirdLocation : Location
     {
         Teleportation();
         CompleteLevel(3);
+        InstallLocalization(11, 24);
     }
 
     /// <summary>

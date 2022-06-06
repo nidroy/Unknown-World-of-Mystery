@@ -694,6 +694,9 @@ MonoBehaviour:
   loadObject: {fileID: 1812958260}
   audioManager: {fileID: 218743095}
   music: {fileID: 1812958259}
+  endingText:
+  - {fileID: 1253046535}
+  - {fileID: 35848968}
 --- !u!114 &218743095
 MonoBehaviour:
   m_ObjectHideFlags: 0

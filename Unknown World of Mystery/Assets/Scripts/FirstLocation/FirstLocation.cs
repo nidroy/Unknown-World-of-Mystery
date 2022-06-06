@@ -32,7 +32,7 @@ public class FirstLocation : Location
         SkeletonAppeared();
         Teleportation();
         CompleteLevel(1);
-
+        InstallLocalization(5, 15);
     }
 
     /// <summary>

@@ -39,6 +39,7 @@ public class SecondLocation : Location
         OpenDoor();
         Ñomplete();
         CompleteLevel(2);
+        InstallLocalization(4, 20);
     }
 
     /// <summary>
